@@ -57,20 +57,25 @@ function generateCondition(structure, isBase) {
     return output;
 }
 
-function generateCommand(structure, id, slot) {
+function generateCommand(structure, id, slot, includeGive) {
     let output = "";
 
-    output += "/give @p " + id + "{" + slot + ":";
+    if (includeGive) {
+        output += "/give @p " + id + "{";
+    }
+    output += slot + ":";
 
     output += generateCondition(structure, true);
 
-    output += "}";
+    if (includeGive) {
+        output += "}";
+    }
 
     return output;
 }
 
-function CommandOutput({ structure, id, slot }) {
-    let cmd = generateCommand(structure, id, slot);
+function CommandOutput({ structure, id, slot, includeGive }) {
+    let cmd = generateCommand(structure, id, slot, includeGive);
 
     return (
         <div>
