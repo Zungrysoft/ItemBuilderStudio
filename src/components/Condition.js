@@ -47,7 +47,6 @@ function Condition({ type, structure, onChange, depth }) {
             {depth > 0 ? <div>
                 <DeleteButton
                     eventClick={(e) => {
-                        console.log(structure);
                         onChange({})
                     }}
                 />

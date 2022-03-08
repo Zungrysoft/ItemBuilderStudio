@@ -70,8 +70,18 @@ function generateCommand(structure, id, slot) {
 }
 
 function CommandOutput({ structure, id, slot }) {
+    let cmd = generateCommand(structure, id, slot);
+
     return (
-        <p>{generateCommand(structure, id, slot)}</p>
+        <div>
+            <button
+                onClick={(e) => {
+                    navigator.clipboard.writeText(cmd);
+                    console.log(cmd);
+                }}
+            >Copy Command</button>
+            <p>{cmd}</p>
+        </div>
     );
 }
 
