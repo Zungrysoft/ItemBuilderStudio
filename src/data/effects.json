@@ -1,0 +1,202 @@
+{
+    "0":{
+        "display":"No Effect"
+    },
+    "100":{
+        "display":"Plus Attack Damage",
+        "value_mode":"input",
+        "value_display":"Amount"
+    },
+    "101":{
+        "display":"Plus Movement Speed",
+        "value_mode":"input",
+        "value_display":"Percent Increase"
+    },
+    "102":{
+        "display":"Plus Attack Speed",
+        "value_mode":"input",
+        "value_display":"Percent Increase"
+    },
+    "103":{
+        "display":"Plus Max Health",
+        "value_mode":"input",
+        "value_display":"Amount"
+    },
+    "104":{
+        "display":"Plus Armor",
+        "value_mode":"input",
+        "value_display":"Amount"
+    },
+    "105":{
+        "display":"Plus Knockback Resistance",
+        "value_mode":"input",
+        "value_display":"Percent"
+    },
+    "106":{
+        "display":"Plus Armor Toughness",
+        "value_mode":"input",
+        "value_display":"Amount"
+    },
+    "420":{
+        "instant": true,
+        "display":"Item Takes Durability Damage",
+        "note":"Negative values will repair the item.",
+        "value_mode":"input",
+        "value_display":"Amount"
+    },
+    "421":{
+        "instant": true,
+        "display":"Item is Restored to Full Durability"
+    },
+    "430":{
+        "instant": true,
+        "display":"Set Item Count",
+        "value_mode":"input",
+        "value_display":"Count"
+    },
+    "431":{
+        "instant": true,
+        "display":"Increase Item Count",
+        "value_mode":"input",
+        "value_display":"Count"
+    },
+    "480":{
+        "instant": true,
+        "display":"Reload this Crossbow",
+        "value_mode":"loadable",
+        "value_display":"Projectile"
+    },
+    "481":{
+        "instant": true,
+        "display":"Reload all Crossbows on Hotbar",
+        "value_mode":"loadable",
+        "value_display":"Projectile"
+    },
+    "500":{
+        "instant": true,
+        "display":"Set on Fire"
+    },
+    "501":{
+        "instant": true,
+        "display":"Set Ground on Fire",
+        "value_mode":"input",
+        "value_display":"Radius",
+        "min": 1,
+        "max": 5
+    },
+    "502":{
+        "instant": true,
+        "display":"Call Lightning Strike"
+    },
+    "503":{
+        "instant": true,
+        "display":"Summon Explosion",
+        "note":"\"mobGriefing\" gamerule will determine whether this will break blocks",
+        "value_mode":"input",
+        "value_display":"Blast Radius",
+        "min": 1,
+        "max": 5
+    },
+    "520":{
+        "instant": true,
+        "monster_only": true,
+        "display":"Launch Upwards",
+        "value_mode":"input",
+        "value_display":"Launch Force"
+    },
+    "800":{
+        "instant": true,
+        "display":"Set SavedCounter1",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "801":{
+        "instant": true,
+        "display":"Increase SavedCounter1",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "805":{
+        "instant": true,
+        "display":"Set SavedCounter2",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "806":{
+        "instant": true,
+        "display":"Increase SavedCounter2",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "810":{
+        "instant": true,
+        "display":"Set SavedCounter3",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "811":{
+        "instant": true,
+        "display":"Increase SavedCounter3",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "840":{
+        "display":"Set FrameCounter1",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "841":{
+        "display":"Increase FrameCounter1",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "845":{
+        "display":"Set FrameCounter2",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "846":{
+        "display":"Increase FrameCounter2",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "850":{
+        "display":"Set FrameCounter3",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "851":{
+        "display":"Increase FrameCounter3",
+        "value_mode":"input",
+        "value_display":"value_mode"
+    },
+    "860":{
+        "display":"Roll Random Number",
+        "note":"Rolled number only lasts for the current tick.\n0 <= n < Max",
+        "value_mode":"input",
+        "value_display":"Max"
+    },
+    "870":{
+        "instant": true,
+        "display":"Prime Item",
+        "note":"Used with Effects #870 and #871",
+        "value_mode":"input",
+        "value_display":"Ticks"
+    },
+    "875":{
+        "instant": true,
+        "display":"Activate Item",
+        "note":"Used with Effect #875"
+    },
+    "900":{
+        "display":"Sound/Particle Effect",
+        "value_mode":"sound",
+        "value_display":"Effect"
+    },
+    "901":{
+        "instant": true,
+        "display":"Chat Message",
+        "text":"sound",
+        "text_display":"Message"
+    }
+}

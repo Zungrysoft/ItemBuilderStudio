@@ -1,0 +1,20 @@
+{
+    "1":{
+        "display":"Mainhand"
+    },
+    "2":{
+        "display":"Offhand"
+    },
+    "3":{
+        "display":"Head"
+    },
+    "4":{
+        "display":"Chest"
+    },
+    "5":{
+        "display":"Legs"
+    },
+    "6":{
+        "display":"Feet"
+    }
+}

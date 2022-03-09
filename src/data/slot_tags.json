@@ -1,0 +1,17 @@
+{
+    "ItemBuilderMainhand":{
+        "display":"Mainhand"
+    },
+    "ItemBuilderOffhand":{
+        "display":"Offhand"
+    },
+    "ItemBuilderEitherHand":{
+        "display":"Either Hand"
+    },
+    "ItemBuilderArmor":{
+        "display":"Armor"
+    },
+    "ItemBuilderTrident":{
+        "display":"Thrown Trident"
+    }
+}

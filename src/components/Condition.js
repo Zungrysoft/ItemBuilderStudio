@@ -3,11 +3,11 @@ import AddEffectButton from './AddEffectButton.js';
 import AddConditionButton from './AddConditionButton.js';
 import AddFilterButton from './AddFilterButton.js';
 import DeleteButton from './DeleteButton.js';
+import InputId from './InputId.js';
 import '../App.css';
 
 function newCondition() {
     return {
-        index: 0,
         id: 0,
         value: 0,
         value2: 0,
@@ -53,15 +53,13 @@ function Condition({ type, structure, onChange, depth }) {
                 />
                 <div>
                     <div className="entry">
-                        <p className="label">Id: </p>
-                        <input
-                            className="text-box"
-                            type="text"
-                            defaultValue={structure.id}
-                            onChange={(e) => {
+                        <InputId
+                            type={type}
+                            startValue={structure.id}
+                            onChange={(val) => {
                                 onChange({
                                     ...structure,
-                                    id: e.target.value
+                                    id: val
                                 })
                             }}
                         />

@@ -1,11 +1,4 @@
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   align-items: left;
@@ -58,6 +51,13 @@
     user-select: none;
     margin: 0px;
     margin-left: 5px;
+}
+
+.condition-label {
+    user-select: none;
+    margin: 0px;
+    margin-left: 5px;
+    font-size: 18px;
 }
 
 .text-box {

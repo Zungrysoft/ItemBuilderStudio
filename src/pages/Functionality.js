@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Condition from '../components/Condition.js';
 import CommandOutput from '../components/CommandOutput.js';
+import InputSlot from '../components/InputSlot.js';
 
 function FunctionalityPage() {
     const [structure, setStructure] = useState({
@@ -22,7 +23,7 @@ function FunctionalityPage() {
                     },
                     {
                         id: 10,
-                        value:78,
+                        value:77,
                         effects:[],
                         conditions: [],
                         filters:[],
@@ -54,6 +55,7 @@ function FunctionalityPage() {
                     onChange={(e) => {setIncludeGive(e.target.checked);}}
                 />
             </div>
+            <InputSlot defaultValue="ItemBuilderMainhand" onChange={setSlot}/>
             <Condition type={1} structure={structure} onChange={setStructure} depth={0}/>
             <CommandOutput structure={structure} id={itemId} slot={slot} includeGive={includeGive}/>
         </div>

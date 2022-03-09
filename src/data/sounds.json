@@ -1,0 +1,205 @@
+{
+    "0":{
+        "display":"No Effect"
+    },
+    "100":{
+        "display":"Light Glimmer"
+    },
+    "101":{
+        "display":"Raincloud"
+    },
+    "150":{
+        "display":"Rocket Exaust"
+    },
+    "151":{
+        "display":"Rocket Exaust 2"
+    },
+    "180":{
+        "display":"Rotating Teal Shields"
+    },
+    "181":{
+        "display":"Rotating Red Shields"
+    },
+    "190":{
+        "display":"Red Shimmer"
+    },
+    "191":{
+        "display":"Orange Shimmer"
+    },
+    "192":{
+        "display":"Yellow Shimmer"
+    },
+    "193":{
+        "display":"Green Shimmer"
+    },
+    "194":{
+        "display":"Blue Shimmer"
+    },
+    "195":{
+        "display":"Purple Shimmer"
+    },
+    "196":{
+        "display":"Pink Shimmer"
+    },
+    "197":{
+        "display":"Brown Shimmer"
+    },
+    "198":{
+        "display":"White Shimmer"
+    },
+    "199":{
+        "display":"Black Shimmer"
+    },
+    "200":{
+        "display":"Fireburst",
+        "instant":true
+    },
+    "201":{
+        "display":"Glimmer",
+        "instant":true
+    },
+    "202":{
+        "display":"Gain Experience",
+        "instant":true
+    },
+    "203":{
+        "display":"Pop",
+        "instant":true
+    },
+    "204":{
+        "display":"Stomp",
+        "instant":true
+    },
+    "205":{
+        "display":"Plant Break",
+        "instant":true
+    },
+    "206":{
+        "display":"Wormhole",
+        "instant":true
+    },
+    "207":{
+        "display":"Smack",
+        "instant":true
+    },
+    "290":{
+        "display":"Red Burst",
+        "instant":true
+    },
+    "291":{
+        "display":"Orange Burst",
+        "instant":true
+    },
+    "292":{
+        "display":"Yellow Burst",
+        "instant":true
+    },
+    "293":{
+        "display":"Green Burst",
+        "instant":true
+    },
+    "294":{
+        "display":"Blue Burst",
+        "instant":true
+    },
+    "295":{
+        "display":"Purple Burst",
+        "instant":true
+    },
+    "296":{
+        "display":"Pink Burst",
+        "instant":true
+    },
+    "297":{
+        "display":"Brown Burst",
+        "instant":true
+    },
+    "298":{
+        "display":"White Burst",
+        "instant":true
+    },
+    "299":{
+        "display":"Black Burst",
+        "instant":true
+    },
+    "300":{
+        "display":"Fire Attack",
+        "instant":true
+    },
+    "301":{
+        "display":"Ice Attack",
+        "instant":true
+    },
+    "302":{
+        "display":"Earth Attack",
+        "instant":true
+    },
+    "303":{
+        "display":"Water Attack",
+        "instant":true
+    },
+    "304":{
+        "display":"Bramble Attack",
+        "instant":true
+    },
+    "305":{
+        "display":"Blade Attack",
+        "instant":true
+    },
+    "306":{
+        "display":"Flash Attack",
+        "instant":true
+    },
+    "307":{
+        "display":"Blood Attack",
+        "instant":true
+    },
+    "308":{
+        "display":"Slime Attack",
+        "instant":true
+    },
+    "309":{
+        "display":"Honey Attack",
+        "instant":true
+    },
+    "310":{
+        "display":"Strike Attack",
+        "instant":true
+    },
+    "311":{
+        "display":"Web Attack",
+        "instant":true
+    },
+    "370":{
+        "display":"Dark Attack (Musical)",
+        "instant":true
+    },
+    "371":{
+        "display":"Light Attack",
+        "instant":true
+    },
+    "372":{
+        "display":"Adventurous Attack (Musical)",
+        "instant":true
+    },
+    "373":{
+        "display":"Exotic Attack (Musical)",
+        "instant":true
+    },
+    "900":{
+        "display":"Advancement",
+        "instant":true
+    },
+    "901":{
+        "display":"Beacon 1",
+        "instant":true
+    },
+    "902":{
+        "display":"Beacon 2",
+        "instant":true
+    },
+    "903":{
+        "display":"Totem Break",
+        "instant":true
+    }
+}
