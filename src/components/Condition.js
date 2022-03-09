@@ -7,6 +7,7 @@ import '../App.css';
 
 function newCondition() {
     return {
+        index: 0,
         id: 0,
         value: 0,
         value2: 0,

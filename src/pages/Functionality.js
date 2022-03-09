@@ -44,7 +44,7 @@ function FunctionalityPage() {
                 <input
                     className="text-box"
                     type="text"
-                    defaultValue="minecraft:iron_sword"
+                    defaultValue={"minecraft:iron_sword"}
                     onChange={(e) => {setItemId(e.target.value);}}
                 />
                 <input
