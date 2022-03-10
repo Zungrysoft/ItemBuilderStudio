@@ -4,6 +4,8 @@ import AddConditionButton from './AddConditionButton.js';
 import AddFilterButton from './AddFilterButton.js';
 import DeleteButton from './DeleteButton.js';
 import InputId from './InputId.js';
+import InputValue from './InputValue.js';
+import Note from './Note.js';
 import '../App.css';
 
 function newCondition() {
@@ -59,39 +61,57 @@ function Condition({ type, structure, onChange, depth }) {
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
-                                    id: val
+                                    id: val,
                                 })
                             }}
                         />
                     </div>
                     <div className="entry">
-                        <p className="label">Value: </p>
-                        <input
-                            className="text-box"
-                            type="text"
-                            defaultValue={structure.value}
-                            onChange={(e) => {
+                        <InputValue
+                            type={type}
+                            id={structure.id}
+                            jsonKey="value"
+                            startValue={structure.value}
+                            onChange={(val) => {
                                 onChange({
                                     ...structure,
-                                    value: e.target.value
+                                    value: val,
                                 })
                             }}
                         />
                     </div>
                     <div className="entry">
-                        <p className="label">Value2: </p>
-                        <input
-                            className="text-box"
-                            type="text"
-                            defaultValue={structure.value2}
-                            onChange={(e) => {
+                        <InputValue
+                            type={type}
+                            id={structure.id}
+                            jsonKey="value2"
+                            startValue={structure.value2}
+                            onChange={(val) => {
                                 onChange({
                                     ...structure,
-                                    value2: e.target.value
+                                    value2: val,
                                 })
                             }}
                         />
                     </div>
+                    <div className="entry">
+                        <InputValue
+                            type={type}
+                            id={structure.id}
+                            jsonKey="value3"
+                            startValue={structure.value3}
+                            onChange={(val) => {
+                                onChange({
+                                    ...structure,
+                                    value3: val,
+                                })
+                            }}
+                        />
+                    </div>
+                    <Note
+                        type={type}
+                        id={structure.id}
+                    />
                 </div>
             </div> : <div/>}
             {hasChildren(type, structure.id) ? <div>
@@ -193,72 +213,3 @@ function Condition({ type, structure, onChange, depth }) {
 }
 
 export default Condition;
-
-/*class Condition extends Component {
-    state = {
-        id: 0,
-        value: 0,
-        value2: 0,
-        inverted: false,
-        effects: [],
-        conditions: [],
-        filters: [],
-    }
-    addCondition() {
-        this.state.conditions.push(new Condition())
-        this.setState({conditions: this.state.conditions})
-    }
-    updateId(value) {
-        this.setState({id: value})
-        console.log(value)
-    }
-    render() {
-        return (
-            <div>
-                <div>{this.command()}</div>
-                <InputBox startValue={0} eventUpdate={(e) => this.updateId()}/>
-                <AddButton eventClick={(e) => this.addCondition()}/>
-            </div>
-        );
-    }
-    command() {
-        let ret = "{"
-        
-        // Id
-        ret += "Id:" + this.state.id
-
-        // Value
-        if (this.state.value != 0) {
-            ret += ",Value:" + this.state.value
-        }
-
-        // Value2
-        if (this.state.value2 != 0) {
-            ret += ",Value2:" + this.state.value2
-        }
-
-        // Inverted
-        if (this.state.inverted) {
-            ret += ",Inverted:1"
-        }
-
-        // Conditions
-        console.log("LENGTH"+this.state.conditions.length);
-        if (this.state.conditions.length > 0) {
-            ret += ",Conditions:["
-            this.state.conditions.forEach((item, index) => {
-                if (index != 0) {
-                    ret += ",";
-                }
-                console.log("INDEX:"+index);
-                ret += item.command();
-            });
-            ret += "]"
-        }
-        
-
-        return ret + "}"
-    }
-}
-
-export default Condition;*/

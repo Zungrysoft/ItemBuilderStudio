@@ -91,7 +91,7 @@
     "503":{
         "instant": true,
         "display":"Summon Explosion",
-        "note":"\"mobGriefing\" gamerule will determine whether this will break blocks",
+        "note":"\"mobGriefing\" gamerule will determine\nwhether this will break blocks",
         "value_mode":"input",
         "value_display":"Blast Radius",
         "min": 1,
@@ -172,7 +172,7 @@
     },
     "860":{
         "display":"Roll Random Number",
-        "note":"Rolled number only lasts for the current tick.\n0 <= n < Max",
+        "note":"Rolled number only lasts for the\ncurrent tick.\n0 <= n < Max",
         "value_mode":"input",
         "value_display":"Max"
     },

@@ -56,7 +56,7 @@ function FunctionalityPage() {
                 />
             </div>
             <InputSlot defaultValue="ItemBuilderMainhand" onChange={setSlot}/>
-            <Condition type={1} structure={structure} onChange={setStructure} depth={0}/>
+            <Condition type={1} structure={structure} onChange={setStructure} depth={0} context={0}/>
             <CommandOutput structure={structure} id={itemId} slot={slot} includeGive={includeGive}/>
         </div>
     );

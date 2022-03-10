@@ -269,14 +269,17 @@
         "value_display":"Value"
     },
     "870":{
-        "display":"Item is Unprimed"
+        "display":"Item is Unprimed",
+        "note":"Used with Condition #870"
     },
     "871":{
         "display":"Item became Unprimed",
+        "note":"Used with Condition #870",
         "instant":true
     },
     "875":{
-        "display":"Item is Activated"
+        "display":"Item is Activated",
+        "note":"Used with Condition #875"
     },
     "900":{
         "display":"Timer",
