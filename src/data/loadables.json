@@ -1,0 +1,32 @@
+{
+    "1":{
+        "display":"Arrow"
+    },
+    "2":{
+        "display":"Spectral Arrow"
+    },
+    "10":{
+        "display":"Arrow of Slowness"
+    },
+    "11":{
+        "display":"Arrow of Weakness"
+    },
+    "12":{
+        "display":"Arrow of Harming"
+    },
+    "13":{
+        "display":"Arrow of Healing"
+    },
+    "14":{
+        "display":"Arrow of Poison"
+    },
+    "15":{
+        "display":"Arrow of Levitation"
+    },
+    "30":{
+        "display":"Firework Rocket"
+    },
+    "50":{
+        "display":"Arrow From Inventory"
+    }
+}

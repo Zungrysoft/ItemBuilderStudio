@@ -2,12 +2,12 @@ import '../App.css';
 import effectData from '../data/effects.json';
 import conditionData from '../data/conditions.json';
 import filterData from '../data/filters.json';
+import InputId from './InputId.js';
 
 function Input({ type, id, jsonKey, startValue, onChange }) {
     let mode = null
     let labelName = ""
     let data = null;
-    let isInstant = false;
 
     // Effects
     if (type === 0) {
@@ -43,6 +43,7 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
     mode = data[id][jsonKey + "_mode"]
     labelName = data[id][jsonKey + "_display"]
 
+    console.log(mode)
     // Build label object
     let label = <p className="condition-label">{labelName + ": "}</p>
     
@@ -59,11 +60,18 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
             </div>
         );
     }
-
-    // No data to enter
-    return (
-        <div/>
-    );
+    else {
+        return (
+            <div>
+                {label}
+                <InputId
+                    type={mode}
+                    startValue={startValue}
+                    onChange={onChange}
+                />
+            </div>
+        );
+    }
 }
 
 export default Input;

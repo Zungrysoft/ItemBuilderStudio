@@ -3,6 +3,9 @@ import effectData from '../data/effects.json';
 import conditionData from '../data/conditions.json';
 import filterData from '../data/filters.json';
 
+import loadableData from '../data/loadables.json';
+import soundData from '../data/sounds.json';
+
 function getCategory( type, id ) {
     if (0 <= id && id < 100) {return "Utility";}
     if (800 <= id && id < 900) {return "Logic";}
@@ -22,6 +25,11 @@ function getCategory( type, id ) {
     else if (type === 2) {
         if (100 <= id && id < 200) {return "Contextual";}
     }
+    else if (type === "sound") {
+        if (100 <= id && id < 200) {return "Passive";}
+        if (200 <= id && id < 300) {return "Instant";}
+        if (300 <= id && id < 400) {return "Attack";}
+    }
 
     return "Misc"
 }
@@ -31,21 +39,36 @@ function InputId({ type, startValue, onChange }) {
     let labelName = "";
     let options = [];
     let optionGroups = [];
+    let useCategories = false;
 
     // Effects
     if (type === 0) {
         data = effectData;
-        labelName = "Effect"
+        labelName = "Effect";
+        useCategories = true;
     }
     // Conditions
     else if (type === 1) {
         data = conditionData;
-        labelName = "Condition"
+        labelName = "Condition";
+        useCategories = true;
     }
     // Filters
     else if (type === 2) {
         data = filterData;
-        labelName = "Filter"
+        labelName = "Filter";
+        useCategories = true;
+    }
+    // Other dropdowns
+    else if (type === "loadable") {
+        data = loadableData;
+    }
+    else if (type === "sound") {
+        data = soundData;
+        useCategories = true;
+    }
+    else {
+        return <div/>
     }
 
     // Create option list from json data
@@ -53,15 +76,17 @@ function InputId({ type, startValue, onChange }) {
     let curList = [];
     Object.keys(data).forEach(function(id, _) {
         // Whenever the category changes, form a new group from collected elements
-        let category = getCategory(type, id);
-        if (category != prev) {
-            optionGroups.push(
-                <optgroup label={prev}>
-                    {curList}
-                </optgroup>
-            );
-            curList = [];
-            prev = category;
+        if (useCategories) {
+            let category = getCategory(type, id);
+            if (category != prev) {
+                optionGroups.push(
+                    <optgroup label={prev}>
+                        {curList}
+                    </optgroup>
+                );
+                curList = [];
+                prev = category;
+            }
         }
         // Determine the label for the option
         let labelName = data[id].display;
@@ -76,18 +101,25 @@ function InputId({ type, startValue, onChange }) {
             </option>
         )
     });
-    // Collect remaining elements at the end
-    optionGroups.push(
-        <optgroup label={prev}>
-            {curList}
-        </optgroup>
-    );
-    // This method inserts an unwanted first group. This line removes it.
-    optionGroups = optionGroups.splice(1);
+    
+    if (useCategories) {
+        // Collect remaining elements at the end
+        optionGroups.push(
+            <optgroup label={prev}>
+                {curList}
+            </optgroup>
+        );
+        // This method inserts an unwanted first group. This line removes it.
+        optionGroups = optionGroups.splice(1);
+    }
+    else {
+        // Bypasses option grouping by setting the optionGroups list equal to the options list
+        optionGroups = curList;
+    }
 
     return (
         <div>
-            <p className="condition-label">{labelName + ": "}</p>
+            {labelName == "" ? <div/> : <p className="condition-label">{labelName + ": "}</p>}
             <select className="input-item" value={startValue} onChange={(e) => onChange(e.target.value)}>
                 {optionGroups}
             </select>
