@@ -5,6 +5,11 @@ import filterData from '../data/filters.json';
 
 import loadableData from '../data/loadables.json';
 import soundData from '../data/sounds.json';
+import rangeData from '../data/ranges.json';
+import slotData from '../data/slots.json';
+import mobTypeData from '../data/mob_types.json';
+import durationData from '../data/durations.json';
+import resourceData from '../data/resources.json';
 
 function getCategory( type, id ) {
     if (0 <= id && id < 100) {return "Utility";}
@@ -13,6 +18,8 @@ function getCategory( type, id ) {
     if (type === 0) {
         if (100 <= id && id < 200) {return "Attributes";}
         if (200 <= id && id < 300) {return "Bonuses";}
+        if (300 <= id && id < 350) {return "Passive Potion Effects";}
+        if (350 <= id && id < 400) {return "Cleanse Potion Effects";}
         if (400 <= id && id < 500) {return "Item Modification";}
         if (500 <= id && id < 600) {return "Special Attacks";}
     }
@@ -67,8 +74,30 @@ function InputId({ type, startValue, onChange }) {
         data = soundData;
         useCategories = true;
     }
+    else if (type === "range") {
+        data = rangeData;
+    }
+    else if (type === "slot") {
+        data = slotData;
+    }
+    else if (type === "mob_type") {
+        data = mobTypeData;
+    }
+    else if (type === "duration") {
+        data = durationData;
+    }
+    else if (type === "resource") {
+        data = resourceData;
+    }
     else {
         return <div/>
+    }
+
+    // If the current value is not within the list, set it to something in the list
+    if (!(startValue in data)) {
+        if (Object.keys(data).length > 0) {
+            onChange(Object.keys(data)[0]);
+        }
     }
 
     // Create option list from json data
@@ -94,7 +123,6 @@ function InputId({ type, startValue, onChange }) {
         if ("instant" in data[id] && data[id].instant == true) {
             labelName = "*" + labelName;
         }
-        
         curList.push(
             <option value={id}>
                 {labelName}

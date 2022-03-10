@@ -1,0 +1,47 @@
+{
+    "0":{
+        "display":"Gold Ingot"
+    },
+    "1":{
+        "display":"Gold Nugget"
+    },
+    "2":{
+        "display":"Iron Ingot"
+    },
+    "3":{
+        "display":"Iron Nugget"
+    },
+    "4":{
+        "display":"Emerald"
+    },
+    "5":{
+        "display":"Diamond"
+    },
+    "6":{
+        "display":"Coal"
+    },
+    "20":{
+        "display":"Gunpowder"
+    },
+    "21":{
+        "display":"Bone"
+    },
+    "22":{
+        "display":"Rotten Flesh"
+    },
+    "23":{
+        "display":"Bone"
+    },
+    "24":{
+        "display":"Spider Eye"
+    },
+    "50":{
+        "display":"Arrow"
+    },
+    "51":{
+        "display":"Fire Charge"
+    },
+    "80":{
+        "display":"Magic Scroll"
+    }
+}

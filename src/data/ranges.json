@@ -17,25 +17,25 @@
     "5":{
         "display":"5 Blocks"
     },
-    "6":{
+    "7":{
         "display":"7 Blocks"
     },
-    "7":{
+    "10":{
         "display":"10 Blocks"
     },
-    "8":{
+    "15":{
         "display":"15 Blocks"
     },
-    "9":{
+    "20":{
         "display":"20 Blocks"
     },
-    "10":{
+    "30":{
         "display":"30 Blocks"
     },
-    "11":{
+    "50":{
         "display":"50 Blocks"
     },
-    "12":{
+    "100":{
         "display":"100 Blocks"
     }
 }

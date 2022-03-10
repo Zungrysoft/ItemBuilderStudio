@@ -1,0 +1,62 @@
+{
+    "1":{
+        "display":"Creeper"
+    },
+    "2":{
+        "display":"Husk"
+    },
+    "3":{
+        "display":"Stray"
+    },
+    "4":{
+        "display":"Wither Skeleton"
+    },
+    "5":{
+        "display":"Blaze"
+    },
+    "6":{
+        "display":"Silverfish"
+    },
+    "7":{
+        "display":"Witch"
+    },
+    "8":{
+        "display":"Vex"
+    },
+    "9":{
+        "display":"Ravager"
+    },
+    "50":{
+        "display":"Zombie (Includes Variants)"
+    },
+    "51":{
+        "display":"Skeleton (Includes Variants)"
+    },
+    "52":{
+        "display":"Spider (Includes Variants)"
+    },
+    "53":{
+        "display":"Piglin (Includes Variants)"
+    },
+    "54":{
+        "display":"Arthropod"
+    },
+    "55":{
+        "display":"Illager"
+    },
+    "56":{
+        "display":"Flying Monster"
+    },
+    "70":{
+        "display":"Undead Monster"
+    },
+    "71":{
+        "display":"Nether Monster"
+    },
+    "72":{
+        "display":"End Monster"
+    },
+    "73":{
+        "display":"Aquatic Monster"
+    }
+}

@@ -5,33 +5,8 @@ import InputSlot from '../components/InputSlot.js';
 
 function FunctionalityPage() {
     const [structure, setStructure] = useState({
-        id: 5,
-        value:70,
         effects:[],
-        conditions:[
-            {
-                id: 6,
-                value:71,
-                effects:[],
-                conditions:[
-                    {
-                        id: 10,
-                        value:78,
-                        effects:[],
-                        conditions: [],
-                        filters: [],
-                    },
-                    {
-                        id: 10,
-                        value:77,
-                        effects:[],
-                        conditions: [],
-                        filters:[],
-                    }
-                ],
-                filters:[],
-            }
-        ],
+        conditions:[],
         filters:[],
     });
     const [itemId, setItemId] = useState("minecraft:iron_sword");

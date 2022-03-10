@@ -28,117 +28,381 @@
         "value_display":"Amount"
     },
     "105":{
-        "display":"Plus Knockback Resistance",
-        "value_mode":"input",
-        "value_display":"Percent"
-    },
-    "106":{
         "display":"Plus Armor Toughness",
         "value_mode":"input",
         "value_display":"Amount"
     },
+    "106":{
+        "display":"Plus Knockback Resistance",
+        "value_mode":"input",
+        "value_display":"Percent"
+    },
+    "200":{
+        "display":"Gain Potion Effect for Duration",
+        "value_mode":"potion_effect",
+        "value_display":"Potion Effect",
+        "value2_mode":"duration",
+        "value2_display":"Duration",
+        "has_sounds":true,
+        "instant": true
+    },
+    "201":{
+        "display":"Heal 4 Health",
+        "value_mode":"input",
+        "value_display":"Times to Heal 4 Health",
+        "has_sounds":true,
+        "instant": true
+    },
+    "202":{
+        "display":"Take 6 Damage",
+        "value_mode":"input",
+        "value_display":"Times to Take 6 Damage",
+        "has_sounds":true,
+        "instant": true
+    },
+    "203":{
+        "display":"Regain Hunger",
+        "value_mode":"input",
+        "value_display":"Hunger Gained",
+        "has_sounds":true,
+        "instant": true
+    },
+    "210":{
+        "display":"Gain XP Points",
+        "note":"Negative values remove XP.",
+        "value_mode":"input",
+        "value_display":"Points",
+        "has_sounds":true,
+        "instant": true
+    },
+    "211":{
+        "display":"Gain XP Levels",
+        "note":"Negative values remove XP.",
+        "value_mode":"input",
+        "value_display":"Levels",
+        "has_sounds":true,
+        "instant": true
+    },
+    "212":{
+        "display":"Lose all XP",
+        "has_sounds":true,
+        "instant": true
+    },
+    "220":{
+        "display":"Receive Resource Item",
+        "note":"Negative values will clear items.",
+        "value_mode":"resource",
+        "value_display":"Resource",
+        "value2_mode":"input",
+        "value2_display":"Count",
+        "instant": true
+    },
+    "300":{
+        "display":"Passive Blindness"
+    },
+    "301":{
+        "display":"Passive Dolphin's Grace"
+    },
+    "302":{
+        "display":"Passive Fire Resistance"
+    },
+    "303":{
+        "display":"Passive Glowing"
+    },
+    "304":{
+        "display":"Passive Haste",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "305":{
+        "display":"Passive Hunger",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "306":{
+        "display":"Passive Invisibility"
+    },
+    "307":{
+        "display":"Passive Jump Boost",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "308":{
+        "display":"Passive Levitation",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "309":{
+        "display":"Passive Mining Fatigue",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":2
+    },
+    "310":{
+        "display":"Passive Nausea"
+    },
+    "311":{
+        "display":"Passive Night Vision"
+    },
+    "312":{
+        "display":"Passive Poison",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":4
+    },
+    "313":{
+        "display":"Passive Regeneration",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":4
+    },
+    "314":{
+        "display":"Passive Resistance",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":4
+    },
+    "315":{
+        "display":"Passive Slow-Falling"
+    },
+    "316":{
+        "display":"Passive Speed",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "317":{
+        "display":"Passive Strength",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "318":{
+        "display":"Passive Water-Breathing"
+    },
+    "319":{
+        "display":"Passive Weakness",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
+    },
+    "320":{
+        "display":"Passive Wither",
+        "value_mode":"value_range",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":4
+    },
+    "350":{
+        "display":"Cleanse Blindness"
+    },
+    "351":{
+        "display":"Cleanse Dolphin's Grace"
+    },
+    "352":{
+        "display":"Cleanse Fire Resistance"
+    },
+    "353":{
+        "display":"Cleanse Glowing"
+    },
+    "354":{
+        "display":"Cleanse Haste"
+    },
+    "355":{
+        "display":"Cleanse Hunger"
+    },
+    "356":{
+        "display":"Cleanse Invisibility"
+    },
+    "357":{
+        "display":"Cleanse Jump Boost"
+    },
+    "358":{
+        "display":"Cleanse Levitation"
+    },
+    "359":{
+        "display":"Cleanse Mining Fatigue"
+    },
+    "360":{
+        "display":"Cleanse Nausea"
+    },
+    "361":{
+        "display":"Cleanse Night Vision"
+    },
+    "362":{
+        "display":"Cleanse Poison"
+    },
+    "363":{
+        "display":"Cleanse Regeneration"
+    },
+    "364":{
+        "display":"Cleanse Resistance"
+    },
+    "365":{
+        "display":"Cleanse Slow-Falling"
+    },
+    "366":{
+        "display":"Cleanse Speed"
+    },
+    "367":{
+        "display":"Cleanse Strength"
+    },
+    "368":{
+        "display":"Cleanse Water-Breathing"
+    },
+    "369":{
+        "display":"Cleanse Weakness"
+    },
+    "370":{
+        "display":"Cleanse Wither"
+    },
+    "371":{
+        "display":"Cleanse Absorption"
+    },
     "420":{
-        "instant": true,
         "display":"Item Takes Durability Damage",
         "note":"Negative values will repair the item.",
         "value_mode":"input",
-        "value_display":"Amount"
+        "value_display":"Amount",
+        "has_sounds":true,
+        "instant": true
     },
     "421":{
-        "instant": true,
-        "display":"Item is Restored to Full Durability"
+        "display":"Item is Restored to Full Durability",
+        "has_sounds":true,
+        "instant": true
     },
     "430":{
-        "instant": true,
         "display":"Set Item Count",
         "value_mode":"input",
-        "value_display":"Count"
+        "value_display":"Count",
+        "instant": true
     },
     "431":{
-        "instant": true,
         "display":"Increase Item Count",
         "value_mode":"input",
-        "value_display":"Count"
+        "value_display":"Count",
+        "instant": true
     },
-    "480":{
-        "instant": true,
+    "450":{
         "display":"Reload this Crossbow",
         "value_mode":"loadable",
-        "value_display":"Projectile"
+        "value_display":"Projectile",
+        "has_sounds":true,
+        "instant": true
     },
-    "481":{
-        "instant": true,
+    "451":{
         "display":"Reload all Crossbows on Hotbar",
         "value_mode":"loadable",
-        "value_display":"Projectile"
+        "value_display":"Projectile",
+        "has_sounds":true,
+        "instant": true
+    },
+    "480":{
+        "display":"Item Breaks",
+        "has_sounds":true,
+        "instant": true
+    },
+    "481":{
+        "display":"Item Falls Out",
+        "has_sounds":true,
+        "instant": true
+    },
+    "482":{
+        "display":"Item is Removed from Slot",
+        "has_sounds":true,
+        "instant": true
     },
     "500":{
-        "instant": true,
-        "display":"Set on Fire"
+        "display":"Set on Fire",
+        "has_sounds":true,
+        "instant": true
     },
     "501":{
-        "instant": true,
         "display":"Set Ground on Fire",
-        "value_mode":"input",
+        "value_mode":"value_range",
         "value_display":"Radius",
         "min": 1,
-        "max": 5
+        "max": 5,
+        "has_sounds":true,
+        "instant": true
     },
     "502":{
-        "instant": true,
-        "display":"Call Lightning Strike"
+        "display":"Call Lightning Strike",
+        "instant": true
     },
     "503":{
-        "instant": true,
         "display":"Summon Explosion",
         "note":"\"mobGriefing\" gamerule will determine\nwhether this will break blocks",
-        "value_mode":"input",
+        "value_mode":"value_range",
         "value_display":"Blast Radius",
         "min": 1,
-        "max": 5
+        "max": 5,
+        "instant": true
     },
     "520":{
-        "instant": true,
-        "monster_only": true,
         "display":"Launch Upwards",
         "value_mode":"input",
-        "value_display":"Launch Force"
+        "value_display":"Launch Force",
+        "monster_only": true,
+        "has_sounds":true,
+        "instant": true
+    },
+    "580":{
+        "display":"Kills You Instantly",
+        "note":"Please use with care.",
+        "instant": true
     },
     "800":{
-        "instant": true,
         "display":"Set SavedCounter1",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "801":{
-        "instant": true,
         "display":"Increase SavedCounter1",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "805":{
-        "instant": true,
         "display":"Set SavedCounter2",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "806":{
-        "instant": true,
         "display":"Increase SavedCounter2",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "810":{
-        "instant": true,
         "display":"Set SavedCounter3",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "811":{
-        "instant": true,
         "display":"Increase SavedCounter3",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "instant": true
     },
     "840":{
         "display":"Set FrameCounter1",
@@ -177,16 +441,16 @@
         "value_display":"Max"
     },
     "870":{
-        "instant": true,
         "display":"Prime Item",
         "note":"Used with Effects #870 and #871",
         "value_mode":"input",
-        "value_display":"Ticks"
+        "value_display":"Ticks",
+        "instant": true
     },
     "875":{
-        "instant": true,
         "display":"Activate Item",
-        "note":"Used with Effect #875"
+        "note":"Used with Effect #875",
+        "instant": true
     },
     "900":{
         "display":"Sound/Particle Effect",
@@ -194,9 +458,9 @@
         "value_display":"Effect"
     },
     "901":{
-        "instant": true,
         "display":"Chat Message",
         "text_mode":"input",
-        "text_display":"Message"
+        "text_display":"Message",
+        "instant": true
     }
 }

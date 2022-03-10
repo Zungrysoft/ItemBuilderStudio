@@ -1,8 +1,10 @@
 import '../App.css';
+import InputId from './InputId.js';
+import InputRange from './InputRange.js';
+
 import effectData from '../data/effects.json';
 import conditionData from '../data/conditions.json';
 import filterData from '../data/filters.json';
-import InputId from './InputId.js';
 
 function Input({ type, id, jsonKey, startValue, onChange }) {
     let mode = null
@@ -56,6 +58,18 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
                     type="text"
                     defaultValue={startValue}
                     onChange={(e) => onChange(e.target.value)}
+                />
+            </div>
+        );
+    }
+    else if (mode === "value_range") {
+        return (
+            <div>
+                {label}
+                <InputRange
+                    startValue={startValue}
+                    data={data[id]}
+                    onChange={onChange}
                 />
             </div>
         );

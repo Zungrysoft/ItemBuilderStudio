@@ -1,0 +1,38 @@
+{
+    "1":{
+        "display":"1 Second"
+    },
+    "2":{
+        "display":"2 Seconds"
+    },
+    "3":{
+        "display":"3 Seconds"
+    },
+    "5":{
+        "display":"5 Seconds"
+    },
+    "7":{
+        "display":"7 Seconds"
+    },
+    "10":{
+        "display":"10 Seconds"
+    },
+    "20":{
+        "display":"20 Seconds"
+    },
+    "30":{
+        "display":"30 Seconds"
+    },
+    "60":{
+        "display":"1 Minute"
+    },
+    "180":{
+        "display":"3 Minutes"
+    },
+    "300":{
+        "display":"5 Minutes"
+    },
+    "600":{
+        "display":"10 Minutes"
+    }
+}
