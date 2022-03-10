@@ -7,6 +7,7 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
     let mode = null
     let labelName = ""
     let data = null;
+    let isInstant = false;
 
     // Effects
     if (type === 0) {
@@ -41,10 +42,6 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
     // Pull out data
     mode = data[id][jsonKey + "_mode"]
     labelName = data[id][jsonKey + "_display"]
-    
-    if (mode === null) {
-        return <div/>
-    }
 
     // Build label object
     let label = <p className="condition-label">{labelName + ": "}</p>

@@ -108,6 +108,20 @@ function Condition({ type, structure, onChange, depth }) {
                             }}
                         />
                     </div>
+                    <div className="entry">
+                        <InputValue
+                            type={type}
+                            id={structure.id}
+                            jsonKey="text"
+                            startValue={structure.text}
+                            onChange={(val) => {
+                                onChange({
+                                    ...structure,
+                                    text: val
+                                })
+                            }}
+                        />
+                    </div>
                     <Note
                         type={type}
                         id={structure.id}

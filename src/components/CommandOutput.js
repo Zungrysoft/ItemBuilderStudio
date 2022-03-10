@@ -1,8 +1,8 @@
 import '../App.css';
 
-function jsonParam(item, key) {
+function jsonParam(item, key, quotes) {
     if (item && item != 0 && item != "") {
-        return "," + key + ":" + item;
+        return "," + key + ":" + quotes + item + quotes;
     }
     return "";
 }
@@ -32,12 +32,12 @@ function generateCondition(structure, isBase) {
     // Condition parameters
     if (!isBase) {
         output += "Id:" + structure.id;
-        output += jsonParam(structure.value,"Value");
-        output += jsonParam(structure.value2,"Value2");
-        output += jsonParam(structure.value3,"Value3");
-        output += jsonParam(structure.nosound,"NoSound");
-        output += jsonParam(structure.inverted,"Inverted");
-        output += jsonParam(structure.text,"Text");
+        output += jsonParam(structure.value,"Value","");
+        output += jsonParam(structure.value2,"Value2","");
+        output += jsonParam(structure.value3,"Value3","");
+        output += jsonParam(structure.nosound,"NoSound","");
+        output += jsonParam(structure.inverted,"Inverted","");
+        output += jsonParam(structure.text,"Text","\\\"");
     }
 
     // Child Effects

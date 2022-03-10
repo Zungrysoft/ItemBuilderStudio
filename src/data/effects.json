@@ -108,67 +108,67 @@
         "instant": true,
         "display":"Set SavedCounter1",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "801":{
         "instant": true,
         "display":"Increase SavedCounter1",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "805":{
         "instant": true,
         "display":"Set SavedCounter2",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "806":{
         "instant": true,
         "display":"Increase SavedCounter2",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "810":{
         "instant": true,
         "display":"Set SavedCounter3",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "811":{
         "instant": true,
         "display":"Increase SavedCounter3",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "840":{
         "display":"Set FrameCounter1",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "841":{
         "display":"Increase FrameCounter1",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "845":{
         "display":"Set FrameCounter2",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "846":{
         "display":"Increase FrameCounter2",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "850":{
         "display":"Set FrameCounter3",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "851":{
         "display":"Increase FrameCounter3",
         "value_mode":"input",
-        "value_display":"value_mode"
+        "value_display":"Value"
     },
     "860":{
         "display":"Roll Random Number",
@@ -196,7 +196,7 @@
     "901":{
         "instant": true,
         "display":"Chat Message",
-        "text":"sound",
+        "text_mode":"input",
         "text_display":"Message"
     }
 }

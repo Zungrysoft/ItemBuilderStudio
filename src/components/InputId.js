@@ -63,9 +63,16 @@ function InputId({ type, startValue, onChange }) {
             curList = [];
             prev = category;
         }
+        // Determine the label for the option
+        let labelName = data[id].display;
+        // Add asterisk if this is an instant condition
+        if ("instant" in data[id] && data[id].instant == true) {
+            labelName = "*" + labelName;
+        }
+        
         curList.push(
             <option value={id}>
-                {data[id].display}
+                {labelName}
             </option>
         )
     });

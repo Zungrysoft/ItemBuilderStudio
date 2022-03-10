@@ -199,72 +199,72 @@
         "value_display":"Type"
     },
     "800":{
-        "display":"SavedCounter1 Equals Value",
+        "display":"SavedCounter1 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "801":{
-        "display":"SavedCounter1 is Greater Than or Equal to Value",
+        "display":"SavedCounter1 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "805":{
-        "display":"SavedCounter2 Equals Value",
+        "display":"SavedCounter2 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "806":{
-        "display":"SavedCounter2 is Greater Than or Equal to Value",
+        "display":"SavedCounter2 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "810":{
-        "display":"SavedCounter3 Equals Value",
+        "display":"SavedCounter3 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "811":{
-        "display":"SavedCounter3 is Greater Than or Equal to Value",
+        "display":"SavedCounter3 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "840":{
-        "display":"FrameCounter1 Equals Value",
+        "display":"FrameCounter1 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "841":{
-        "display":"FrameCounter1 is Greater Than or Equal to Value",
+        "display":"FrameCounter1 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "845":{
-        "display":"FrameCounter2 Equals Value",
+        "display":"FrameCounter2 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "846":{
-        "display":"FrameCounter2 is Greater Than or Equal to Value",
+        "display":"FrameCounter2 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "850":{
-        "display":"FrameCounter3 Equals Value",
+        "display":"FrameCounter3 = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "851":{
-        "display":"FrameCounter3 is Greater Than or Equal to Value",
+        "display":"FrameCounter3 >= Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "860":{
-        "display":"Rolled Random Number Equals Value",
+        "display":"Rolled Random Number = Value",
         "value_mode":"input",
         "value_display":"Value"
     },
     "861":{
-        "display":"Rolled Number is Greater Than or Equal to Value",
+        "display":"Rolled Random Number >= to Value",
         "value_mode":"input",
         "value_display":"Value"
     },
