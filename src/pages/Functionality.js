@@ -18,13 +18,13 @@ function FunctionalityPage() {
             <div className="entry">
                 <p className="label">Item Id: </p>
                 <input
-                    className="text-box"
+                    className="input-box"
                     type="text"
                     defaultValue={"minecraft:iron_sword"}
                     onChange={(e) => {setItemId(e.target.value);}}
                 />
                 <input
-                    className="text-box"
+                    className="input-checkbox"
                     type="checkbox"
                     checked={includeGive}
                     onChange={(e) => {setIncludeGive(e.target.checked);}}

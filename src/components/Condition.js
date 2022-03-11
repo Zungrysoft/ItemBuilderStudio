@@ -5,6 +5,8 @@ import AddFilterButton from './AddFilterButton.js';
 import DeleteButton from './DeleteButton.js';
 import InputId from './InputId.js';
 import InputValue from './InputValue.js';
+import InputCheckbox from './InputCheckbox.js';
+import InputNoSound from './InputNoSound.js';
 import Note from './Note.js';
 import '../App.css';
 
@@ -14,8 +16,8 @@ function newCondition() {
         value: 0,
         value2: 0,
         value3: 0,
-        inverted: 0,
-        nosound: 0,
+        inverted: false,
+        nosound: false,
         text: "",
         effects: [],
         conditions: [],
@@ -122,6 +124,35 @@ function Condition({ type, structure, onChange, depth }) {
                             }}
                         />
                     </div>
+                    {type === 0 ?
+                        <div className="entry">
+                            <InputNoSound
+                                label="No Sound"
+                                id={structure.id}
+                                startValue={structure.nosound}
+                                onChange={(val) => {
+                                    onChange({
+                                        ...structure,
+                                        nosound: val
+                                    })
+                                }}
+                            />
+                        </div>
+                    : <div/>}
+                    {type === 1 ?
+                        <div className="entry">
+                            <InputCheckbox
+                                label="Inverted"
+                                startValue={structure.inverted}
+                                onChange={(val) => {
+                                    onChange({
+                                        ...structure,
+                                        inverted: val
+                                    })
+                                }}
+                            />
+                        </div>
+                    : <div/>}
                     <Note
                         type={type}
                         id={structure.id}

@@ -74,6 +74,19 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
             </div>
         );
     }
+    else if (mode === "value_range_amp") {
+        return (
+            <div>
+                {label}
+                <InputRange
+                    startValue={startValue}
+                    data={data[id]}
+                    onChange={onChange}
+                    style={1}
+                />
+            </div>
+        );
+    }
     else {
         return (
             <div>

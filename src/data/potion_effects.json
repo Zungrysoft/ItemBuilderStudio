@@ -1,5 +1,95 @@
 {
     "0":{
-        "display":"Unlimited Range"
+        "display":"Speed"
+    },
+    "1":{
+        "display":"Speed II"
+    },
+    "4":{
+        "display":"Speed V"
+    },
+    "10":{
+        "display":"Strength"
+    },
+    "11":{
+        "display":"Strength II"
+    },
+    "19":{
+        "display":"Strength V"
+    },
+    "20":{
+        "display":"Resistance"
+    },
+    "21":{
+        "display":"Resistance II"
+    },
+    "24":{
+        "display":"Resistance V"
+    },
+    "30":{
+        "display":"Haste"
+    },
+    "31":{
+        "display":"Haste II"
+    },
+    "39":{
+        "display":"Haste X"
+    },
+    "40":{
+        "display":"Slowness"
+    },
+    "41":{
+        "display":"Slowness II"
+    },
+    "49":{
+        "display":"Slowness X"
+    },
+    "50":{
+        "display":"Weakness"
+    },
+    "51":{
+        "display":"Weakness II"
+    },
+    "59":{
+        "display":"Weakness X"
+    },
+    "60":{
+        "display":"Wither"
+    },
+    "61":{
+        "display":"Wither II"
+    },
+    "64":{
+        "display":"Wither V"
+    },
+    "70":{
+        "display":"Levitation"
+    },
+    "72":{
+        "display":"Levitation III"
+    },
+    "74":{
+        "display":"Levitation V"
+    },
+    "80":{
+        "display":"Absorption"
+    },
+    "81":{
+        "display":"Absorption II"
+    },
+    "84":{
+        "display":"Absorption V"
+    },
+    "90":{
+        "display":"Regeneration"
+    },
+    "91":{
+        "display":"Regeneration II"
+    },
+    "94":{
+        "display":"Regeneration V"
+    },
+    "100":{
+        "display":"Fire Resistance"
     }
 }

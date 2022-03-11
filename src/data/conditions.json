@@ -179,10 +179,14 @@
         "display":"In Lava"
     },
     "383":{
-        "display":"In Light Level 8 or Greater"
+        "display":"In Light Level",
+        "value_mode":"input",
+        "value_display":"Minimum Light Level"
     },
     "390":{
         "display":"Monster is of Type",
+        "value_mode":"mob_type",
+        "value_display":"Type",
         "monster_only":true
     },
     "400":{

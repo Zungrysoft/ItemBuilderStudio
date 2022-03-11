@@ -43,28 +43,28 @@
         "value_display":"Potion Effect",
         "value2_mode":"duration",
         "value2_display":"Duration",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "201":{
         "display":"Heal 4 Health",
         "value_mode":"input",
         "value_display":"Times to Heal 4 Health",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "202":{
         "display":"Take 6 Damage",
         "value_mode":"input",
         "value_display":"Times to Take 6 Damage",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "203":{
         "display":"Regain Hunger",
         "value_mode":"input",
         "value_display":"Hunger Gained",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "210":{
@@ -72,7 +72,7 @@
         "note":"Negative values remove XP.",
         "value_mode":"input",
         "value_display":"Points",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "211":{
@@ -80,12 +80,12 @@
         "note":"Negative values remove XP.",
         "value_mode":"input",
         "value_display":"Levels",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "212":{
         "display":"Lose all XP",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "220":{
@@ -111,14 +111,14 @@
     },
     "304":{
         "display":"Passive Haste",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "305":{
         "display":"Passive Hunger",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
@@ -128,21 +128,21 @@
     },
     "307":{
         "display":"Passive Jump Boost",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "308":{
         "display":"Passive Levitation",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "309":{
         "display":"Passive Mining Fatigue",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":2
@@ -155,21 +155,21 @@
     },
     "312":{
         "display":"Passive Poison",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":4
     },
     "313":{
         "display":"Passive Regeneration",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":4
     },
     "314":{
         "display":"Passive Resistance",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":4
@@ -179,14 +179,14 @@
     },
     "316":{
         "display":"Passive Speed",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "317":{
         "display":"Passive Strength",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
@@ -196,14 +196,14 @@
     },
     "319":{
         "display":"Passive Weakness",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "320":{
         "display":"Passive Wither",
-        "value_mode":"value_range",
+        "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":4
@@ -279,12 +279,12 @@
         "note":"Negative values will repair the item.",
         "value_mode":"input",
         "value_display":"Amount",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "421":{
         "display":"Item is Restored to Full Durability",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "430":{
@@ -303,34 +303,34 @@
         "display":"Reload this Crossbow",
         "value_mode":"loadable",
         "value_display":"Projectile",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "451":{
         "display":"Reload all Crossbows on Hotbar",
         "value_mode":"loadable",
         "value_display":"Projectile",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "480":{
         "display":"Item Breaks",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "481":{
         "display":"Item Falls Out",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "482":{
         "display":"Item is Removed from Slot",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "500":{
         "display":"Set on Fire",
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "501":{
@@ -339,7 +339,7 @@
         "value_display":"Radius",
         "min": 1,
         "max": 5,
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "502":{
@@ -360,7 +360,7 @@
         "value_mode":"input",
         "value_display":"Launch Force",
         "monster_only": true,
-        "has_sounds":true,
+        "has_sound":true,
         "instant": true
     },
     "580":{
