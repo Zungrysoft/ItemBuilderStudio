@@ -10,6 +10,7 @@ import slotData from '../data/slots.json';
 import mobTypeData from '../data/mob_types.json';
 import durationData from '../data/durations.json';
 import resourceData from '../data/resources.json';
+import equipmentData from '../data/equipment.json';
 import potionEffectData from '../data/potion_effects.json';
 
 function getCategory( type, id ) {
@@ -89,6 +90,9 @@ function InputId({ type, startValue, onChange }) {
     }
     else if (type === "resource") {
         data = resourceData;
+    }
+    else if (type === "equipment") {
+        data = equipmentData;
     }
     else if (type === "potion_effect") {
         data = potionEffectData;

@@ -1,0 +1,104 @@
+{
+    "0":{
+        "display":"Empty Slot"
+    },
+    "1":{
+        "display":"Sword"
+    },
+    "2":{
+        "display":"Axe"
+    },
+    "3":{
+        "display":"Pickaxe"
+    },
+    "4":{
+        "display":"Shovel"
+    },
+    "5":{
+        "display":"Hoe"
+    },
+    "10":{
+        "display":"Helmet"
+    },
+    "11":{
+        "display":"Chestplate"
+    },
+    "12":{
+        "display":"Leggings"
+    },
+    "13":{
+        "display":"Boots"
+    },
+    "20":{
+        "display":"Wooden Equipment"
+    },
+    "21":{
+        "display":"Leather Equipment"
+    },
+    "22":{
+        "display":"Stone Equipment"
+    },
+    "23":{
+        "display":"Chainmail Equipment"
+    },
+    "24":{
+        "display":"Iron Equipment"
+    },
+    "25":{
+        "display":"Diamond Equipment"
+    },
+    "26":{
+        "display":"Netherite Equipment"
+    },
+    "27":{
+        "display":"Golden Equipment"
+    },
+    "40":{
+        "display":"Bow"
+    },
+    "41":{
+        "display":"Crossbow"
+    },
+    "42":{
+        "display":"Trident"
+    },
+    "43":{
+        "display":"Shield"
+    },
+    "44":{
+        "display":"Potion or Water Bottle"
+    },
+    "45":{
+        "display":"Totem of Undying"
+    },
+    "46":{
+        "display":"Golden Apple"
+    },
+    "47":{
+        "display":"Fishing Rod"
+    },
+    "48":{
+        "display":"Flint and Steel"
+    },
+    "49":{
+        "display":"Torch or Lantern"
+    },
+    "50":{
+        "display":"Elytra"
+    },
+    "51":{
+        "display":"Arrow (Includes Spectral/Tipped)"
+    },
+    "70":{
+        "display":"Empty Bucket"
+    },
+    "71":{
+        "display":"Water Bucket (Includes Fish Bucket)"
+    },
+    "72":{
+        "display":"Lava Bucket"
+    },
+    "73":{
+        "display":"Milk Bucket"
+    }
+}

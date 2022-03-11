@@ -357,6 +357,7 @@
     },
     "520":{
         "display":"Launch Upwards",
+        "note":"Does not affect players.",
         "value_mode":"input",
         "value_display":"Launch Force",
         "monster_only": true,
