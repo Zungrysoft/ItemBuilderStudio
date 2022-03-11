@@ -2,6 +2,12 @@
     "0":{
         "display":"No Effect"
     },
+    "1":{
+        "display":"Debug Message",
+        "text_mode":"input",
+        "text_display":"Print",
+        "instant": true
+    },
     "100":{
         "display":"Plus Attack Damage",
         "value_mode":"input",
@@ -456,7 +462,7 @@
     "900":{
         "display":"Sound/Particle Effect",
         "value_mode":"sound",
-        "value_display":"Effect"
+        "value_display":"Sound Effect"
     },
     "901":{
         "display":"Chat Message",

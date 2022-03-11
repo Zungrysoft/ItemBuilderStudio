@@ -164,7 +164,7 @@
     },
     "310":{
         "display":"Has a Resource Item",
-        "value_mode":"resources",
+        "value_mode":"resource",
         "value_display":"Resource",
         "value2_mode":"input",
         "value2_display":"Minimum Count"
