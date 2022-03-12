@@ -35,12 +35,10 @@ function generateCondition(structure, isBase) {
         output += jsonParam(structure.value,"Value","");
         output += jsonParam(structure.value2,"Value2","");
         output += jsonParam(structure.value3,"Value3","");
-        output += jsonParam(structure.nosound ? 1 : 0,"NoSound","");
-        output += jsonParam(structure.inverted ? 1 : 0,"Inverted","");
+        output += jsonParam(structure.nosound,"NoSound","");
+        output += jsonParam(structure.inverted,"Inverted","");
         output += jsonParam(structure.text,"Text","\"");
     }
-
-    // Child Effects
     
     // Child Conditions
     output += jsonChildren(structure.effects, "Effects");

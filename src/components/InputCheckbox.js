@@ -10,7 +10,7 @@ function InputSlot({ label, startValue, onChange }) {
                 type="checkbox"
                 id={"label_" + rnum}
                 checked={startValue}
-                onChange={(e) => {onChange(e.target.checked)}}
+                onChange={(e) => {onChange(e.target.checked ? 1 : 0)}}
             />
             
         </div>

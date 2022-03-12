@@ -184,30 +184,37 @@
         "display":"Passive Slow-Falling"
     },
     "316":{
-        "display":"Passive Speed",
+        "display":"Passive Slowness",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "317":{
-        "display":"Passive Strength",
+        "display":"Passive Speed",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
     "318":{
-        "display":"Passive Water-Breathing"
+        "display":"Passive Strength",
+        "value_mode":"value_range_amp",
+        "value_display":"Amplifier",
+        "min":0,
+        "max":9
     },
     "319":{
+        "display":"Passive Water-Breathing"
+    },
+    "320":{
         "display":"Passive Weakness",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
         "min":0,
         "max":9
     },
-    "320":{
+    "321":{
         "display":"Passive Wither",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
@@ -263,21 +270,24 @@
         "display":"Cleanse Slow-Falling"
     },
     "366":{
-        "display":"Cleanse Speed"
+        "display":"Cleanse Slowness"
     },
     "367":{
-        "display":"Cleanse Strength"
+        "display":"Cleanse Speed"
     },
     "368":{
-        "display":"Cleanse Water-Breathing"
+        "display":"Cleanse Strength"
     },
     "369":{
-        "display":"Cleanse Weakness"
+        "display":"Cleanse Water-Breathing"
     },
     "370":{
-        "display":"Cleanse Wither"
+        "display":"Cleanse Weakness"
     },
     "371":{
+        "display":"Cleanse Wither"
+    },
+    "372":{
         "display":"Cleanse Absorption"
     },
     "420":{
@@ -285,6 +295,8 @@
         "note":"Negative values will repair the item.",
         "value_mode":"input",
         "value_display":"Amount",
+        "value2_mode":"checkbox",
+        "value2_display":"Ignore Unbreaking",
         "has_sound":true,
         "instant": true
     },
@@ -449,14 +461,13 @@
     },
     "870":{
         "display":"Prime Item",
-        "note":"Used with Effects #870 and #871",
         "value_mode":"input",
         "value_display":"Ticks",
         "instant": true
     },
     "875":{
         "display":"Activate Item",
-        "note":"Used with Effect #875",
+        "has_sound":true,
         "instant": true
     },
     "900":{

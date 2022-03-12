@@ -2,6 +2,11 @@
     "0":{
         "display":"No Changes"
     },
+    "100":{
+        "display":"Executed as All Nearby Players",
+        "value_mode":"range",
+        "value_display":"Range"
+    },
     "101":{
         "display":"Executed as All Other Nearby Players",
         "value_mode":"range",

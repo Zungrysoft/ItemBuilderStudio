@@ -10,8 +10,5 @@
     },
     "ItemBuilderArmor":{
         "display":"Armor"
-    },
-    "ItemBuilderTrident":{
-        "display":"Thrown Trident"
     }
 }

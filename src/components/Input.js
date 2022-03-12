@@ -1,6 +1,7 @@
 import '../App.css';
 import InputId from './InputId.js';
 import InputRange from './InputRange.js';
+import InputCheckbox from './InputCheckbox.js';
 
 import effectData from '../data/effects.json';
 import conditionData from '../data/conditions.json';
@@ -83,6 +84,17 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
                     data={data[id]}
                     onChange={onChange}
                     style={1}
+                />
+            </div>
+        );
+    }
+    else if (mode === "checkbox") {
+        return (
+            <div>
+                <InputCheckbox
+                    label={labelName}
+                    startValue={startValue}
+                    onChange={onChange}
                 />
             </div>
         );

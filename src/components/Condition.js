@@ -4,7 +4,7 @@ import AddConditionButton from './AddConditionButton.js';
 import AddFilterButton from './AddFilterButton.js';
 import DeleteButton from './DeleteButton.js';
 import InputId from './InputId.js';
-import InputValue from './InputValue.js';
+import Input from './Input.js';
 import InputCheckbox from './InputCheckbox.js';
 import InputNoSound from './InputNoSound.js';
 import Note from './Note.js';
@@ -69,7 +69,7 @@ function Condition({ type, structure, onChange, depth }) {
                         />
                     </div>
                     <div className="entry">
-                        <InputValue
+                        <Input
                             type={type}
                             id={structure.id}
                             jsonKey="value"
@@ -83,7 +83,7 @@ function Condition({ type, structure, onChange, depth }) {
                         />
                     </div>
                     <div className="entry">
-                        <InputValue
+                        <Input
                             type={type}
                             id={structure.id}
                             jsonKey="value2"
@@ -97,7 +97,7 @@ function Condition({ type, structure, onChange, depth }) {
                         />
                     </div>
                     <div className="entry">
-                        <InputValue
+                        <Input
                             type={type}
                             id={structure.id}
                             jsonKey="value3"
@@ -111,7 +111,7 @@ function Condition({ type, structure, onChange, depth }) {
                         />
                     </div>
                     <div className="entry">
-                        <InputValue
+                        <Input
                             type={type}
                             id={structure.id}
                             jsonKey="text"
