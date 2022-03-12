@@ -4,7 +4,7 @@ import FunctionalityPage from './pages/Functionality.js';
 import CommandOutput from './components/CommandOutput.js';
 
 function App() {
-    // Data
+    const [page, setPage] = useState("functionality")
     const [data, setData] = useState({
         structure: {
             effects:[],
