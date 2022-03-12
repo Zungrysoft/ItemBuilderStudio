@@ -346,6 +346,12 @@
         "has_sound":true,
         "instant": true
     },
+    "490":{
+        "display":"Set CustomModelData",
+        "value_mode":"input",
+        "value_display":"Value",
+        "instant": true
+    },
     "500":{
         "display":"Set on Fire",
         "has_sound":true,

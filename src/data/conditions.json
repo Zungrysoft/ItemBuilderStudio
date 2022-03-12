@@ -198,6 +198,16 @@
         "value_display":"Minimum Damage"
     },
     "430":{
+        "display":"Item Count",
+        "value_mode":"input",
+        "value_display":"Count"
+    },
+    "431":{
+        "display":"Minimum Item Count",
+        "value_mode":"input",
+        "value_display":"Minimum Count"
+    },
+    "480":{
         "display":"Item is of Type",
         "value_mode":"equipment",
         "value_display":"Type"

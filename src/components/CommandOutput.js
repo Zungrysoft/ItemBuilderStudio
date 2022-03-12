@@ -1,5 +1,20 @@
 import '../App.css';
 
+function bindValue(num) {
+    // Make sure it's an int
+    num = parseInt(String(num).replace(/,/g, ""));
+
+    // Bind value to within the safe limits of Minecraft scoreboards
+    /*if (num > 2147483647) {
+        num = 2147483647;
+    }
+    if (num < -2147483648) {
+        num = -2147483648;
+    }*/
+
+    return num;
+}
+
 function jsonParam(item, key, quotes) {
     if (item && item != 0 && item != "") {
         return "," + key + ":" + quotes + item + quotes;
@@ -32,9 +47,9 @@ function generateCondition(structure, isBase) {
     // Condition parameters
     if (!isBase) {
         output += "Id:" + structure.id;
-        output += jsonParam(structure.value,"Value","");
-        output += jsonParam(structure.value2,"Value2","");
-        output += jsonParam(structure.value3,"Value3","");
+        output += jsonParam(bindValue(structure.value),"Value","");
+        output += jsonParam(bindValue(structure.value2),"Value2","");
+        output += jsonParam(bindValue(structure.value3),"Value3","");
         output += jsonParam(structure.nosound,"NoSound","");
         output += jsonParam(structure.inverted,"Inverted","");
         output += jsonParam(structure.text,"Text","\"");
