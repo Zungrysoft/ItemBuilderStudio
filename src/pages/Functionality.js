@@ -3,16 +3,7 @@ import Condition from '../components/Condition.js';
 import CommandOutput from '../components/CommandOutput.js';
 import InputSlot from '../components/InputSlot.js';
 
-function FunctionalityPage() {
-    const [structure, setStructure] = useState({
-        effects:[],
-        conditions:[],
-        filters:[],
-    });
-    const [itemId, setItemId] = useState("minecraft:iron_sword");
-    const [slot, setSlot] = useState("ItemBuilderMainhand");
-    const [includeGive, setIncludeGive] = useState(true);
-
+function FunctionalityPage({ structure, itemId, slot, includeGive, onChange}) {
     return (
         <div>
             <div className="entry">

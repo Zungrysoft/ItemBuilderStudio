@@ -46,7 +46,6 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
     mode = data[id][jsonKey + "_mode"]
     labelName = data[id][jsonKey + "_display"]
 
-    console.log(mode)
     // Build label object
     let label = <p className="condition-label">{labelName + ": "}</p>
     
