@@ -48,7 +48,7 @@ function boxType(type, depth) {
 
 function Condition({ type, structure, onChange, depth }) {
     return (
-        <div className={boxType( type, depth )}>
+        <div className={boxType(type, depth)}>
             {depth > 0 ? <div>
                 <DeleteButton
                     eventClick={(e) => {

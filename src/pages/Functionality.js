@@ -1,9 +1,8 @@
 import React,{useState} from 'react';
 import Condition from '../components/Condition.js';
-import CommandOutput from '../components/CommandOutput.js';
 import InputSlot from '../components/InputSlot.js';
 
-function FunctionalityPage({ structure, itemId, slot, includeGive, onChange}) {
+function FunctionalityPage({ data, onChange }) {
     return (
         <div>
             <div className="entry">
@@ -11,19 +10,47 @@ function FunctionalityPage({ structure, itemId, slot, includeGive, onChange}) {
                 <input
                     className="input-box"
                     type="text"
-                    defaultValue={"minecraft:iron_sword"}
-                    onChange={(e) => {setItemId(e.target.value);}}
+                    defaultValue={data.itemId}
+                    onChange={(e) => {
+                        onChange({
+                            ...data,
+                            itemId: e.target.value,
+                        })
+                    }}
                 />
                 <input
                     className="input-checkbox"
                     type="checkbox"
-                    checked={includeGive}
-                    onChange={(e) => {setIncludeGive(e.target.checked);}}
+                    checked={data.includeGive}
+                    onChange={(e) => {
+                        onChange({
+                            ...data,
+                            includeGive: e.target.value,
+                        })
+                    }}
                 />
             </div>
-            <InputSlot defaultValue="ItemBuilderMainhand" onChange={setSlot}/>
-            <Condition type={1} structure={structure} onChange={setStructure} depth={0} context={0}/>
-            <CommandOutput structure={structure} id={itemId} slot={slot} includeGive={includeGive}/>
+            <InputSlot
+                defaultValue={data.slot}
+                onChange={(val) => {
+                    onChange({
+                        ...data,
+                        slot: val,
+                    })
+                }}
+            />
+            <Condition
+                type={1}
+                structure={data.structure}
+                depth={0}
+                context={0}
+                onChange={(val) => {
+                    onChange({
+                        ...data,
+                        structure: val,
+                    })
+                }}
+            />
         </div>
     );
 }
