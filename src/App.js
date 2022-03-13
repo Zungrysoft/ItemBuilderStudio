@@ -1,6 +1,10 @@
 import React,{useState} from 'react';
 import './App.css';
+
 import FunctionalityPage from './pages/Functionality.js';
+import DisplayPage from './pages/Display.js';
+import AboutPage from './pages/About.js';
+
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
 
@@ -8,6 +12,7 @@ let tabs = [
     {display:"Functionality",id:"functionality"},
     {display:"Display",id:"display"},
     {display:"Enchantments",id:"enchantments"},
+    {display:"Info",id:"about"},
 ]
 
 function App() {
@@ -21,6 +26,7 @@ function App() {
         itemId: "minecraft:iron_sword",
         slot: "ItemBuilderMainhand",
         includeGive: true,
+
     })
     return (
         <div className="App">
@@ -34,6 +40,18 @@ function App() {
                     {/* Pages */}
                     {page=="functionality" ? 
                         <FunctionalityPage
+                            data={data}
+                            onChange={setData}
+                        /> 
+                    :<div/>}
+                    {page=="display" ? 
+                        <DisplayPage
+                            data={data}
+                            onChange={setData}
+                        /> 
+                    :<div/>}
+                    {page=="about" ? 
+                        <AboutPage
                             data={data}
                             onChange={setData}
                         /> 
