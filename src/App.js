@@ -2,6 +2,13 @@ import React,{useState} from 'react';
 import './App.css';
 import FunctionalityPage from './pages/Functionality.js';
 import CommandOutput from './components/CommandOutput.js';
+import Navbar from './components/Navbar.js';
+
+let tabs = [
+    {display:"Functionality",id:"functionality"},
+    {display:"Display",id:"display"},
+    {display:"Enchantments",id:"enchantments"},
+]
 
 function App() {
     const [page, setPage] = useState("functionality")
@@ -17,6 +24,11 @@ function App() {
     })
     return (
         <div className="App">
+            <Navbar
+                tabs={tabs}
+                startVal={page}
+                onChange={setPage}
+            />
             <header className="App-header">
                 <div>
                     <FunctionalityPage
