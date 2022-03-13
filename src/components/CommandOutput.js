@@ -98,7 +98,9 @@ function CommandOutput({ structure, id, slot, includeGive }) {
                     console.log(cmd);
                 }}
             >Copy Command</button>
-            <p>{cmd}</p>
+            <div>
+                <code className="command-text">{cmd}</code>
+            </div>
         </div>
     );
 }

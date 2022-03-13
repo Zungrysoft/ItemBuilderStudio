@@ -31,16 +31,21 @@ function App() {
             />
             <header className="App-header">
                 <div>
-                    <FunctionalityPage
-                        data={data}
-                        onChange={setData}
-                    />
-                    <CommandOutput
-                        structure={data.structure}
-                        id={data.itemId}
-                        slot={data.slot}
-                        includeGive={data.includeGive}
-                    />
+                    {/* Pages */}
+                    {page=="functionality" ? 
+                        <FunctionalityPage
+                            data={data}
+                            onChange={setData}
+                        /> 
+                    :<div/>}
+                    <div className="command-output">
+                        <CommandOutput
+                            structure={data.structure}
+                            id={data.itemId}
+                            slot={data.slot}
+                            includeGive={data.includeGive}
+                        />
+                    </div>
                 </div>
             </header>
         </div>
