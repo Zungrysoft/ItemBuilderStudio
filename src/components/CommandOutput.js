@@ -70,32 +70,32 @@ function generateCondition(structure, isBase) {
     return output;
 }
 
-function generateCommand(structure, id, slot, includeGive) {
+function generateCommand(data) {
     let output = "";
-
-    if (includeGive) {
-        output += "/give @p " + id + "{";
+    
+    if (data.includeGive) {
+        output += "/give @p " + data.itemId + "{";
     }
-    output += slot + ":";
+    
+    output += data.slot + ":";
 
-    output += generateCondition(structure, true);
+    output += generateCondition(data.structure, true);
 
-    if (includeGive) {
+    if (data.includeGive) {
         output += "}";
     }
 
     return output;
 }
 
-function CommandOutput({ structure, id, slot, includeGive }) {
-    let cmd = generateCommand(structure, id, slot, includeGive);
+function CommandOutput({ data }) {
+    let cmd = generateCommand(data);
 
     return (
         <div>
             <button
                 onClick={(e) => {
                     navigator.clipboard.writeText(cmd);
-                    console.log(cmd);
                 }}
             >Copy Command</button>
             <div>

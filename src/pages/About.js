@@ -1,7 +1,6 @@
 function AboutPage({ data, onChange }) {
     return (
         <div>
-            <h3>Info</h3>
             <p>
                 ItemBuilder is a datapack that allows Minecraft Java Edition mapmakers
                 to create custom items using a system of effects and conditions. This website

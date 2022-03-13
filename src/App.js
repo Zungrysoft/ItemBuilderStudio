@@ -26,7 +26,9 @@ function App() {
         itemId: "minecraft:iron_sword",
         slot: "ItemBuilderMainhand",
         includeGive: true,
-
+        name: "",
+        lore: "",
+        color: "",
     })
     return (
         <div className="App">
@@ -58,10 +60,7 @@ function App() {
                     :<div/>}
                     <div className="command-output">
                         <CommandOutput
-                            structure={data.structure}
-                            id={data.itemId}
-                            slot={data.slot}
-                            includeGive={data.includeGive}
+                            data={data}
                         />
                     </div>
                 </div>
