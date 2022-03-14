@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ItemBuilderGUIv2/static/css/main.bb3fa41e.css",
+    "main.js": "/ItemBuilderGUIv2/static/js/main.1da525f5.js",
+    "static/js/787.a475fbc9.chunk.js": "/ItemBuilderGUIv2/static/js/787.a475fbc9.chunk.js",
+    "index.html": "/ItemBuilderGUIv2/index.html",
+    "main.bb3fa41e.css.map": "/ItemBuilderGUIv2/static/css/main.bb3fa41e.css.map",
+    "main.1da525f5.js.map": "/ItemBuilderGUIv2/static/js/main.1da525f5.js.map",
+    "787.a475fbc9.chunk.js.map": "/ItemBuilderGUIv2/static/js/787.a475fbc9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb3fa41e.css",
+    "static/js/main.1da525f5.js"
+  ]
+}
