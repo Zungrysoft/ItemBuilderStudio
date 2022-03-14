@@ -187,9 +187,12 @@ function generateLore(text, color, italic) {
 
 function generateHideFlags(data) {
     let fl = 0;
+    // Total up flags
     if (data.model.colorEnabled) {
         fl += 64;
     }
+
+    // Return
     if (fl > 0) {
         return ",HideFlags:" + fl;
     }

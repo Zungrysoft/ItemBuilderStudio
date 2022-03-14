@@ -78,6 +78,11 @@
     width: 220px
 }
 
+.input-box-lore {
+    width: 300px;
+    height: 80px;
+}
+
 .input-checkbox {
     height: 20px;
     width: 20px;

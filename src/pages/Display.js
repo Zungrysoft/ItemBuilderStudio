@@ -122,7 +122,7 @@ function DisplayPage({ data, onChange }) {
             <h2>Lore</h2>
             <p className="label">Upsides: </p>
             <textarea
-                className="input-box-paragraph"
+                className="input-box-lore"
                 type="text"
                 defaultValue={data.lore.upsides}
                 onChange={(e) => {
@@ -137,7 +137,7 @@ function DisplayPage({ data, onChange }) {
             />
             <p className="label">Downsides: </p>
             <textarea
-                className="input-box-paragraph"
+                className="input-box-lore"
                 type="text"
                 defaultValue={data.lore.downsides}
                 onChange={(e) => {
@@ -152,7 +152,7 @@ function DisplayPage({ data, onChange }) {
             />
             <p className="label">Lore: </p>
             <textarea
-                className="input-box-paragraph"
+                className="input-box-lore"
                 type="text"
                 defaultValue={data.lore.lore}
                 onChange={(e) => {
