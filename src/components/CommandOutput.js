@@ -11,10 +11,20 @@ function rlc(str) {
     return str;
 }
 
+// Adds escape characters to text
+function escapeChars(str) {
+    str = str.replace(/\\/g,"\\\\\\\\");
+    str = str.replace(/\'/g,"\\'");
+    str = str.replace(/\"/g,"\\\\\"");
+    return str;
+}
+
 function generateText(text, color, bold, italic) {
     if (text === "") {
         return "";
     }
+
+    text = escapeChars(text);
 
     let output = ",{";
 
@@ -154,8 +164,46 @@ function generateName(name) {
     return rlc(output);
 }
 
+function generateLore(text, color, italic) {
+    if (text === "") {
+        return "";
+    }
+
+    text = escapeChars(text);
+
+    let lines = text.split("\n");
+    let output = "";
+
+    lines.forEach((line) => {
+        output += ",'{";
+        output += "\"text\":\"" + line + "\"";
+        output += ",\"color\":\"" + color + "\"";
+        output += ",\"italic\":" + italic;
+        output += "}'";
+    });
+
+    return output;
+}
+
+function generateHideFlags(data) {
+    let fl = 0;
+    if (data.model.colorEnabled) {
+        fl += 64;
+    }
+    if (fl > 0) {
+        return ",HideFlags:" + fl;
+    }
+    return "";
+}
+
 function generateDisplay(data) {
-    if (data.name.text === "" && data.lore === "" && !data.model.colorEnabled) {
+    if (
+        data.name.text === "" &&
+        data.lore.upsides === "" &&
+        data.lore.downsides === "" &&
+        data.lore.lore === "" &&
+        !data.model.colorEnabled
+    ) {
         return "";
     }
 
@@ -167,6 +215,16 @@ function generateDisplay(data) {
 
     if (data.name.text !== "") {
         output += ",Name:'[" + generateName(data.name) + "]'";
+    }
+
+    if (data.lore.upsides !== "" || data.lore.downsides !== "" || data.lore.lore !== "") {
+        output += ",Lore:[";
+        output += rlc(
+            generateLore(data.lore.upsides, "blue", false) +
+            generateLore(data.lore.downsides, "red", false) +
+            generateLore(data.lore.lore, "gray", true)
+        );
+        output += "]";
     }
 
     return ",display:{" + rlc(output) + "}";
@@ -249,6 +307,8 @@ function generateCommand(data) {
     output += generateCondition(data.structure, true);
 
     output += generateDisplay(data);
+
+    output += generateHideFlags(data);
 
     output = rlc(output);
 

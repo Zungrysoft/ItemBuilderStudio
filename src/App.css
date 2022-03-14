@@ -74,6 +74,10 @@
     margin-top: -3px;
 }
 
+.input-box-long {
+    width: 220px
+}
+
 .input-checkbox {
     height: 20px;
     width: 20px;

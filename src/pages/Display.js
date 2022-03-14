@@ -35,7 +35,7 @@ function DisplayPage({ data, onChange }) {
             <h2>Name</h2>
             <div>
                 <input
-                    className="input-box"
+                    className="input-box-long"
                     type="text"
                     defaultValue={data.name.text}
                     onChange={(e) => {
@@ -119,16 +119,49 @@ function DisplayPage({ data, onChange }) {
                     />
                 : <div/>}
             </div>
-            <h2>Text</h2>
-            <p className="label">Lore: </p>
-            <input
-                className="input-box"
+            <h2>Lore</h2>
+            <p className="label">Upsides: </p>
+            <textarea
+                className="input-box-paragraph"
                 type="text"
-                defaultValue={data.lore}
+                defaultValue={data.lore.upsides}
                 onChange={(e) => {
                     onChange({
                         ...data,
-                        lore: e.target.value,
+                        lore: {
+                            ...data.lore,
+                            upsides: e.target.value,
+                        }
+                    })
+                }}
+            />
+            <p className="label">Downsides: </p>
+            <textarea
+                className="input-box-paragraph"
+                type="text"
+                defaultValue={data.lore.downsides}
+                onChange={(e) => {
+                    onChange({
+                        ...data,
+                        lore: {
+                            ...data.lore,
+                            downsides: e.target.value,
+                        }
+                    })
+                }}
+            />
+            <p className="label">Lore: </p>
+            <textarea
+                className="input-box-paragraph"
+                type="text"
+                defaultValue={data.lore.lore}
+                onChange={(e) => {
+                    onChange({
+                        ...data,
+                        lore: {
+                            ...data.lore,
+                            lore: e.target.value,
+                        }
                     })
                 }}
             />

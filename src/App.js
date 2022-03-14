@@ -26,7 +26,7 @@ function App() {
         itemId: "minecraft:iron_sword",
         slot: "ItemBuilderMainhand",
         includeGive: true,
-        name:{
+        name: {
             text: "",
             color: "ffffff",
             color2: "555555",
@@ -34,7 +34,11 @@ function App() {
             bold: false,
             italic: false,
         },
-        lore: "",
+        lore: {
+            upsides: "",
+            downsides: "",
+            lore: "",
+        },
         model: {
             color: "2c2f9e",
             colorEnabled: false,
