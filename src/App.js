@@ -35,7 +35,11 @@ function App() {
             italic: false,
         },
         lore: "",
-        color: "2c2f9e",
+        model: {
+            color: "2c2f9e",
+            colorEnabled: false,
+            customModelData: 0,
+        }
     })
     return (
         <div className="App">

@@ -1,4 +1,4 @@
-import { hexFormat } from '../helpers/color.js'
+import { hexFormat, interpolateColor, hexToDec } from '../helpers/color.js'
 
 // Removes leading commas in built lists
 function rlc(str) {
@@ -9,59 +9,6 @@ function rlc(str) {
         str = str.slice(1);
     }
     return str;
-}
-
-function charToNum(c) {
-    if (c == 'a') {return 10;}
-    if (c == 'b') {return 11;}
-    if (c == 'c') {return 12;}
-    if (c == 'd') {return 13;}
-    if (c == 'e') {return 14;}
-    if (c == 'f') {return 15;}
-    let pc = parseInt(c);
-    if (pc) {
-        return pc;
-    }
-    console.log("DAMN");
-    return 0;
-}
-
-function hexToRgb(color) {
-
-
-    let r = color.slice(0,1);
-    let g = "0x" + color[3] + color[4];
-    let b = "0x" + color[5] + color[6];
- 
-    return +r, +g, +b;
-}
-
-/*function rgbToHex(r, g, b) {
-    // Remove leading #
-    if (color.slice(0,1) == "#") {
-        color = color.slice(1);
-    }
-
-    let r = 16*charToNum(color.slice(0,1)) + charToNum(color.slice(1,2));
-    let g = 16*charToNum(color.slice(2,3)) + charToNum(color.slice(3,4));
-    let b = 16*charToNum(color.slice(4,5)) + charToNum(color.slice(5,6));
-    return r, g, b;
-}*/
-
-// Converts color from a hex string to an integer
-function convertColor(color) {
-    // Remove leading #
-    if (color.slice(0,1) == "#") {
-        color = color.slice(1);
-    }
-
-    let factor = 1;
-    let result = 0;
-    for (let i = 5; i >= 0; i --) {
-        result += factor * charToNum(color.slice(i,i+1));
-        factor *= 16;
-    }
-    return result
 }
 
 function generateText(text, color, bold, italic) {
@@ -79,12 +26,80 @@ function generateText(text, color, bold, italic) {
     return output + "}";
 }
 
+function generateNameMetallic(name) {
+    // Special case for if the name has a length of 1
+    if (name.text.length <= 1) {
+        return generateText(name.text, name.color, name.bold, name.italic);
+    }
+
+    let output = "";
+
+    for (let i = 0; i < name.text.length; i ++) {
+        let pos = i/(name.text.length-1);
+        let factor = 0;
+
+        if (pos < 0.386) {
+            factor = 1/(1+Math.pow(2.718,-20*(pos-0.1)));
+        }
+        else if (pos < 0.6) {
+            factor = 1/(1+Math.pow(2.718,15*(pos-0.4)));
+        }
+        else {
+            factor = 1/(1+Math.pow(2.718,-10*(pos-1)));
+        }
+
+        output += generateText(
+            name.text[i],
+            interpolateColor(name.color, name.color2, factor),
+            name.bold,
+            name.italic,
+        );
+    }
+    
+    return rlc(output);
+}
+
+function generateNameGradient(name) {
+    // Special case for if the name has a length of 1
+    if (name.text.length <= 1) {
+        return generateText(name.text, name.color, name.bold, name.italic);
+    }
+
+    let output = "";
+
+    for (let i = 0; i < name.text.length; i ++) {
+        output += generateText(
+            name.text[i],
+            interpolateColor(name.color, name.color2, i/(name.text.length-1)),
+            name.bold,
+            name.italic,
+        );
+    }
+    
+    return rlc(output);
+}
+
+function generateNameWordGradient(name) {
+    let output = "";
+    let words = name.text.split(' ');
+    words.forEach((word, index) => {
+        if (index > 0) {
+            word = " " + word;
+        }
+        output += "," + generateNameGradient({
+            ...name,
+            text: word
+        });
+    });
+    return output;
+}
+
 function generateNameAlternating(name) {
     let output = "";
 
     for (let i = 0; i < name.text.length; i ++) {
         let color = i % 2 == 0 ? name.color : name.color2;
-        output += generateText(name.text.slice(i,i+1), color, name.bold, name.italic);
+        output += generateText(name.text[i], color, name.bold, name.italic);
     }
     
     return rlc(output);
@@ -102,7 +117,7 @@ function generateNameCapitalized(name) {
     for (let i = 0; i < name.text.length; i ++) {
         let newCase = isCapital(name.text.charCodeAt(i));
         if (newCase !== curCase) {
-            let chosenColor = curCase ? name.color : name.color2;
+            let chosenColor = curCase ? name.color2 : name.color;
             output += generateText(queue, chosenColor, name.bold, name.italic);
             
             queue = "";
@@ -110,31 +125,44 @@ function generateNameCapitalized(name) {
         }
         queue += name.text[i];
     }
-    let chosenColor = curCase ? name.color : name.color2;
+    let chosenColor = curCase ? name.color2 : name.color;
     output += generateText(queue, chosenColor, name.bold, name.italic);
     
     return rlc(output);
 }
 
 function generateName(name) {
+    let output = "";
     if (name.colorMode === "alternating") {
-        return rlc(generateNameAlternating(name));
+        output = generateNameAlternating(name);
     }
-    if (name.colorMode === "capitalized") {
-        return rlc(generateNameCapitalized(name));
+    else if (name.colorMode === "capitalized") {
+        output = generateNameCapitalized(name);
     }
-    return rlc(generateText(name.text, name.color, name.bold, name.italic));
+    else if (name.colorMode === "gradient") {
+        output = generateNameGradient(name);
+    }
+    else if (name.colorMode === "word_gradient") {
+        output = generateNameWordGradient(name);
+    }
+    else if (name.colorMode === "metallic") {
+        output = generateNameMetallic(name);
+    }
+    else {
+        output = generateText(name.text, name.color, name.bold, name.italic);
+    }
+    return rlc(output);
 }
 
 function generateDisplay(data) {
-    if (data.name.text === "" && data.lore === "" && data.color === "") {
+    if (data.name.text === "" && data.lore === "" && !data.model.colorEnabled) {
         return "";
     }
 
     let output = "";
 
-    if (data.color !== "") {
-        output += ",color:" + convertColor(data.color);
+    if (data.model.colorEnabled) {
+        output += ",color:" + hexToDec(data.model.color);
     }
 
     if (data.name.text !== "") {

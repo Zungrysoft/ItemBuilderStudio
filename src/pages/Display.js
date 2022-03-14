@@ -5,26 +5,35 @@ import InputColor from '../components/InputColor.js';
 let colorModes = {
     "single":{
         display:"Single Color",
+        numColors: 1,
     },
     "gradient":{
         display:"Gradient",
+        numColors: 2,
+    },
+    "word_gradient":{
+        display:"Word Gradient",
+        numColors: 2,
     },
     "metallic":{
-        display:"Metallic",
+        display:"Sheen",
+        numColors: 2,
     },
     "alternating":{
         display:"Alternating",
+        numColors: 2,
     },
     "capitalized":{
         display:"Capitalized",
+        numColors: 2,
     },
 };
 
 function DisplayPage({ data, onChange }) {
     return (
         <div>
+            <h2>Name</h2>
             <div>
-                <p className="label">Name: </p>
                 <input
                     className="input-box"
                     type="text"
@@ -66,7 +75,7 @@ function DisplayPage({ data, onChange }) {
                     }}
                 />
                 <InputList
-                    label="Name Color Mode"
+                    label="Color Mode"
                     startValue={data.name.colorMode}
                     data={colorModes}
                     onChange={(val) => {
@@ -79,33 +88,38 @@ function DisplayPage({ data, onChange }) {
                         })
                     }}
                 />
-                <InputColor
-                    label="Color"
-                    startValue={data.name.color}
-                    onChange={(val) => {
-                        onChange({
-                            ...data,
-                            name: {
-                                ...data.name,
-                                color: val,
-                            }
-                        })
-                    }}
-                />
-                <InputColor
-                    label="Alt Color"
-                    startValue={data.name.color2}
-                    onChange={(val) => {
-                        onChange({
-                            ...data,
-                            name: {
-                                ...data.name,
-                                color2: val,
-                            }
-                        })
-                    }}
-                />
+                {colorModes[data.name.colorMode].numColors >= 1 ?
+                    <InputColor
+                        label="Color"
+                        startValue={data.name.color}
+                        onChange={(val) => {
+                            onChange({
+                                ...data,
+                                name: {
+                                    ...data.name,
+                                    color: val,
+                                }
+                            })
+                        }}
+                    />
+                : <div/>}
+                {colorModes[data.name.colorMode].numColors >= 2 ?
+                    <InputColor
+                        label="Alt Color"
+                        startValue={data.name.color2}
+                        onChange={(val) => {
+                            onChange({
+                                ...data,
+                                name: {
+                                    ...data.name,
+                                    color2: val,
+                                }
+                            })
+                        }}
+                    />
+                : <div/>}
             </div>
+            <h2>Text</h2>
             <p className="label">Lore: </p>
             <input
                 className="input-box"
@@ -118,16 +132,36 @@ function DisplayPage({ data, onChange }) {
                     })
                 }}
             />
-            <InputColor
-                label="Leather Color"
-                startValue={data.color}
-                onChange={(val) => {
-                    onChange({
-                        ...data,
-                        color: val,
-                    })
-                }}
-            />
+            <h2>Model</h2>
+            <div>
+                <InputColor
+                    label="Leather Color"
+                    startValue={data.model.color}
+                    onChange={(val) => {
+                        onChange({
+                            ...data,
+                            model: {
+                                ...data.model,
+                                color: val,
+                                colorEnabled: true,
+                            }
+                        })
+                    }}
+                />
+                <Checkbox
+                    label="Enabled"
+                    startValue={data.model.colorEnabled}
+                    onChange={(val) => {
+                        onChange({
+                            ...data,
+                            model: {
+                                ...data.model,
+                                colorEnabled: val,
+                            }
+                        })
+                    }}
+                />
+            </div>
         </div>
     );
 }
