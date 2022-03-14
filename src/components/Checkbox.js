@@ -1,6 +1,6 @@
 import '../App.css';
 
-function InputCheckbox({ label, startValue, onChange }) {
+function Checkbox({ label, startValue, onChange }) {
     let rnum = Math.trunc(Math.random() * 524280)
     return (
         <div>
@@ -10,11 +10,11 @@ function InputCheckbox({ label, startValue, onChange }) {
                 type="checkbox"
                 id={"label_" + rnum}
                 checked={startValue}
-                onChange={(e) => {onChange(e.target.checked ? 1 : 0)}}
+                onChange={(e) => {onChange(e.target.checked)}}
             />
             
         </div>
     )
 }
 
-export default InputCheckbox;
+export default Checkbox;

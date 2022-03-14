@@ -11,9 +11,9 @@ import Navbar from './components/Navbar.js';
 let tabs = [
     {display:"Functionality",id:"functionality"},
     {display:"Display",id:"display"},
-    {display:"Enchantments",id:"enchantments"},
+    //{display:"Enchantments",id:"enchantments"},
     {display:"Info",id:"about"},
-]
+];
 
 function App() {
     const [page, setPage] = useState("functionality")
@@ -26,9 +26,16 @@ function App() {
         itemId: "minecraft:iron_sword",
         slot: "ItemBuilderMainhand",
         includeGive: true,
-        name: "",
+        name:{
+            text: "",
+            color: "ffffff",
+            color2: "555555",
+            colorMode: "single",
+            bold: false,
+            italic: false,
+        },
         lore: "",
-        color: "",
+        color: "2c2f9e",
     })
     return (
         <div className="App">

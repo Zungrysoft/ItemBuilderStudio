@@ -1,8 +1,6 @@
 import '../App.css';
-import slotData from '../data/slot_tags.json';
 
-function InputSlot({ startValue, onChange }) {
-    let data = slotData;
+function InputList({ startValue, data, label, onChange }) {
     let optionList = [];
 
     // Create option list from json data
@@ -16,7 +14,7 @@ function InputSlot({ startValue, onChange }) {
 
     return (
         <div>
-            <p className="label">{"Activator Type: "}</p>
+            <p className="label">{label + ": "}</p>
             <select value={startValue} onChange={(e) => onChange(e.target.value)}>
                 {optionList}
             </select>
@@ -24,4 +22,4 @@ function InputSlot({ startValue, onChange }) {
     )
 }
 
-export default InputSlot;
+export default InputList;

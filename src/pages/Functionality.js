@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import Condition from '../components/Condition.js';
-import InputSlot from '../components/InputSlot.js';
+import InputList from '../components/InputList.js';
+
+import slotData from '../data/slot_tags.json';
 
 function FunctionalityPage({ data, onChange }) {
     return (
@@ -30,7 +32,9 @@ function FunctionalityPage({ data, onChange }) {
                     }}
                 />
             </div>
-            <InputSlot
+            <InputList
+                label="Activator Type"
+                data={slotData}
                 defaultValue={data.slot}
                 onChange={(val) => {
                     onChange({
