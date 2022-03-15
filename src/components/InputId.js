@@ -1,7 +1,5 @@
 import '../App.css';
-import effectData from '../data/effects.json';
-import conditionData from '../data/conditions.json';
-import filterData from '../data/filters.json';
+import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
 
 import loadableData from '../data/loadables.json';
 import soundData from '../data/sounds.json';
@@ -16,6 +14,7 @@ import potionEffectData from '../data/potion_effects.json';
 function getCategory( type, id ) {
     if (0 <= id && id < 100) {return "Utility";}
     if (800 <= id && id < 900) {return "Logic";}
+    if (id >= 1000) {return "User-Defined";}
 
     if (type === 0) {
         if (100 <= id && id < 200) {return "Attributes";}
@@ -43,28 +42,37 @@ function getCategory( type, id ) {
     return "Misc"
 }
 
-function InputId({ type, startValue, onChange }) {
+function isDisabled(context,data,id) {
+    if (context === "player" && "monster_only" in data[id] && data[id].monster_only) {
+        return true;
+    }
+    else if (context === "mob" && "player_only" in data[id] && data[id].player_only) {
+        return true;
+    }
+    return false;
+}
+
+function InputId({ type, startValue, onChange, context }) {
     let data = {};
     let labelName = "";
-    let options = [];
     let optionGroups = [];
     let useCategories = false;
 
     // Effects
     if (type === 0) {
-        data = effectData;
+        data = getEffectData();
         labelName = "Effect";
         useCategories = true;
     }
     // Conditions
     else if (type === 1) {
-        data = conditionData;
+        data = getConditionData();
         labelName = "Condition";
         useCategories = true;
     }
     // Filters
     else if (type === 2) {
-        data = filterData;
+        data = getFilterData();
         labelName = "Filter";
         useCategories = true;
     }
@@ -131,11 +139,13 @@ function InputId({ type, startValue, onChange }) {
         if ("instant" in data[id] && data[id].instant == true) {
             labelName = "*" + labelName;
         }
-        curList.push(
-            <option value={id}>
-                {labelName}
-            </option>
-        )
+        if (!isDisabled(context,data,id)){
+            curList.push(
+                <option value={id}>
+                    {labelName}
+                </option>
+            )
+        }
     });
     
     if (useCategories) {

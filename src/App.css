@@ -88,6 +88,11 @@
     width: 20px;
 }
 
+option:disabled{
+    background-color:#39414d;
+    color:#556074;
+}
+
 .command-output {
     display: inline-flex;
     border: 2px solid black;

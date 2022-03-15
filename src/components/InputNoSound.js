@@ -1,11 +1,11 @@
 import '../App.css';
 import InputCheckbox from './InputCheckbox.js';
 
-import effectData from '../data/effects.json';
+import { getEffectData } from '../helpers/jsonData.js';
 
 function InputSlot({ id, label, startValue, onChange }) {
     // Make sure the effect has sounds to cancel
-    if ("has_sound" in effectData[id] && effectData[id].has_sound) {
+    if ("has_sound" in getEffectData()[id] && getEffectData()[id].has_sound) {
         return (
             <InputCheckbox
                 label={label}

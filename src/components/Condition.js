@@ -10,21 +10,22 @@ import InputNoSound from './InputNoSound.js';
 import Note from './Note.js';
 import '../App.css';
 
-function newCondition() {
-    return {
-        id: 0,
-        value: 0,
-        value2: 0,
-        value3: 0,
-        inverted: false,
-        nosound: false,
-        text: "",
-        effects: [],
-        conditions: [],
-        filters: [],
-    };
+import { getFilterData } from '../helpers/jsonData.js';
+
+// Context tracks whether the filter is causing conditions to
+// be run on players or mobs. Some conditions need to be greyed
+// out depending on the context
+function filterContext(oldContext, id) {
+    if (!getFilterData[id]) {
+        return oldContext;
+    }
+    if ("context" in getFilterData[id]) {
+        return getFilterData()[id].context;
+    }
+    return oldContext;
 }
 
+// Whether this item can contain more conditions in it
 function hasChildren(type, id) {
     if (type === 0) {
         return false;
@@ -46,7 +47,22 @@ function boxType(type, depth) {
     return "bounding-box-effect";
 }
 
-function Condition({ type, structure, onChange, depth }) {
+function newCondition() {
+    return {
+        id: 0,
+        value: 0,
+        value2: 0,
+        value3: 0,
+        inverted: false,
+        nosound: false,
+        text: "",
+        effects: [],
+        conditions: [],
+        filters: [],
+    };
+}
+
+function Condition({ type, structure, onChange, depth, context }) {
     return (
         <div className={boxType(type, depth)}>
             {depth > 0 ? <div>
@@ -60,6 +76,7 @@ function Condition({ type, structure, onChange, depth }) {
                         <InputId
                             type={type}
                             startValue={structure.id}
+                            context={context}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -209,6 +226,7 @@ function Condition({ type, structure, onChange, depth }) {
                             }}
                             depth={depth+1}
                             type={0}
+                            context={context}
                         />
                     </div>
                 ))}
@@ -229,6 +247,7 @@ function Condition({ type, structure, onChange, depth }) {
                             }}
                             depth={depth+1}
                             type={1}
+                            context={context}
                         />
                     </div>
                 ))}
@@ -249,6 +268,7 @@ function Condition({ type, structure, onChange, depth }) {
                             }}
                             depth={depth+1}
                             type={2}
+                            context={filterContext(context, filter.id)}
                         />
                     </div>
                 ))}

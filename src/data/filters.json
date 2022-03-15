@@ -5,60 +5,68 @@
     "100":{
         "display":"Executed as All Nearby Players",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"player"
     },
     "101":{
         "display":"Executed as All Other Nearby Players",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"player"
     },
     "102":{
         "display":"Executed as Nearest Player Within Range",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"player"
     },
     "103":{
         "display":"Executed as Random Nearby Player",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"player"
     },
     "104":{
         "display":"Executed as Random Other Nearby Player",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"player"
     },
     "120":{
         "display":"Executed as All Nearby Monsters",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"mob"
     },
     "121":{
         "display":"Executed as All Other Nearby Monsters",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"mob"
     },
     "122":{
         "display":"Executed as Nearest Monster Within Range",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"mob"
     },
     "123":{
         "display":"Executed as Random Nearby Monster",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"mob"
     },
     "124":{
         "display":"Executed as Random Other Nearby Monster",
         "value_mode":"range",
-        "value_display":"Range"
+        "value_display":"Range",
+        "context":"mob"
     },
     "125":{
-        "display":"Executed as Nearby Monsters That Just Took Damage",
+        "display":"Executed as Monsters That Just Took Damage",
         "value_mode":"range",
-        "value_display":"Range"
-    },
-    "180":{
-        "display":"Executed as Mount"
+        "value_display":"Range",
+        "context":"mob"
     },
     "900":{
         "display":"Executed on Item Equip Slot",

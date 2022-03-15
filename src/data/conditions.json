@@ -6,124 +6,155 @@
         "display":"Dealt Damage With a Melee Attack",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Minimum Damage"
+        "value_display":"Minimum Damage",
+        "player_only":true
     },
     "101":{
         "display":"Dealt Damage With an Arrow",
         "note":"Counts spectral and potion arrows.",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "102":{
         "display":"Deal Damage With a Firework Rocket",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "110":{
         "display":"Took Damage",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Minimum Damage"
+        "value_display":"Minimum Damage",
+        "player_only":true
     },
     "111":{
         "display":"Took Damage from a Monster",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "112":{
         "display":"Took Blast Damage",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "113":{
         "display":"Took Fire Damage",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "114":{
         "display":"Took Projectile Damage",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "120":{
         "display":"Killed Mob or Player",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "121":{
         "display":"Killed Monster of Specific Type",
         "instant":true,
         "value_mode":"mob_type",
-        "value_display":"Type"
+        "value_display":"Type",
+        "player_only":true
     },
     "200":{
-        "display":"Drawing Bow"
+        "display":"Drawing Bow",
+        "player_only":true
     },
     "201":{
         "display":"Fired Bow",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "205":{
-        "display":"Loading Crossbow"
+        "display":"Loading Crossbow",
+        "player_only":true
     },
     "206":{
         "display":"Loaded Crossbow",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "207":{
-        "display":"Crossbow is Loaded"
+        "display":"Crossbow is Loaded",
+        "player_only":true
     },
     "208":{
         "display":"Fired Crossbow",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "210":{
-        "display":"Readying Trident"
+        "display":"Readying Trident",
+        "player_only":true
     },
     "215":{
-        "display":"Holding Shield Up"
+        "display":"Holding Shield Up",
+        "player_only":true
     },
     "216":{
         "display":"Blocked Damage With Shield",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Minimum Damage"
+        "value_display":"Minimum Damage",
+        "player_only":true
     },
     "220":{
-        "display":"Eating Food"
+        "display":"Eating Food",
+        "player_only":true
     },
     "221":{
         "display":"Ate Food",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "222":{
         "display":"Ate a Slice of Cake",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "225":{
-        "display":"Drinking Potion"
+        "display":"Drinking Potion",
+        "player_only":true
     },
     "226":{
         "display":"Drank Potion",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "230":{
-        "display":"Looking Through Spyglass"
+        "display":"Looking Through Spyglass",
+        "player_only":true
     },
     "231":{
-        "display":"Gliding With Elytra"
+        "display":"Gliding With Elytra",
+        "player_only":true
     },
     "250":{
-        "display":"On Ground"
+        "display":"On Ground",
+        "player_only":true
     },
     "251":{
-        "display":"Sprinting While On Ground"
+        "display":"Sprinting While On Ground",
+        "player_only":true
     },
     "252":{
-        "display":"Sneaking/Crouching"
+        "display":"Sneaking/Crouching",
+        "player_only":true
     },
     "260":{
         "display":"Fell Certain Distance",
         "note":"Only activates if the player fell more than one block.\nDoes not trigger in Creative Mode.",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Distance in cm"
+        "value_display":"Distance in cm",
+        "player_only":true
     },
     "261":{
-        "display":"Jumped"
+        "display":"Jumped",
+        "player_only":true
     },
     "270":{
         "display":"Riding a Mob"
@@ -145,7 +176,8 @@
     },
     "280":{
         "display":"Broke a Monster Spawner",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "300":{
         "display":"Has Certain Amount of Health",
@@ -155,19 +187,22 @@
     "301":{
         "display":"Has Certain Amount of Armor",
         "value_mode":"input",
-        "value_display":"Minimum Armor"
+        "value_display":"Minimum Armor",
+        "player_only":true
     },
     "302":{
         "display":"Has a Certain Number of XP Levels",
         "value_mode":"input",
-        "value_display":"Minimum Level"
+        "value_display":"Minimum Level",
+        "player_only":true
     },
     "310":{
         "display":"Has a Resource Item",
         "value_mode":"resource",
         "value_display":"Resource",
         "value2_mode":"input",
-        "value2_display":"Minimum Count"
+        "value2_display":"Minimum Count",
+        "player_only":true
     },
     "380":{
         "display":"On Fire"
@@ -190,22 +225,26 @@
         "monster_only":true
     },
     "400":{
-        "display":"Item is Enchanted"
+        "display":"Item is Enchanted",
+        "player_only":true
     },
     "420":{
         "display":"Item is Damaged",
         "value_mode":"input",
-        "value_display":"Minimum Damage"
+        "value_display":"Minimum Damage",
+        "player_only":true
     },
     "430":{
         "display":"Item Count",
         "value_mode":"input",
-        "value_display":"Count"
+        "value_display":"Count",
+        "player_only":true
     },
     "431":{
         "display":"Minimum Item Count",
         "value_mode":"input",
-        "value_display":"Minimum Count"
+        "value_display":"Minimum Count",
+        "player_only":true
     },
     "480":{
         "display":"Item is of Type",
@@ -215,32 +254,38 @@
     "800":{
         "display":"SavedCounter1 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "801":{
         "display":"SavedCounter1 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "805":{
         "display":"SavedCounter2 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "806":{
         "display":"SavedCounter2 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "810":{
         "display":"SavedCounter3 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "811":{
         "display":"SavedCounter3 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "player_only":true
     },
     "840":{
         "display":"FrameCounter1 = Value",
@@ -283,14 +328,17 @@
         "value_display":"Value"
     },
     "870":{
-        "display":"Item is Primed"
+        "display":"Item is Primed",
+        "player_only":true
     },
     "871":{
         "display":"Item became Unprimed",
-        "instant":true
+        "instant":true,
+        "player_only":true
     },
     "875":{
-        "display":"Item is Activated"
+        "display":"Item is Activated",
+        "player_only":true
     },
     "900":{
         "display":"Timer",
@@ -310,6 +358,7 @@
         "display":"Used Carrot on a Stick",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Cooldown"
+        "value_display":"Cooldown",
+        "player_only":true
     }
 }

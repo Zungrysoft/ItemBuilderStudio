@@ -59,19 +59,13 @@
         "has_sound":true,
         "instant": true
     },
-    "202":{
-        "display":"Take 6 Damage",
-        "value_mode":"input",
-        "value_display":"Times to Take 6 Damage",
-        "has_sound":true,
-        "instant": true
-    },
     "203":{
         "display":"Regain Hunger",
         "value_mode":"input",
         "value_display":"Hunger Gained",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "210":{
         "display":"Gain XP Points",
@@ -79,7 +73,8 @@
         "value_mode":"input",
         "value_display":"Points",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "211":{
         "display":"Gain XP Levels",
@@ -87,12 +82,14 @@
         "value_mode":"input",
         "value_display":"Levels",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "212":{
         "display":"Lose all XP",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "220":{
         "display":"Receive Resource Item",
@@ -101,7 +98,8 @@
         "value_display":"Resource",
         "value2_mode":"input",
         "value2_display":"Count",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "300":{
         "display":"Passive Blindness"
@@ -298,38 +296,44 @@
         "value2_mode":"checkbox",
         "value2_display":"Ignore Unbreaking",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "421":{
         "display":"Item is Restored to Full Durability",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "430":{
         "display":"Set Item Count",
         "value_mode":"input",
         "value_display":"Count",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "431":{
         "display":"Increase Item Count",
         "value_mode":"input",
         "value_display":"Count",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "450":{
         "display":"Reload this Crossbow",
         "value_mode":"loadable",
         "value_display":"Projectile",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "451":{
         "display":"Reload all Crossbows on Hotbar",
         "value_mode":"loadable",
         "value_display":"Projectile",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "480":{
         "display":"Item Breaks",
@@ -339,18 +343,21 @@
     "481":{
         "display":"Item Falls Out",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "482":{
         "display":"Item is Removed from Slot",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "490":{
         "display":"Set CustomModelData",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "500":{
         "display":"Set on Fire",
@@ -381,7 +388,6 @@
     },
     "520":{
         "display":"Launch Upwards",
-        "note":"Does not affect players.",
         "value_mode":"input",
         "value_display":"Launch Force",
         "monster_only": true,
@@ -397,37 +403,43 @@
         "display":"Set SavedCounter1",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "801":{
         "display":"Increase SavedCounter1",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "805":{
         "display":"Set SavedCounter2",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "806":{
         "display":"Increase SavedCounter2",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "810":{
         "display":"Set SavedCounter3",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "811":{
         "display":"Increase SavedCounter3",
         "value_mode":"input",
         "value_display":"Value",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "840":{
         "display":"Set FrameCounter1",
@@ -469,12 +481,14 @@
         "display":"Prime Item",
         "value_mode":"input",
         "value_display":"Ticks",
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "875":{
         "display":"Activate Item",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "player_only":true
     },
     "900":{
         "display":"Sound/Particle Effect",
@@ -485,6 +499,7 @@
         "display":"Chat Message",
         "text_mode":"input",
         "text_display":"Message",
-        "instant": true
+        "instant": true,
+        "player_only":true
     }
 }

@@ -3,9 +3,7 @@ import InputId from './InputId.js';
 import InputRange from './InputRange.js';
 import InputCheckbox from './InputCheckbox.js';
 
-import effectData from '../data/effects.json';
-import conditionData from '../data/conditions.json';
-import filterData from '../data/filters.json';
+import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
 
 function Input({ type, id, jsonKey, startValue, onChange }) {
     let mode = null
@@ -14,15 +12,15 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
 
     // Effects
     if (type === 0) {
-        data = effectData;
+        data = getEffectData();
     }
     // Conditions
     else if (type === 1) {
-        data = conditionData;
+        data = getConditionData();
     }
     // Filters
     else if (type === 2) {
-        data = filterData;
+        data = getFilterData();
     }
     else {
         return <div/>

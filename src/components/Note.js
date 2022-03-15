@@ -1,7 +1,5 @@
 import '../App.css';
-import effectData from '../data/effects.json';
-import conditionData from '../data/conditions.json';
-import filterData from '../data/filters.json';
+import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
 
 function Note({ type, id }) {
     let data = {};
@@ -9,15 +7,15 @@ function Note({ type, id }) {
 
     // Effects
     if (type === 0) {
-        data = effectData;
+        data = getEffectData();
     }
     // Conditions
     else if (type === 1) {
-        data = conditionData;
+        data = getConditionData();
     }
     // Filters
     else if (type === 2) {
-        data = filterData;
+        data = getFilterData();
     }
 
     // If this id is not in the json table, just exit
