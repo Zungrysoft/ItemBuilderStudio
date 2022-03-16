@@ -158,6 +158,7 @@
     },
     "261":{
         "display":"Jumped",
+        "instant":true,
         "player_only":true
     },
     "270":{

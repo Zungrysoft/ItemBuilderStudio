@@ -314,6 +314,7 @@
     },
     "431":{
         "display":"Increase Item Count",
+        "note":"Negative values reduce the count.",
         "value_mode":"input",
         "value_display":"Count",
         "instant": true,
@@ -397,6 +398,7 @@
     "580":{
         "display":"Kills You Instantly",
         "note":"Please use with care.",
+        "has_sound":true,
         "instant": true
     },
     "800":{

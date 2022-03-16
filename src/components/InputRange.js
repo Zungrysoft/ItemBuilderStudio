@@ -20,6 +20,16 @@ function InputSlot({ startValue, data, onChange, style }) {
     if (!("min" in data && "max" in data)) {
         return <div/>
     }
+    
+    // Validate that min > max
+    if (data.min > data.max) {
+        return <div/>
+    }
+
+    // If the startValue is not between min and max, set it to be
+    if (startValue < data.min || startValue > data.max) {
+        onChange(data.min);
+    }
 
     // Create option list from min and max
     for (let i = data.min; i <= data.max; i ++) {
