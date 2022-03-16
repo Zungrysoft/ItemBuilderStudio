@@ -60,42 +60,46 @@
         "player_only":true
     },
     "200":{
-        "display":"Drawing Bow",
+        "display":"Drawing a Bow",
         "player_only":true
     },
     "201":{
-        "display":"Fired Bow",
+        "display":"Fired a Bow",
         "instant":true,
         "player_only":true
     },
     "205":{
-        "display":"Loading Crossbow",
+        "display":"Loading a Crossbow",
         "player_only":true
     },
     "206":{
         "display":"Loaded Crossbow",
+        "value_mode":"checkbox",
+        "value_display":"Must be This Slot",
         "instant":true,
         "player_only":true
     },
     "207":{
         "display":"Crossbow is Loaded",
+        "value_mode":"checkbox",
+        "value_display":"Must be This Slot",
         "player_only":true
     },
     "208":{
-        "display":"Fired Crossbow",
+        "display":"Fired a Crossbow",
         "instant":true,
         "player_only":true
     },
     "210":{
-        "display":"Readying Trident",
+        "display":"Readying a Trident",
         "player_only":true
     },
     "215":{
-        "display":"Holding Shield Up",
+        "display":"Holding a Shield Up",
         "player_only":true
     },
     "216":{
-        "display":"Blocked Damage With Shield",
+        "display":"Blocked Damage With a Shield",
         "instant":true,
         "value_mode":"input",
         "value_display":"Minimum Damage",
@@ -116,11 +120,11 @@
         "player_only":true
     },
     "225":{
-        "display":"Drinking Potion",
+        "display":"Drinking a Potion",
         "player_only":true
     },
     "226":{
-        "display":"Drank Potion",
+        "display":"Drank a Potion",
         "instant":true,
         "player_only":true
     },

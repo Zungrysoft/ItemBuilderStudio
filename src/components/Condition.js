@@ -144,7 +144,7 @@ function Condition({ type, structure, onChange, depth, context }) {
                     {type === 0 ?
                         <div className="entry">
                             <InputNoSound
-                                label="No Sound"
+                                label="No Sounds or Particles"
                                 id={structure.id}
                                 startValue={structure.nosound}
                                 onChange={(val) => {
