@@ -13,13 +13,13 @@ import '../App.css';
 import { getFilterData } from '../helpers/jsonData.js';
 
 // Context tracks whether the filter is causing conditions to
-// be run on players or mobs. Some conditions need to be greyed
+// be run on players or mobs. Some conditions need to be disabled
 // out depending on the context
 function filterContext(oldContext, id) {
-    if (!getFilterData[id]) {
+    if (!getFilterData()[id]) {
         return oldContext;
     }
-    if ("context" in getFilterData[id]) {
+    if ("context" in getFilterData()[id]) {
         return getFilterData()[id].context;
     }
     return oldContext;

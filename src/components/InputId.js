@@ -43,7 +43,10 @@ function getCategory( type, id ) {
 }
 
 function isDisabled(context,data,id) {
-    if (context === "player" && "monster_only" in data[id] && data[id].monster_only) {
+    if ((context === "self" || context === "player") && "monster_only" in data[id] && data[id].monster_only) {
+        return true;
+    }
+    if ((context === "mob" || context === "player") && "self_only" in data[id] && data[id].self_only) {
         return true;
     }
     else if (context === "mob" && "player_only" in data[id] && data[id].player_only) {

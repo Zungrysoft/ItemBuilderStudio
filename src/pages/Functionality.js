@@ -47,7 +47,7 @@ function FunctionalityPage({ data, onChange }) {
                 type={1}
                 structure={data.structure}
                 depth={0}
-                context="player"
+                context="self"
                 onChange={(val) => {
                     onChange({
                         ...data,

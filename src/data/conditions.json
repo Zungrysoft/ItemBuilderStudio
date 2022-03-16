@@ -364,6 +364,7 @@
         "instant":true,
         "value_mode":"input",
         "value_display":"Cooldown",
-        "player_only":true
+        "player_only":true,
+        "self_only":true
     }
 }
