@@ -11,6 +11,7 @@ function AboutPage({ data, onChange }) {
             <a href="https://github.com/Zungrysoft/ItemBuilder/releases" target="_blank">Get the datapack here</a>
             <p href="https://github.com/Zungrysoft/ItemBuilder/releases" target="_blank">Video Tutorial Coming Soon</p>
             <p>Created by ZungryWare</p>
+            <p>Contact: ZungrySoftEntertainment@gmail.com or ZungryWare#1545 on Discord</p>
         </div>
     );
 }
