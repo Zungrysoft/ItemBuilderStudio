@@ -27,7 +27,7 @@ function FunctionalityPage({ data, onChange }) {
                     onChange={(e) => {
                         onChange({
                             ...data,
-                            includeGive: e.target.value,
+                            includeGive: e.target.checked,
                         })
                     }}
                 />
