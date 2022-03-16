@@ -35,7 +35,7 @@ function FunctionalityPage({ data, onChange }) {
             <InputList
                 label="Activator Type"
                 data={slotData}
-                defaultValue={data.slot}
+                startValue={data.slot}
                 onChange={(val) => {
                     onChange({
                         ...data,
