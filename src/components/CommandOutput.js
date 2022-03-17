@@ -225,7 +225,7 @@ function generateDisplay(data) {
         output += rlc(
             generateLore(data.lore.upsides, "blue", false) +
             generateLore(data.lore.downsides, "red", false) +
-            generateLore(data.lore.lore, "gray", true)
+            generateLore(data.lore.lore, "dark_gray", true)
         );
         output += "]";
     }
