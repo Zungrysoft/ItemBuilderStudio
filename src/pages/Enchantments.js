@@ -34,7 +34,6 @@ function editEnchantments(data, id, lvl) {
 }
 
 function currentLevel(enchantments, id) {
-    console.log(enchantments);
     let ret = 0;
     enchantments.forEach((ench) => {
         if (ench.id === id) {

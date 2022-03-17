@@ -166,5 +166,24 @@ h2 {
     vertical-align: middle;
     text-align: right;
 }
-  
+
+.stored-item {
+    padding: 5px;
+    overflow: hidden;
+    background-color: #596677;
+    display: inline;
+    color: white;
+    border-radius:0.5em;
+    border-color: #b2bfcf;
+}
+.stored-item-delete {
+    padding: 5px;
+    overflow: hidden;
+    background-color: #596677;
+    display: inline;
+    color: white;
+    width: 30px;
+    border-radius:0.5em;
+    border-color: #b2bfcf;
+}
 

@@ -3,8 +3,9 @@ import './App.css';
 
 import FunctionalityPage from './pages/Functionality.js';
 import DisplayPage from './pages/Display.js';
-import AboutPage from './pages/About.js';
 import EnchantmentsPage from './pages/Enchantments.js';
+import AboutPage from './pages/About.js';
+import StoragePage from './pages/Storage.js';
 
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
@@ -13,11 +14,12 @@ let tabs = [
     {display:"Functionality",id:"functionality"},
     {display:"Display",id:"display"},
     {display:"Enchantments",id:"enchantments"},
+    {display:"Saved",id:"storage"},
     {display:"Info",id:"about"},
 ];
 
 function App() {
-    const [page, setPage] = useState("functionality")
+    const [page, setPage] = useState("functionality");
     const [data, setData] = useState({
         structure: {
             effects:[],
@@ -46,7 +48,7 @@ function App() {
             customModelData: 0,
         },
         enchantments:[],
-    })
+    });
     return (
         <div className="App">
             <Navbar
@@ -71,6 +73,12 @@ function App() {
                     :<div/>}
                     {page=="enchantments" ? 
                         <EnchantmentsPage
+                            data={data}
+                            onChange={setData}
+                        /> 
+                    :<div/>}
+                    {page=="storage" ? 
+                        <StoragePage
                             data={data}
                             onChange={setData}
                         /> 
