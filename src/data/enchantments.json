@@ -1,0 +1,160 @@
+{
+    "minecraft:unbreaking":{
+        "maxLvl": 3,
+        "display": "Unbreaking"
+    },
+    "minecraft:mending":{
+        "maxLvl": 1,
+        "display": "Mending"
+    },
+
+    
+    "minecraft:protection":{
+        "maxLvl": 4,
+        "display": "Protection"
+    },
+    "minecraft:fire_protection":{
+        "maxLvl": 4,
+        "display": "Fire Protection"
+    },
+    "minecraft:blast_protection":{
+        "maxLvl": 4,
+        "display": "Blast Protection"
+    },
+    "minecraft:projectile_protection":{
+        "maxLvl": 4,
+        "display": "Projectile Protection"
+    },
+    "minecraft:thorns":{
+        "maxLvl": 3,
+        "display": "Thorns"
+    },
+    "minecraft:respiration":{
+        "maxLvl": 3,
+        "display": "Respiration"
+    },
+    "minecraft:aqua_affinity":{
+        "maxLvl": 1,
+        "display": "Aqua Affinity"
+    },
+    "minecraft:feather_falling":{
+        "maxLvl": 4,
+        "display": "Feather Falling"
+    },
+    "minecraft:depth_strider":{
+        "maxLvl": 3,
+        "display": "Depth Strider"
+    },
+    "minecraft:frost_walker":{
+        "maxLvl": 2,
+        "display": "Frost Walker"
+    },
+    "minecraft:soul_speed":{
+        "maxLvl": 3,
+        "display": "Soul Speed"
+    },
+    
+
+    "minecraft:sharpness":{
+        "maxLvl": 5,
+        "display": "Sharpness"
+    },
+    "minecraft:smite":{
+        "maxLvl": 5,
+        "display": "Smite"
+    },
+    "minecraft:bane_of_arthropods":{
+        "maxLvl": 5,
+        "display": "Bane of Arthropods"
+    },
+    "minecraft:fire_aspect":{
+        "maxLvl": 2,
+        "display": "Fire Aspect"
+    },
+    "minecraft:knockback":{
+        "maxLvl": 2,
+        "display": "Knockback"
+    },
+    "minecraft:looting":{
+        "maxLvl": 3,
+        "display": "Looting"
+    },
+    "minecraft:sweeping":{
+        "maxLvl": 3,
+        "display": "Sweeping Edge"
+    },
+    
+
+    "minecraft:efficiency":{
+        "maxLvl": 5,
+        "display": "Efficiency"
+    },
+    "minecraft:silk_touch":{
+        "maxLvl": 1,
+        "display": "Silk Touch"
+    },
+    "minecraft:fortune":{
+        "maxLvl": 3,
+        "display": "Fortune"
+    },
+    
+
+    "minecraft:power":{
+        "maxLvl": 5,
+        "display": "Power"
+    },
+    "minecraft:punch":{
+        "maxLvl": 2,
+        "display": "Punch"
+    },
+    "minecraft:flame":{
+        "maxLvl": 1,
+        "display": "Flame"
+    },
+    "minecraft:infinity":{
+        "maxLvl": 1,
+        "display": "Infinity"
+    },
+
+
+    "minecraft:quick_charge":{
+        "maxLvl": 3,
+        "display": "Quick Charge"
+    },
+    "minecraft:piercing":{
+        "maxLvl": 4,
+        "display": "Piercing"
+    },
+    "minecraft:multishot":{
+        "maxLvl": 1,
+        "display": "Multishot"
+    },
+    
+
+    "minecraft:loyalty":{
+        "maxLvl": 3,
+        "display": "Loyalty"
+    },
+    "minecraft:impaling":{
+        "maxLvl": 5,
+        "display": "Impaling"
+    },
+    "minecraft:channeling":{
+        "maxLvl": 1,
+        "display": "Channeling"
+    },
+    "minecraft:riptide":{
+        "maxLvl": 3,
+        "display": "Riptide"
+    },
+
+
+    "minecraft:luck_of_the_sea":{
+        "maxLvl": 3,
+        "display": "Luck of the Sea"
+    },
+    "minecraft:lure":{
+        "maxLvl": 3,
+        "display": "Lure"
+    }
+}

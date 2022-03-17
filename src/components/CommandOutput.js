@@ -298,6 +298,19 @@ function generateCondition(structure, isBase) {
     return rlc(output);
 }
 
+function generateEnchantments(enchantments) {
+    if (enchantments.length === 0) {
+        return "";
+    }
+
+    let output = "";
+    enchantments.forEach((ench) => {
+        output += ",{id:\"" + ench.id + "\",lvl:" + ench.lvl + "}";
+    })
+
+    return ",Enchantments:[" + rlc(output) + "]";
+}
+
 function generateCommand(data) {
     let output = "";
     
@@ -310,6 +323,8 @@ function generateCommand(data) {
     output += generateCondition(data.structure, true);
 
     output += generateDisplay(data);
+
+    output += generateEnchantments(data.enchantments);
 
     output += generateHideFlags(data);
 

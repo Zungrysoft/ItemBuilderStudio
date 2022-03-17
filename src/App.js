@@ -4,6 +4,7 @@ import './App.css';
 import FunctionalityPage from './pages/Functionality.js';
 import DisplayPage from './pages/Display.js';
 import AboutPage from './pages/About.js';
+import EnchantmentsPage from './pages/Enchantments.js';
 
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
@@ -11,7 +12,7 @@ import Navbar from './components/Navbar.js';
 let tabs = [
     {display:"Functionality",id:"functionality"},
     {display:"Display",id:"display"},
-    //{display:"Enchantments",id:"enchantments"},
+    {display:"Enchantments",id:"enchantments"},
     {display:"Info",id:"about"},
 ];
 
@@ -43,7 +44,8 @@ function App() {
             color: "2c2f9e",
             colorEnabled: false,
             customModelData: 0,
-        }
+        },
+        enchantments:[],
     })
     return (
         <div className="App">
@@ -63,6 +65,12 @@ function App() {
                     :<div/>}
                     {page=="display" ? 
                         <DisplayPage
+                            data={data}
+                            onChange={setData}
+                        /> 
+                    :<div/>}
+                    {page=="enchantments" ? 
+                        <EnchantmentsPage
                             data={data}
                             onChange={setData}
                         /> 

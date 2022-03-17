@@ -4,10 +4,10 @@ function isHexChar(char) {
 
 export function hexFormat(color) {
     // Strip off # or 0x
-    if (color.slice(0,1) == "#") {
+    if (color.slice(0,1) === "#") {
         color = color.slice(1);
     }
-    else if (color.slice(0,2) == "0x") {
+    else if (color.slice(0,2) === "0x") {
         color = color.slice(2);
     }
 
@@ -54,7 +54,7 @@ function charToNum(c) {
 // Converts color from a hex string to an integer
 export function hexToDec(color) {
     // Remove leading #
-    if (color.slice(0,1) == "#") {
+    if (color.slice(0,1) === "#") {
         color = color.slice(1);
     }
 
