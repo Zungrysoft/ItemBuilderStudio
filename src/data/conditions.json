@@ -192,8 +192,7 @@
     "301":{
         "display":"Has Certain Amount of Armor",
         "value_mode":"input",
-        "value_display":"Minimum Armor",
-        "player_only":true
+        "value_display":"Minimum Armor"
     },
     "302":{
         "display":"Has a Certain Number of XP Levels",
