@@ -1,6 +1,7 @@
 import Checkbox from '../components/Checkbox.js';
 import InputList from '../components/InputList.js';
 import InputColor from '../components/InputColor.js';
+import InputNameWithRandomizer from '../components/InputNameWithRandomizer';
 
 let colorModes = {
     "single":{
@@ -34,16 +35,15 @@ function DisplayPage({ data, onChange }) {
         <div>
             <h2>Name</h2>
             <div>
-                <input
-                    className="input-box-long"
-                    type="text"
-                    defaultValue={data.name.text}
-                    onChange={(e) => {
+                <InputNameWithRandomizer
+                    startValue={data.name.text}
+                    itemId={data.itemId}
+                    onChange={(val) => {
                         onChange({
                             ...data,
                             name: {
                                 ...data.name,
-                                text: e.target.value,
+                                text: val,
                             }
                         })
                     }}

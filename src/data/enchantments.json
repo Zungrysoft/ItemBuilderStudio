@@ -7,6 +7,11 @@
         "maxLvl": 1,
         "display": "Mending"
     },
+    "minecraft:vanishing_curse":{
+        "maxLvl": 1,
+        "display": "Curse of Vanishing",
+        "curse": true
+    },
 
 
     "minecraft:protection":{
@@ -52,6 +57,11 @@
     "minecraft:soul_speed":{
         "maxLvl": 3,
         "display": "Soul Speed"
+    },
+    "minecraft:binding_curse":{
+        "maxLvl": 1,
+        "display": "Curse of Binding",
+        "curse": true
     },
     
 

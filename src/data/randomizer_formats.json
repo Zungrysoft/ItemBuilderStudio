@@ -1,0 +1,188 @@
+{
+    "formats":[
+        {
+            "weight": 100,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 10,
+            "sections":[
+                "The ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 100,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 30,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[adjective]",
+                " ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 30,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[weapon]",
+                " of ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 60,
+            "sections":[
+                "[description]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 60,
+            "sections":[
+                "[weapon]",
+                " of the ",
+                "[noun]"
+            ]
+        },
+        {
+            "weight": 20,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[weapon]",
+                " of the ",
+                "[noun]"
+            ]
+        },
+        {
+            "weight": 20,
+            "sections":[
+                "[weapon]",
+                " of the ",
+                "[adjective]",
+                " ",
+                "[noun]"
+            ]
+        },
+        {
+            "weight": 5,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[weapon]",
+                " of the ",
+                "[adjective]",
+                " ",
+                "[noun]"
+            ]
+        },
+        {
+            "weight": 10,
+            "sections":[
+                "[weapon]",
+                " of the ",
+                "[adjective]"
+            ]
+        },
+        {
+            "weight": 15,
+            "sections":[
+                "[noun]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 5,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[noun]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 15,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[adjective]",
+                " ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[noun]",
+                " ",
+                "[weapon]",
+                " of ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 5,
+            "sections":[
+                "Very ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 4,
+            "sections":[
+                "[weapon]",
+                " that is ",
+                "[adjective]"
+            ]
+        },
+        {
+            "weight": 100,
+            "sections":[
+                "[person]",
+                "'s ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 20,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[person]"
+            ]
+        }
+    ]
+}

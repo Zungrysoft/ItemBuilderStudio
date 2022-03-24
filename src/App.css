@@ -20,6 +20,14 @@
     fill:gray;
 }
 
+.centered-button {
+    color:white;
+}
+
+.centered-button:hover {
+    fill:gray;
+}
+
 .bounding-box-effect {
     display: inline-flex;
     border: 2px solid black;
@@ -75,7 +83,7 @@
 }
 
 .input-box-long {
-    width: 220px
+    width: 280px
 }
 
 .input-box-lore {
