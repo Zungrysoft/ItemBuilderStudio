@@ -13,7 +13,7 @@ let colorModes = {
         numColors: 2,
     },
     "word_gradient":{
-        display:"Word Gradient",
+        display:"Gradient Words",
         numColors: 2,
     },
     "metallic":{
@@ -22,6 +22,10 @@ let colorModes = {
     },
     "alternating":{
         display:"Alternating",
+        numColors: 2,
+    },
+    "word_alternating":{
+        display:"Alternating Words",
         numColors: 2,
     },
     "capitalized":{

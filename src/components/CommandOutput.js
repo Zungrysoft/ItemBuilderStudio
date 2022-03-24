@@ -104,6 +104,19 @@ function generateNameWordGradient(name) {
     return output;
 }
 
+function generateNameWordAlternating(name) {
+    let output = "";
+    let words = name.text.split(' ');
+    words.forEach((word, index) => {
+        if (index > 0) {
+            word = " " + word;
+        }
+        let color = index % 2 == 0 ? name.color : name.color2;
+        output += generateText(word, color, name.bold, name.italic);
+    });
+    return output;
+}
+
 function generateNameAlternating(name) {
     let output = "";
 
@@ -145,6 +158,9 @@ function generateName(name) {
     let output = "";
     if (name.colorMode === "alternating") {
         output = generateNameAlternating(name);
+    }
+    else if (name.colorMode === "word_alternating") {
+        output = generateNameWordAlternating(name);
     }
     else if (name.colorMode === "capitalized") {
         output = generateNameCapitalized(name);
@@ -238,12 +254,12 @@ function bindValue(num) {
     num = parseInt(String(num).replace(/,/g, ""));
 
     // Bind value to within the safe limits of Minecraft scoreboards
-    /*if (num > 2147483647) {
+    if (num > 2147483647) {
         num = 2147483647;
     }
     if (num < -2147483648) {
         num = -2147483648;
-    }*/
+    }
 
     return num;
 }
