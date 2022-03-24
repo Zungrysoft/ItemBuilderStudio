@@ -169,7 +169,7 @@
             ]
         },
         {
-            "weight": 100,
+            "weight": 10,
             "sections":[
                 "[person]",
                 "'s ",
@@ -177,7 +177,27 @@
             ]
         },
         {
-            "weight": 20,
+            "weight": 10,
+            "sections":[
+                "[person]",
+                "'s ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 10,
+            "sections":[
+                "[person]",
+                "'s ",
+                "[weapon]",
+                " of ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 6,
             "sections":[
                 "[weapon]",
                 " of ",

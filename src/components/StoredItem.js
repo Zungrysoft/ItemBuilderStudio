@@ -1,5 +1,3 @@
-import defaultItems from '../data/default_storage';
-
 function StoredItem({ data, onClick, onDelete }) {
     let displayName = data.name.text === "" ? "Unnamed Item" : data.name.text;
     return (

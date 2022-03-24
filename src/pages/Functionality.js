@@ -10,7 +10,7 @@ function FunctionalityPage({ data, onChange }) {
             <div className="entry">
                 <p className="label">Item Id: </p>
                 <input
-                    className="input-box"
+                    className="input-box-long"
                     type="text"
                     defaultValue={data.itemId}
                     onChange={(e) => {
