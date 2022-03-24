@@ -358,13 +358,8 @@ function CommandOutput({ data }) {
 
     return (
         <div>
-            <button
-                onClick={(e) => {
-                    navigator.clipboard.writeText(cmd);
-                }}
-            >Copy Command</button>
             <div>
-                <code className="command-text">{cmd}</code>
+                <code className="command-text" id="cmdText">{cmd}</code>
             </div>
         </div>
     );

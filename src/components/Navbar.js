@@ -12,6 +12,12 @@ function Navbar({ tabs, startVal, onChange }) {
                     }}
                 >{val.display}</button>
             )}
+            <button
+                style={{float:"right"}}
+                onClick={(e) => {
+                    navigator.clipboard.writeText(document.getElementById("cmdText").innerText);
+                }}
+            >Copy Command</button>
         </div>
     )
 }
