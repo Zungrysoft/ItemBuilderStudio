@@ -110,11 +110,31 @@
             ]
         },
         {
-            "weight": 5,
+            "weight": 2,
+            "sections":[
+                "[noun]",
+                " ",
+                "[noun]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 10,
             "sections":[
                 "[adjective]",
                 " ",
                 "[noun]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 7,
+            "sections":[
+                "[noun]",
+                " ",
+                "[description]",
                 " ",
                 "[weapon]"
             ]

@@ -39,7 +39,8 @@ function parseSection(section, itemId) {
         if (itemId.includes("sword")) {weapon="sword";}
         if (itemId.includes("axe")) {weapon="axe";}
         if (itemId.includes("pickaxe")) {weapon="pickaxe";}
-        if (itemId.includes("shovel")) {weapon="hoe";}
+        if (itemId.includes("shovel")) {weapon="shovel";}
+        if (itemId.includes("hoe")) {weapon="hoe";}
         if (itemId.includes("helmet")) {weapon=armorPiece("helmet");}
         if (itemId.includes("chestplate")) {weapon=armorPiece("chestplate");}
         if (itemId.includes("leggings")) {weapon=armorPiece("leggings");}
