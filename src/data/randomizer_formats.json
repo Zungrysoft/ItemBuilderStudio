@@ -72,6 +72,50 @@
             ]
         },
         {
+            "weight": 15,
+            "sections":[
+                "The ",
+                "[noun]",
+                "'s ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 5,
+            "sections":[
+                "The ",
+                "[noun]",
+                "'s ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 5,
+            "sections":[
+                "The ",
+                "[adjective]",
+                " ",
+                "[noun]",
+                "'s ",
+                "[weapon]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "The ",
+                "[adjective]",
+                " ",
+                "[noun]",
+                "'s ",
+                "[adjective]",
+                " ",
+                "[weapon]"
+            ]
+        },
+        {
             "weight": 20,
             "sections":[
                 "[weapon]",
