@@ -5,6 +5,7 @@ import json
 FILE_PATH = '../src/data/randomizer_words.json'
 TYPES = ["weapons","nouns","descriptions","adjectives","names"]
 WEAPON_TYPES = [
+	"trinket",
 	"sword",
 	"axe",
 	"pickaxe",
@@ -19,7 +20,9 @@ WEAPON_TYPES = [
 	"bow",
 	"crossbow",
 	"trident",
-	"trinket",
+	"wings",
+	"potion",
+	"staff",
 ]
 
 def data_insert(value, plural_form, weight, list):

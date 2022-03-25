@@ -80,6 +80,30 @@
             ]
         },
         {
+            "weight": 3,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[weapon]",
+                " of ",
+                "[adjective]",
+                " ",
+                "[noun_plural]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[adjective]",
+                " ",
+                "[adjective]",
+                " ",
+                "[noun_plural]"
+            ]
+        },
+        {
             "weight": 20,
             "sections":[
                 "[adjective]",
@@ -284,6 +308,22 @@
                 "[weapon]",
                 " of ",
                 "[person]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[description]",
+                " of ",
+                "[description]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[adjective]",
+                " ",
+                "[description]"
             ]
         }
     ]

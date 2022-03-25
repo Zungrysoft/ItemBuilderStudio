@@ -54,6 +54,10 @@ function parseSection(section, itemId) {
         if (itemId.includes("bow")) {weapon="bow";}
         if (itemId.includes("crossbow")) {weapon="crossbow";}
         if (itemId.includes("trident")) {weapon="trident";}
+        if (itemId.includes("elytra")) {weapon="wings";}
+        if (itemId.includes("potion")) {weapon="potion";}
+        if (itemId.includes("bottle")) {weapon="potion";}
+        if (itemId.includes("stick")) {weapon="staff";}
 
         return pickFromWeightedList(randomizerWords.weapons[weapon]).value;
     }
