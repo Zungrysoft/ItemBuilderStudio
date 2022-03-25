@@ -4,6 +4,11 @@ import randomizerWords from '../data/randomizer_words.json';
 import randomizerFormats from '../data/randomizer_formats.json';
 import ButtonRandomize from '../components/ButtonRandomize.js';
 
+function pickFromList(list) {
+    let randomVal = Math.trunc(Math.random() * list.length);
+    return list[randomVal];
+}
+
 function pickFromWeightedList(list) {
     // Figure out what the total weight of all items is
     let totalWeight = 0;
@@ -63,6 +68,18 @@ function parseSection(section, itemId) {
     }
     if (section === "[noun]") {
         return pickFromWeightedList(randomizerWords.nouns).value;
+    }
+    if (section === "[noun_plural]") {
+        let ret = pickFromWeightedList(randomizerWords.nouns);
+        // See if a special-case plural form exists for this word
+        if ("value_plural" in ret) {
+            return ret.value_plural;
+        }
+        // Don't pluralize words that already end in s
+        if (ret.value.substr(ret.value.length-1,1) === 's') {
+            return ret.value;
+        }
+        return ret.value + "s";
     }
     return section;
 }

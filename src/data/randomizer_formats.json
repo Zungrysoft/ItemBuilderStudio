@@ -62,6 +62,24 @@
             ]
         },
         {
+            "weight": 80,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[noun_plural]"
+            ]
+        },
+        {
+            "weight": 40,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[adjective]",
+                " ",
+                "[noun_plural]"
+            ]
+        },
+        {
             "weight": 20,
             "sections":[
                 "[adjective]",

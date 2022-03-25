@@ -22,16 +22,24 @@ WEAPON_TYPES = [
 	"trinket",
 ]
 
-def data_insert(value, weight, list):
+def data_insert(value, plural_form, weight, list):
 	# Make sure it's not already in the list
 	for i in range(len(list)):
 		if list[i]["value"] == value:
 			prev_weight = list[i]["weight"]
 			print(f"Entry already in list. Updating weight from {prev_weight}.")
 			list[i]["weight"] = weight
+			list[i]["value_plural"] = plural_form
 			return list
-		
-	list.append({"value": value, "weight": weight})
+	
+	# Build data
+	ins = {"value": value, "weight": weight}
+	
+	# Check for plural form
+	if plural_form != "":
+		ins["value_plural"] = plural_form
+	
+	list.append(ins)
 	return list
 
 def init_data(data):
@@ -72,12 +80,21 @@ def main():
 			
 			# Type input
 			print(f"1: {value} of Destruction")
-			print(f"2: Sword of the {value}")
+			print(f"2: Sword of the {value}s")
 			print(f"3: Sword of {value}")
 			print(f"4: Sword that's {value}")
 			print(f"5: {value}'s Sword")
+			type = input("Input type: ")
+			
+			# Check for plural form
+			plural_form = ""
+			if type == "*2" or type == "2*":
+				type = 2
+				plural_form = input("Plural Form: ")
+			
+			# Input verification
 			try:
-				type = int(input("Input type: ")) - 1
+				type = int(type) - 1
 			except:
 				print("Invalid input")
 				continue
@@ -107,7 +124,7 @@ def main():
 			# All other keys
 			else:
 				# Insert data
-				data[TYPES[type]] = data_insert(value, weight, data[TYPES[type]])
+				data[TYPES[type]] = data_insert(value, plural_form, weight, data[TYPES[type]])
 				
 	# Write resulting json data to file
 	with open(FILE_PATH,"w") as f:

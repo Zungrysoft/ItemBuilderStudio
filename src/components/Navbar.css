@@ -4,7 +4,8 @@
 	background-color: #111216;
     position: sticky;
     position:-webkit-sticky;
-    top:0px;
+    left: 0px;
+    top: 0px;
 }
 
 /* Style the buttons that are used to open the tab content */
