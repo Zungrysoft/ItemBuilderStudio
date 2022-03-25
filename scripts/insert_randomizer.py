@@ -120,7 +120,7 @@ def main():
 					continue
 				
 				# Insert data
-				data[TYPES[type]][WEAPON_TYPES[weapon]] = data_insert(value, weight, data[TYPES[type]][WEAPON_TYPES[weapon]])
+				data[TYPES[type]][WEAPON_TYPES[weapon]] = data_insert(value, "", weight, data[TYPES[type]][WEAPON_TYPES[weapon]])
 			# All other keys
 			else:
 				# Insert data
