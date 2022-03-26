@@ -382,9 +382,9 @@
         "display":"Summon Explosion",
         "note":"\"mobGriefing\" gamerule will determine\nwhether this will break blocks",
         "value_mode":"value_range",
-        "value_display":"Blast Radius",
+        "value_display":"Explosion Power",
         "min": 1,
-        "max": 5,
+        "max": 10,
         "instant": true
     },
     "520":{
@@ -395,10 +395,74 @@
         "has_sound":true,
         "instant": true
     },
-    "580":{
-        "display":"Kills You Instantly",
-        "note":"Please use with care.",
+    "550":{
+        "display":"Shoot Arrow",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Power Multiplier %",
         "has_sound":true,
+        "instant": true
+    },
+    "560":{
+        "display":"Shoot Small Fireball",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "has_sound":true,
+        "instant": true
+    },
+    "561":{
+        "display":"Shoot Large Fireball",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"value_range",
+        "value2_display":"Explosion Power",
+        "min": 1,
+        "max": 10,
+        "has_sound":true,
+        "instant": true
+    },
+    "562":{
+        "display":"Shoot Ignited TNT",
+        "note":"This will destroy blocks.",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Fuse Time",
+        "has_sound":true,
+        "instant": true
+    },
+    "564":{
+        "display":"Shoot Trident",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "has_sound":true,
+        "instant": true
+    },
+    "565":{
+        "display":"Shoot Shulker Bullet",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"checkbox",
+        "value2_display":"Disable Homing",
+        "has_sound":true,
+        "instant": true
+    },
+    "580":{
+        "display":"Die Instantly",
+        "has_sound":true,
+        "instant": true
+    },
+    "581":{
+        "display":"Kill Launched Projectile",
+        "note":"Can be used to make Bows and\nCrossbows fire other projectiles.",
+        "version_min": 2.1,
         "instant": true
     },
     "800":{

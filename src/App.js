@@ -4,8 +4,9 @@ import './App.css';
 import FunctionalityPage from './pages/Functionality.js';
 import DisplayPage from './pages/Display.js';
 import EnchantmentsPage from './pages/Enchantments.js';
-import AboutPage from './pages/About.js';
 import StoragePage from './pages/Storage.js';
+import SettingsPage from './pages/Settings.js';
+import AboutPage from './pages/About.js';
 
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
@@ -15,11 +16,15 @@ let tabs = [
     {display:"Display",id:"display"},
     {display:"Enchantments",id:"enchantments"},
     {display:"Saved",id:"storage"},
+    {display:"Settings",id:"settings"},
     {display:"Info",id:"about"},
 ];
 
 function App() {
     const [page, setPage] = useState("functionality");
+    const [settings, setSettings] = useState({
+        version: 2.0
+    });
     const [data, setData] = useState({
         structure: {
             effects:[],
@@ -59,31 +64,38 @@ function App() {
             <header className="App-header">
                 <div>
                     {/* Pages */}
-                    {page=="functionality" ? 
+                    {page=="functionality" ?
                         <FunctionalityPage
                             data={data}
                             onChange={setData}
+                            version={settings.version}
                         /> 
                     :<div/>}
-                    {page=="display" ? 
+                    {page=="display" ?
                         <DisplayPage
                             data={data}
                             onChange={setData}
                         /> 
                     :<div/>}
-                    {page=="enchantments" ? 
+                    {page=="enchantments" ?
                         <EnchantmentsPage
                             data={data}
                             onChange={setData}
                         /> 
                     :<div/>}
-                    {page=="storage" ? 
+                    {page=="storage" ?
                         <StoragePage
                             data={data}
                             onChange={setData}
                         /> 
                     :<div/>}
-                    {page=="about" ? 
+                    {page=="settings" ?
+                        <SettingsPage
+                            data={settings}
+                            onChange={setSettings}
+                        /> 
+                    :<div/>}
+                    {page=="about" ?
                         <AboutPage
                             data={data}
                             onChange={setData}

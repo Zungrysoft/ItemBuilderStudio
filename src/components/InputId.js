@@ -9,6 +9,7 @@ import mobTypeData from '../data/mob_types.json';
 import durationData from '../data/durations.json';
 import resourceData from '../data/resources.json';
 import equipmentData from '../data/equipment.json';
+import angleData from '../data/angles.json';
 import potionEffectData from '../data/potion_effects.json';
 
 function getCategory( type, id ) {
@@ -32,6 +33,7 @@ function getCategory( type, id ) {
     }
     else if (type === 2) {
         if (100 <= id && id < 200) {return "Contextual";}
+        if (500 <= id && id < 600) {return "Directional";}
     }
     else if (type === "sound") {
         if (100 <= id && id < 200) {return "Passive";}
@@ -42,7 +44,18 @@ function getCategory( type, id ) {
     return "Misc"
 }
 
-function isDisabled(context,data,id) {
+function isDisabled(id,data,context,version) {
+    console.log(data);
+    console.log(id);
+    // Versioning
+    if ("version_min" in data[id] && version < data[id].version_min) {
+        return true;
+    }
+    if ("version_max" in data[id] && version > data[id].version_max) {
+        return true;
+    }
+
+    // Filter context
     if ((context === "self" || context === "player") && "monster_only" in data[id] && data[id].monster_only) {
         return true;
     }
@@ -52,10 +65,11 @@ function isDisabled(context,data,id) {
     else if (context === "mob" && "player_only" in data[id] && data[id].player_only) {
         return true;
     }
+
     return false;
 }
 
-function InputId({ type, startValue, onChange, context }) {
+function InputId({ type, startValue, onChange, context, version }) {
     let data = {};
     let labelName = "";
     let optionGroups = [];
@@ -105,6 +119,9 @@ function InputId({ type, startValue, onChange, context }) {
     else if (type === "equipment") {
         data = equipmentData;
     }
+    else if (type === "angle") {
+        data = angleData;
+    }
     else if (type === "potion_effect") {
         data = potionEffectData;
     }
@@ -112,37 +129,45 @@ function InputId({ type, startValue, onChange, context }) {
         return <div/>
     }
 
-    // If the current value is not within the list, set it to something in the list
-    if (!(startValue in data)) {
-        if (Object.keys(data).length > 0) {
+    if (Object.keys(data).length > 0) {
+        // If the current value is not within the list, set it to something in the list
+        if (!(startValue in data)) {
             onChange(Object.keys(data)[0]);
+        }
+        // If the current value is disabled, set it to something in the list
+        else if (isDisabled(startValue,data,context,version)) {
+            let newValue = Object.keys(data)[0];
+            if (!isDisabled(newValue,data,context,version)) {
+                onChange(newValue);
+            }
         }
     }
 
     // Create option list from json data
     let prev = "";
     let curList = [];
-    Object.keys(data).forEach(function(id, _) {
-        // Whenever the category changes, form a new group from collected elements
-        if (useCategories) {
-            let category = getCategory(type, id);
-            if (category != prev) {
-                optionGroups.push(
-                    <optgroup label={prev}>
-                        {curList}
-                    </optgroup>
-                );
-                curList = [];
-                prev = category;
+    Object.keys(data).forEach((id) => {
+        if (!isDisabled(id,data,context,version)){
+            // Whenever the category changes, form a new group from collected elements
+            if (useCategories) {
+                let category = getCategory(type, id);
+                if (category != prev) {
+                    optionGroups.push(
+                        <optgroup label={prev}>
+                            {curList}
+                        </optgroup>
+                    );
+                    curList = [];
+                    prev = category;
+                }
             }
-        }
-        // Determine the label for the option
-        let labelName = data[id].display;
-        // Add asterisk if this is an instant condition
-        if ("instant" in data[id] && data[id].instant == true) {
-            labelName = "*" + labelName;
-        }
-        if (!isDisabled(context,data,id)){
+            // Determine the label for the option
+            let labelName = data[id].display;
+            // Add asterisk if this is an instant condition
+            if ("instant" in data[id] && data[id].instant == true) {
+                labelName = "*" + labelName;
+            }
+            
             curList.push(
                 <option value={id}>
                     {labelName}

@@ -2,7 +2,10 @@ import React,{ Component } from 'react';
 import AddEffectButton from './AddEffectButton.js';
 import AddConditionButton from './AddConditionButton.js';
 import AddFilterButton from './AddFilterButton.js';
-import DeleteButton from './DeleteButton.js';
+import ButtonDelete from './ButtonDelete.js';
+import ButtonDuplicate from './ButtonDuplicate.js';
+import ButtonShiftUp from './ButtonShiftUp.js';
+import ButtonShiftDown from './ButtonShiftDown.js';
 import InputId from './InputId.js';
 import Input from './Input.js';
 import InputCheckbox from './InputCheckbox.js';
@@ -62,21 +65,79 @@ function newCondition() {
     };
 }
 
-function Condition({ type, structure, onChange, depth, context }) {
+function duplicateEntry(list, toCopy) {
+    for (let i = 0; i < list.length; i ++) {
+        if (list[i] === toCopy) {
+            list.splice(i, 0, {...toCopy});
+            break;
+        }
+    }
+    return list;
+}
+
+function shiftUp(list, toShift) {
+    for (let i = 1; i < list.length; i ++) {
+        if (list[i] === toShift) {
+            let swapper = list[i];
+            list[i] = list[i-1];
+            list[i-1] = swapper;
+            break;
+        }
+    }
+    return list;
+}
+
+function shiftDown(list, toShift) {
+    for (let i = 0; i < list.length-1; i ++) {
+        if (list[i] === toShift) {
+            let swapper = list[i];
+            list[i] = list[i+1];
+            list[i+1] = swapper;
+            break;
+        }
+    }
+    return list;
+}
+
+function Condition({
+    type, structure, onChange,
+    eventDuplicate, eventShiftUp, eventShiftDown, 
+    only, depth, context, version,
+}) {
     return (
         <div className={boxType(type, depth)}>
             {depth > 0 ? <div>
-                <DeleteButton
+                <ButtonDelete
                     eventClick={(e) => {
                         onChange({})
                     }}
                 />
+                <ButtonDuplicate
+                    eventClick={(e) => {
+                        eventDuplicate()
+                    }}
+                />
+                {only ? <div/> :
+                    <ButtonShiftUp
+                        eventClick={(e) => {
+                            eventShiftUp()
+                        }}
+                    />
+                }
+                {only ? <div/> :
+                    <ButtonShiftDown
+                        eventClick={(e) => {
+                            eventShiftDown()
+                        }}
+                    />
+                }
                 <div>
                     <div className="entry">
                         <InputId
                             type={type}
                             startValue={structure.id}
                             context={context}
+                            version={version}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -91,6 +152,7 @@ function Condition({ type, structure, onChange, depth, context }) {
                             id={structure.id}
                             jsonKey="value"
                             startValue={structure.value}
+                            version={version}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -105,6 +167,7 @@ function Condition({ type, structure, onChange, depth, context }) {
                             id={structure.id}
                             jsonKey="value2"
                             startValue={structure.value2}
+                            version={version}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -119,6 +182,7 @@ function Condition({ type, structure, onChange, depth, context }) {
                             id={structure.id}
                             jsonKey="value3"
                             startValue={structure.value3}
+                            version={version}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -133,6 +197,7 @@ function Condition({ type, structure, onChange, depth, context }) {
                             id={structure.id}
                             jsonKey="text"
                             startValue={structure.text}
+                            version={version}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -224,9 +289,29 @@ function Condition({ type, structure, onChange, depth, context }) {
                                     )
                                 })
                             }}
+                            eventDuplicate={() => {
+                                onChange({
+                                    ...structure,
+                                    effects: duplicateEntry(structure.effects,effect)
+                                })
+                            }}
+                            eventShiftUp={() => {
+                                onChange({
+                                    ...structure,
+                                    effects: shiftUp(structure.effects,effect)
+                                })
+                            }}
+                            eventShiftDown={() => {
+                                onChange({
+                                    ...structure,
+                                    effects: shiftDown(structure.effects,effect)
+                                })
+                            }}
+                            only={structure.effects.length === 1}
                             depth={depth+1}
                             type={0}
                             context={context}
+                            version={version}
                         />
                     </div>
                 ))}
@@ -245,9 +330,29 @@ function Condition({ type, structure, onChange, depth, context }) {
                                     )
                                 })
                             }}
+                            eventDuplicate={() => {
+                                onChange({
+                                    ...structure,
+                                    conditions: duplicateEntry(structure.conditions,condition)
+                                })
+                            }}
+                            eventShiftUp={() => {
+                                onChange({
+                                    ...structure,
+                                    conditions: shiftUp(structure.conditions,condition)
+                                })
+                            }}
+                            eventShiftDown={() => {
+                                onChange({
+                                    ...structure,
+                                    conditions: shiftDown(structure.conditions,condition)
+                                })
+                            }}
+                            only={structure.conditions.length === 1}
                             depth={depth+1}
                             type={1}
                             context={context}
+                            version={version}
                         />
                     </div>
                 ))}
@@ -266,9 +371,29 @@ function Condition({ type, structure, onChange, depth, context }) {
                                     )
                                 })
                             }}
+                            eventDuplicate={() => {
+                                onChange({
+                                    ...structure,
+                                    filters: duplicateEntry(structure.filters,filter)
+                                })
+                            }}
+                            eventShiftUp={() => {
+                                onChange({
+                                    ...structure,
+                                    filters: shiftUp(structure.filters,filter)
+                                })
+                            }}
+                            eventShiftDown={() => {
+                                onChange({
+                                    ...structure,
+                                    filters: shiftDown(structure.filters,filter)
+                                })
+                            }}
+                            only={structure.filters.length === 1}
                             depth={depth+1}
                             type={2}
                             context={filterContext(context, filter.id)}
+                            version={version}
                         />
                     </div>
                 ))}

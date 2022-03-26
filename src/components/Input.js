@@ -5,7 +5,7 @@ import InputCheckbox from './InputCheckbox.js';
 
 import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
 
-function Input({ type, id, jsonKey, startValue, onChange }) {
+function Input({ type, id, jsonKey, startValue, onChange, version }) {
     let mode = null
     let labelName = ""
     let data = null;
@@ -104,6 +104,7 @@ function Input({ type, id, jsonKey, startValue, onChange }) {
                     type={mode}
                     startValue={startValue}
                     onChange={onChange}
+                    version={version}
                 />
             </div>
         );

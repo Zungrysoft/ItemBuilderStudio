@@ -14,6 +14,8 @@
 
 .icon-button {
     color:white;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .icon-button:hover {

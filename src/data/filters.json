@@ -68,9 +68,32 @@
         "value_display":"Range",
         "context":"mob"
     },
+    "500":{
+        "display":"Horizontal Triple Volley",
+        "version_min": 2.1,
+        "value_mode":"angle",
+        "value_display":"Angle"
+    },
+    "501":{
+        "display":"Vertical Triple Volley",
+        "version_min": 2.1,
+        "value_mode":"angle",
+        "value_display":"Angle"
+    },
+    "502":{
+        "display":"In Cardinal Directions",
+        "version_min": 2.1
+    },
     "900":{
         "display":"Executed on Item Equip Slot",
         "value_mode":"slot",
         "value_display":"Slot"
+    },
+    "901":{
+        "display":"Executed multiple times",
+        "note":"Large values here will cause lag.\nCapped at 256.",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Count"
     }
 }

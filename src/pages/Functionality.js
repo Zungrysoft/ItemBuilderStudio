@@ -5,7 +5,7 @@ import InputList from '../components/InputList.js';
 
 import slotData from '../data/slot_tags.json';
 
-function FunctionalityPage({ data, onChange }) {
+function FunctionalityPage({ data, onChange, version }) {
     return (
         <div>
             <div className="entry">
@@ -49,6 +49,7 @@ function FunctionalityPage({ data, onChange }) {
                 structure={data.structure}
                 depth={0}
                 context="self"
+                version={version}
                 onChange={(val) => {
                     onChange({
                         ...data,
