@@ -1,3 +1,4 @@
+import './Functionality.css';
 import React,{useState} from 'react';
 import Condition from '../components/Condition.js';
 import InputList from '../components/InputList.js';

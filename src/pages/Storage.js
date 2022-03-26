@@ -1,3 +1,4 @@
+import './Storage.css';
 import React,{useState, useEffect} from 'react';
 import StoredItem from '../components/StoredItem.js';
 

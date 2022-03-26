@@ -1,3 +1,4 @@
+import './Enchantments.css';
 import enchantmentData from '../data/enchantments.json';
 import Enchantment from '../components/Enchantment.js';
 
