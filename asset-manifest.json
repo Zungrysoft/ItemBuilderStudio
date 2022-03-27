@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ItemBuilderGUIv2/static/css/main.c4e3dc4e.css",
-    "main.js": "/ItemBuilderGUIv2/static/js/main.6ae5790e.js",
-    "static/js/787.a475fbc9.chunk.js": "/ItemBuilderGUIv2/static/js/787.a475fbc9.chunk.js",
-    "index.html": "/ItemBuilderGUIv2/index.html",
-    "main.c4e3dc4e.css.map": "/ItemBuilderGUIv2/static/css/main.c4e3dc4e.css.map",
-    "main.6ae5790e.js.map": "/ItemBuilderGUIv2/static/js/main.6ae5790e.js.map",
-    "787.a475fbc9.chunk.js.map": "/ItemBuilderGUIv2/static/js/787.a475fbc9.chunk.js.map"
+    "main.css": "/ItemBuilderStudio/static/css/main.c4e3dc4e.css",
+    "main.js": "/ItemBuilderStudio/static/js/main.0817e1d6.js",
+    "static/js/787.a475fbc9.chunk.js": "/ItemBuilderStudio/static/js/787.a475fbc9.chunk.js",
+    "index.html": "/ItemBuilderStudio/index.html",
+    "main.c4e3dc4e.css.map": "/ItemBuilderStudio/static/css/main.c4e3dc4e.css.map",
+    "main.0817e1d6.js.map": "/ItemBuilderStudio/static/js/main.0817e1d6.js.map",
+    "787.a475fbc9.chunk.js.map": "/ItemBuilderStudio/static/js/787.a475fbc9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4e3dc4e.css",
-    "static/js/main.6ae5790e.js"
+    "static/js/main.0817e1d6.js"
   ]
 }
