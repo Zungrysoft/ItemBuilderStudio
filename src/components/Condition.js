@@ -13,20 +13,7 @@ import InputNoSound from './InputNoSound.js';
 import Note from './Note.js';
 import '../App.css';
 
-import { getFilterData } from '../helpers/jsonData.js';
-
-// Context tracks whether the filter is causing conditions to
-// be run on players or mobs. Some conditions need to be disabled
-// out depending on the context
-function filterContext(oldContext, id) {
-    if (!getFilterData()[id]) {
-        return oldContext;
-    }
-    if ("context" in getFilterData()[id]) {
-        return getFilterData()[id].context;
-    }
-    return oldContext;
-}
+import { getFilterContext } from '../helpers/conditionUtils.js';
 
 // Whether this item can contain more conditions in it
 function hasChildren(type, id) {
@@ -68,7 +55,7 @@ function newCondition() {
 function duplicateEntry(list, toCopy) {
     for (let i = 0; i < list.length; i ++) {
         if (list[i] === toCopy) {
-            list.splice(i, 0, {...toCopy});
+            list.splice(i, 0, structuredClone(toCopy));
             break;
         }
     }
@@ -275,8 +262,8 @@ function Condition({
             </div> : <div/>}
             {hasChildren(type, structure.id) ? <div>
                 {/* Child Effects */}
-                {structure.effects.map((effect) => (
-                    <div>
+                {structure.effects.map((effect, index) => (
+                    <div key={index}>
                         <Condition
                             structure={effect}
                             onChange={(childStructure) => {
@@ -316,8 +303,8 @@ function Condition({
                     </div>
                 ))}
                 {/* Child Conditions */}
-                {structure.conditions.map((condition) => (
-                    <div>
+                {structure.conditions.map((condition, index) => (
+                    <div key={index}>
                         <Condition
                             structure={condition}
                             onChange={(childStructure) => {
@@ -357,8 +344,8 @@ function Condition({
                     </div>
                 ))}
                 {/* Child Filters */}
-                {structure.filters.map((filter) => (
-                    <div>
+                {structure.filters.map((filter, index) => (
+                    <div key={index}>
                         <Condition
                             structure={filter}
                             onChange={(childStructure) => {
@@ -392,7 +379,7 @@ function Condition({
                             only={structure.filters.length === 1}
                             depth={depth+1}
                             type={2}
-                            context={filterContext(context, filter.id)}
+                            context={getFilterContext(context, filter.id)}
                             version={version}
                         />
                     </div>

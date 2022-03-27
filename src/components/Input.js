@@ -1,44 +1,38 @@
 import '../App.css';
+import React, { useEffect } from 'react';
+
 import InputId from './InputId.js';
 import InputRange from './InputRange.js';
 import InputCheckbox from './InputCheckbox.js';
 
-import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
+import { getDataByType } from '../helpers/jsonData.js';
 
 function Input({ type, id, jsonKey, startValue, onChange, version }) {
     let mode = null
     let labelName = ""
-    let data = null;
+    let data = getDataByType(type);
 
-    // Effects
-    if (type === 0) {
-        data = getEffectData();
-    }
-    // Conditions
-    else if (type === 1) {
-        data = getConditionData();
-    }
-    // Filters
-    else if (type === 2) {
-        data = getFilterData();
-    }
-    else {
-        return <div/>
-    }
+
+    // Validation
+    useEffect(() => {
+        // If there is no data for this key, set value to 0
+        if ( !((jsonKey + "_mode") in data[id]) || !((jsonKey + "_display") in data[id])) {
+            if (startValue !== 0) {
+                onChange(0);
+            }
+        }
+    }, [id, data, jsonKey]);
+
 
     // If this id is not in the json table, just exit
     if ( !(id in data) ) {
         return <div/>
     }
-
     // If there is no data for this key, exit out
     if ( !((jsonKey + "_mode") in data[id]) || !((jsonKey + "_display") in data[id])) {
-        // Also set this input's value to 0, so it doesn't show up in the final command
-        if (startValue != 0) {
-            onChange(0);
-        }
         return <div/>
     }
+
 
     // Pull out data
     mode = data[id][jsonKey + "_mode"]
@@ -54,7 +48,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                 <input
                     className="input-item"
                     type="text"
-                    defaultValue={startValue}
+                    value={startValue}
                     onChange={(e) => onChange(e.target.value)}
                 />
             </div>
@@ -68,6 +62,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                     startValue={startValue}
                     data={data[id]}
                     onChange={onChange}
+                    jsonKey={jsonKey}
                 />
             </div>
         );
@@ -80,6 +75,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                     startValue={startValue}
                     data={data[id]}
                     onChange={onChange}
+                    jsonKey={jsonKey}
                     style={1}
                 />
             </div>

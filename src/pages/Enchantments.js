@@ -58,6 +58,7 @@ function EnchantmentsPage({ data, onChange }) {
                                 enchantments: editEnchantments(data.enchantments, id, lvl)
                             })
                         }}
+                        key={id}
                     />
                 )}
             </table>

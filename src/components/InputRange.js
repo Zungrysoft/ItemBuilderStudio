@@ -1,4 +1,5 @@
 import '../App.css';
+import React, { useEffect } from 'react';
 
 function amplifierNumeral(num) {
     if (num == 0) {return "I";}
@@ -13,28 +14,36 @@ function amplifierNumeral(num) {
     if (num == 9) {return "X";}
 }
 
-function InputSlot({ startValue, data, onChange, style }) {
+function InputRange({ startValue, data, jsonKey, onChange, style }) {
     let optionList = [];
 
+    let minKey = jsonKey + "_min";
+    let maxKey = jsonKey + "_max";
+
+    // Validation
+    useEffect(() => {
+        if (minKey in data && maxKey in data) {
+            // Validate that the value is between min and max
+            if (startValue < data[minKey] || startValue > data[maxKey]) {
+                onChange(data[minKey]);
+            }
+        }
+    });
+
     // Make sure there is a min and max key
-    if (!("min" in data && "max" in data)) {
+    if (!(minKey in data && maxKey in data)) {
         return <div/>
     }
     
     // Validate that min > max
-    if (data.min > data.max) {
+    if (data[minKey] > data[maxKey]) {
         return <div/>
     }
 
-    // If the startValue is not between min and max, set it to be
-    if (startValue < data.min || startValue > data.max) {
-        onChange(data.min);
-    }
-
     // Create option list from min and max
-    for (let i = data.min; i <= data.max; i ++) {
+    for (let i = data[minKey]; i <= data[maxKey]; i ++) {
         optionList.push(
-            <option value={i}>
+            <option value={i} key={i}>
                 {style == 1 ? amplifierNumeral(i) : i}
             </option>
         );
@@ -49,4 +58,4 @@ function InputSlot({ startValue, data, onChange, style }) {
     )
 }
 
-export default InputSlot;
+export default InputRange;

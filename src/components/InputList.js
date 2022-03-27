@@ -6,7 +6,7 @@ function InputList({ startValue, data, label, onChange }) {
     // Create option list from json data
     Object.keys(data).forEach(function(key, _) {
         optionList.push(
-            <option value={key}>
+            <option value={key} key={key}>
                 {data[key].display}
             </option>
         );

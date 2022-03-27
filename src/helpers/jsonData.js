@@ -2,6 +2,17 @@ import effectData from '../data/effects.json';
 import conditionData from '../data/conditions.json';
 import filterData from '../data/filters.json';
 
+import loadableData from '../data/loadables.json';
+import soundData from '../data/sounds.json';
+import rangeData from '../data/ranges.json';
+import slotData from '../data/slots.json';
+import mobTypeData from '../data/mob_types.json';
+import durationData from '../data/durations.json';
+import resourceData from '../data/resources.json';
+import equipmentData from '../data/equipment.json';
+import angleData from '../data/angles.json';
+import potionEffectData from '../data/potion_effects.json';
+
 function userDefined() {
     let ret = {};
     for (let i = 1; i <= 40; i ++) {
@@ -38,5 +49,50 @@ export function getFilterData() {
     return {
         ...filterData,
         ...userDefined(),
+    }
+}
+
+export function getDataByType(type) {
+    if (type === 0) {
+        return getEffectData();
+    }
+    else if (type === 1) {
+        return getConditionData();
+    }
+    else if (type === 2) {
+        return getFilterData();
+    }
+    else if (type === "loadable") {
+        return loadableData;
+    }
+    else if (type === "sound") {
+        return soundData;
+    }
+    else if (type === "range") {
+        return rangeData;
+    }
+    else if (type === "slot") {
+        return slotData;
+    }
+    else if (type === "mob_type") {
+        return mobTypeData;
+    }
+    else if (type === "duration") {
+        return durationData;
+    }
+    else if (type === "resource") {
+        return resourceData;
+    }
+    else if (type === "equipment") {
+        return equipmentData;
+    }
+    else if (type === "angle") {
+        return angleData;
+    }
+    else if (type === "potion_effect") {
+        return potionEffectData;
+    }
+    else {
+        return {}
     }
 }

@@ -25,24 +25,29 @@ function buttonClass(data, lvl, selected) {
 
 function Enchantment({ enchantment, startValue, onChange }) {
     return (
-        <tr>
-            <label className="enchantment-label">{enchantment.display + ": "}</label>
-            {Object.keys(levels).map((lvl) => 
-                <button
-                    className={buttonClass(enchantment, lvl, startValue)}
-                    onClick={(e) => {
-                        if (lvl === startValue) {
-                            onChange(0);
-                        }
-                        else {
-                            onChange(lvl);
-                        }
-                    }}
-                >
-                    {levels[lvl].display}
-                </button>
-            )}
-        </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <label className="enchantment-label">{enchantment.display + ": "}</label>
+                    {Object.keys(levels).map((lvl) => 
+                        <button
+                            className={buttonClass(enchantment, lvl, startValue)}
+                            onClick={(e) => {
+                                if (lvl === startValue) {
+                                    onChange(0);
+                                }
+                                else {
+                                    onChange(lvl);
+                                }
+                            }}
+                            key={lvl}
+                        >
+                            {levels[lvl].display}
+                        </button>
+                    )}
+                </td>
+            </tr>
+        </tbody>
     )
 }
 

@@ -363,6 +363,7 @@ function CommandOutput({ data }) {
             </div>
         </div>
     );
+    //return <div/>
 }
 
 export default CommandOutput;

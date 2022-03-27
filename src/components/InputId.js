@@ -1,16 +1,7 @@
 import '../App.css';
-import { getEffectData, getConditionData, getFilterData } from '../helpers/jsonData.js';
-
-import loadableData from '../data/loadables.json';
-import soundData from '../data/sounds.json';
-import rangeData from '../data/ranges.json';
-import slotData from '../data/slots.json';
-import mobTypeData from '../data/mob_types.json';
-import durationData from '../data/durations.json';
-import resourceData from '../data/resources.json';
-import equipmentData from '../data/equipment.json';
-import angleData from '../data/angles.json';
-import potionEffectData from '../data/potion_effects.json';
+import React, { useEffect } from 'react';
+import { getDataByType } from '../helpers/jsonData.js';
+import { getValidEntries } from '../helpers/conditionUtils.js';
 
 function getCategory( type, id ) {
     if (0 <= id && id < 100) {return "Utility";}
@@ -44,146 +35,87 @@ function getCategory( type, id ) {
     return "Misc"
 }
 
-function isDisabled(id,data,context,version) {
-    console.log(data);
-    console.log(id);
-    // Versioning
-    if ("version_min" in data[id] && version < data[id].version_min) {
-        return true;
-    }
-    if ("version_max" in data[id] && version > data[id].version_max) {
-        return true;
-    }
-
-    // Filter context
-    if ((context === "self" || context === "player") && "monster_only" in data[id] && data[id].monster_only) {
-        return true;
-    }
-    if ((context === "mob" || context === "player") && "self_only" in data[id] && data[id].self_only) {
-        return true;
-    }
-    else if (context === "mob" && "player_only" in data[id] && data[id].player_only) {
-        return true;
-    }
-
-    return false;
-}
-
 function InputId({ type, startValue, onChange, context, version }) {
-    let data = {};
+    let data = getDataByType(type);
+    let valid = getValidEntries(data, context, version);
     let labelName = "";
     let optionGroups = [];
     let useCategories = false;
 
     // Effects
     if (type === 0) {
-        data = getEffectData();
         labelName = "Effect";
         useCategories = true;
     }
     // Conditions
     else if (type === 1) {
-        data = getConditionData();
         labelName = "Condition";
         useCategories = true;
     }
     // Filters
     else if (type === 2) {
-        data = getFilterData();
         labelName = "Filter";
         useCategories = true;
     }
     // Other dropdowns
-    else if (type === "loadable") {
-        data = loadableData;
-    }
     else if (type === "sound") {
-        data = soundData;
         useCategories = true;
     }
-    else if (type === "range") {
-        data = rangeData;
-    }
-    else if (type === "slot") {
-        data = slotData;
-    }
-    else if (type === "mob_type") {
-        data = mobTypeData;
-    }
-    else if (type === "duration") {
-        data = durationData;
-    }
-    else if (type === "resource") {
-        data = resourceData;
-    }
-    else if (type === "equipment") {
-        data = equipmentData;
-    }
-    else if (type === "angle") {
-        data = angleData;
-    }
-    else if (type === "potion_effect") {
-        data = potionEffectData;
-    }
-    else {
-        return <div/>
-    }
 
-    if (Object.keys(data).length > 0) {
-        // If the current value is not within the list, set it to something in the list
-        if (!(startValue in data)) {
-            onChange(Object.keys(data)[0]);
-        }
-        // If the current value is disabled, set it to something in the list
-        else if (isDisabled(startValue,data,context,version)) {
-            let newValue = Object.keys(data)[0];
-            if (!isDisabled(newValue,data,context,version)) {
-                onChange(newValue);
+    // Validation
+    useEffect(() => {
+        if (Object.keys(valid).length > 0) {           
+            // If the current value is not within the valid list, set it to something in the list
+            if (!(startValue in valid)) {
+                onChange(Object.keys(valid)[0]);
             }
         }
+    });
+
+    // Don't do anything if the data is empty
+    if (Object.keys(valid).length < 1) {
+        return <div/>
     }
 
     // Create option list from json data
     let prev = "";
     let curList = [];
-    Object.keys(data).forEach((id) => {
-        if (!isDisabled(id,data,context,version)){
-            // Whenever the category changes, form a new group from collected elements
-            if (useCategories) {
-                let category = getCategory(type, id);
-                if (category != prev) {
-                    optionGroups.push(
-                        <optgroup label={prev}>
-                            {curList}
-                        </optgroup>
-                    );
-                    curList = [];
-                    prev = category;
-                }
+    Object.keys(valid).forEach((id) => {
+        // Whenever the category changes, form a new group from collected elements
+        if (useCategories) {
+            let category = getCategory(type, id);
+            if (category != prev) {
+                optionGroups.push(
+                    <optgroup label={prev} key={optionGroups.length}>
+                        {curList}
+                    </optgroup>
+                );
+                curList = [];
+                prev = category;
             }
-            // Determine the label for the option
-            let labelName = data[id].display;
-            // Add asterisk if this is an instant condition
-            if ("instant" in data[id] && data[id].instant == true) {
-                labelName = "*" + labelName;
-            }
-            
-            curList.push(
-                <option value={id}>
-                    {labelName}
-                </option>
-            )
         }
+        // Determine the label for the option
+        let labelName = valid[id].display;
+        // Add asterisk if this is an instant condition
+        if ("instant" in valid[id] && valid[id].instant == true) {
+            labelName = "*" + labelName;
+        }
+        
+        curList.push(
+            <option value={id} key={id}>
+                {labelName}
+            </option>
+        )
     });
     
     if (useCategories) {
         // Collect remaining elements at the end
         optionGroups.push(
-            <optgroup label={prev}>
+            <optgroup label={prev} key={optionGroups.length}>
                 {curList}
             </optgroup>
         );
-        // This method inserts an unwanted first group. This line removes it.
+        // The above code inserts an unwanted first group. This line removes it.
         optionGroups = optionGroups.splice(1);
     }
     else {

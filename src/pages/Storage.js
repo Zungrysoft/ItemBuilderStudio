@@ -15,7 +15,6 @@ function StoragePage({ data, onChange }) {
         // Pull localstorage data out
         try {
             setStorage(JSON.parse(localStorage.getItem("savedItems")));
-            console.log(localStorage.getItem("savedItems"));
         } catch (error) {
             // Reset data storage on malformed data
             console.error(error);
@@ -36,7 +35,7 @@ function StoragePage({ data, onChange }) {
             >Save Current Item</button>
             
             <div>
-                {storage.map((item) => 
+                {storage.map((item, index) => 
                     <StoredItem
                         data={item}
                         onClick={() => {onChange(item)}}
@@ -47,6 +46,7 @@ function StoragePage({ data, onChange }) {
                             localStorage.setItem("savedItems", JSON.stringify(newStorageVal));
                             setStorage(newStorageVal);
                         }}
+                        key={index}
                     />
                 )}
             </div>
