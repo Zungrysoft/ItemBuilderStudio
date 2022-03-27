@@ -1,13 +1,5 @@
 import InputList from '../components/InputList.js';
-
-let versions = {
-    "2.0": {
-        "display":"Version 2.0 for Minecraft 1.18.2"
-    },
-    "2.1": {
-        "display":"Version 2.1 for Minecraft 1.18.2"
-    }
-}
+import versions from '../data/versions.json';
 
 function SettingsPage({ data, onChange }) {
     return (
