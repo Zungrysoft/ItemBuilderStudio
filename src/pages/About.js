@@ -1,4 +1,4 @@
-function AboutPage({ data, onChange }) {
+function AboutPage() {
     return (
         <div>
             <p>

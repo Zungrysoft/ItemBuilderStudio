@@ -15,7 +15,6 @@ function StoragePage({ data, onChange }) {
         // Pull localstorage data out
         try {
             setStorage(JSON.parse(localStorage.getItem("savedItems")));
-            console.log(localStorage.getItem("savedItems"));
         } catch (error) {
             // Reset data storage on malformed data
             console.error(error);

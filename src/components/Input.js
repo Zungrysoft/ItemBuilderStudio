@@ -33,10 +33,6 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
 
     // If there is no data for this key, exit out
     if ( !((jsonKey + "_mode") in data[id]) || !((jsonKey + "_display") in data[id])) {
-        // Also set this input's value to 0, so it doesn't show up in the final command
-        if (startValue != 0) {
-            onChange(0);
-        }
         return <div/>
     }
 
@@ -67,6 +63,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                 <InputRange
                     startValue={startValue}
                     data={data[id]}
+                    jsonKey={jsonKey}
                     onChange={onChange}
                 />
             </div>
@@ -79,6 +76,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                 <InputRange
                     startValue={startValue}
                     data={data[id]}
+                    jsonKey={jsonKey}
                     onChange={onChange}
                     style={1}
                 />

@@ -117,15 +117,15 @@
         "display":"Passive Haste",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "305":{
         "display":"Passive Hunger",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "306":{
         "display":"Passive Invisibility"
@@ -134,22 +134,22 @@
         "display":"Passive Jump Boost",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "308":{
         "display":"Passive Levitation",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "309":{
         "display":"Passive Mining Fatigue",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":2
+        "value_min":0,
+        "value_max":2
     },
     "310":{
         "display":"Passive Nausea"
@@ -161,22 +161,22 @@
         "display":"Passive Poison",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":4
+        "value_min":0,
+        "value_max":4
     },
     "313":{
         "display":"Passive Regeneration",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":4
+        "value_min":0,
+        "value_max":4
     },
     "314":{
         "display":"Passive Resistance",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":4
+        "value_min":0,
+        "value_max":4
     },
     "315":{
         "display":"Passive Slow-Falling"
@@ -185,22 +185,22 @@
         "display":"Passive Slowness",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "317":{
         "display":"Passive Speed",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "318":{
         "display":"Passive Strength",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "319":{
         "display":"Passive Water-Breathing"
@@ -209,15 +209,15 @@
         "display":"Passive Weakness",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":9
+        "value_min":0,
+        "value_max":9
     },
     "321":{
         "display":"Passive Wither",
         "value_mode":"value_range_amp",
         "value_display":"Amplifier",
-        "min":0,
-        "max":4
+        "value_min":0,
+        "value_max":4
     },
     "350":{
         "display":"Cleanse Blindness"
@@ -369,8 +369,8 @@
         "display":"Set Ground on Fire",
         "value_mode":"value_range",
         "value_display":"Radius",
-        "min": 1,
-        "max": 5,
+        "value_min": 1,
+        "value_max": 5,
         "has_sound":true,
         "instant": true
     },
@@ -383,8 +383,8 @@
         "note":"\"mobGriefing\" gamerule will determine\nwhether this will break blocks",
         "value_mode":"value_range",
         "value_display":"Explosion Power",
-        "min": 1,
-        "max": 10,
+        "value_min": 1,
+        "value_max": 10,
         "instant": true
     },
     "520":{
@@ -420,8 +420,8 @@
         "value_display":"Velocity Multiplier %",
         "value2_mode":"value_range",
         "value2_display":"Explosion Power",
-        "min": 1,
-        "max": 10,
+        "value2_min": 1,
+        "value2_max": 10,
         "has_sound":true,
         "instant": true
     },

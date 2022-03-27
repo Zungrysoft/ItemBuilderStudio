@@ -13,20 +13,7 @@ import InputNoSound from './InputNoSound.js';
 import Note from './Note.js';
 import '../App.css';
 
-import { getFilterData } from '../helpers/jsonData.js';
-
-// Context tracks whether the filter is causing conditions to
-// be run on players or mobs. Some conditions need to be disabled
-// out depending on the context
-function filterContext(oldContext, id) {
-    if (!getFilterData()[id]) {
-        return oldContext;
-    }
-    if ("context" in getFilterData()[id]) {
-        return getFilterData()[id].context;
-    }
-    return oldContext;
-}
+import { getFilterContext } from '../helpers/conditionUtils.js'
 
 // Whether this item can contain more conditions in it
 function hasChildren(type, id) {
@@ -392,7 +379,7 @@ function Condition({
                             only={structure.filters.length === 1}
                             depth={depth+1}
                             type={2}
-                            context={filterContext(context, filter.id)}
+                            context={getFilterContext(context, filter.id)}
                             version={version}
                         />
                     </div>

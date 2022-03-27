@@ -14,11 +14,6 @@ function InputSlot({ id, label, startValue, onChange }) {
             />
         )
     }
-
-    // No sounds to cancel. Set nosound to false and return empty element
-    if (startValue !== false) {
-        onChange(false);
-    }
     return <div/>
     
 }

@@ -11,6 +11,8 @@ import AboutPage from './pages/About.js';
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
 
+import { cleanData } from './helpers/conditionUtils.js'
+
 let tabs = [
     {display:"Functionality",id:"functionality"},
     {display:"Display",id:"display"},
@@ -22,38 +24,22 @@ let tabs = [
 
 function App() {
     const [page, setPage] = useState("functionality");
-    const [settings, setSettings] = useState({
+    const [settings, setSettingsFinal] = useState({
         version: 2.0
     });
-    const [data, setData] = useState({
-        structure: {
-            effects:[],
-            conditions:[],
-            filters:[],
-        },
-        itemId: "minecraft:iron_sword",
-        slot: "ItemBuilderMainhand",
-        includeGive: true,
-        name: {
-            text: "",
-            color: "ffffff",
-            color2: "555555",
-            colorMode: "single",
-            bold: false,
-            italic: false,
-        },
-        lore: {
-            upsides: "",
-            downsides: "",
-            lore: "",
-        },
-        model: {
-            color: "2c2f9e",
-            colorEnabled: false,
-            customModelData: 0,
-        },
-        enchantments:[],
-    });
+    const [data, setDataFinal] = useState(cleanData(0, settings.version));
+
+    function setData(newData) {
+        setDataFinal(cleanData(newData,settings.version));
+    }
+    function setSettings(newSettings) {
+        // If version is updated, clean item data again
+        if (newSettings.version !== settings.version) {
+            setDataFinal(cleanData(data,newSettings.version));
+        }
+        setSettingsFinal(newSettings);
+    }
+
     return (
         <div className="App">
             <Navbar
@@ -96,10 +82,7 @@ function App() {
                         /> 
                     :<div/>}
                     {page=="about" ?
-                        <AboutPage
-                            data={data}
-                            onChange={setData}
-                        /> 
+                        <AboutPage/> 
                     :<div/>}
                     <div className="command-output">
                         <CommandOutput
