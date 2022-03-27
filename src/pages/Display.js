@@ -128,7 +128,7 @@ function DisplayPage({ data, onChange }) {
             <textarea
                 className="input-box-lore"
                 type="text"
-                defaultValue={data.lore.upsides}
+                value={data.lore.upsides}
                 onChange={(e) => {
                     onChange({
                         ...data,
@@ -143,7 +143,7 @@ function DisplayPage({ data, onChange }) {
             <textarea
                 className="input-box-lore"
                 type="text"
-                defaultValue={data.lore.downsides}
+                value={data.lore.downsides}
                 onChange={(e) => {
                     onChange({
                         ...data,
@@ -158,7 +158,7 @@ function DisplayPage({ data, onChange }) {
             <textarea
                 className="input-box-lore"
                 type="text"
-                defaultValue={data.lore.lore}
+                value={data.lore.lore}
                 onChange={(e) => {
                     onChange({
                         ...data,

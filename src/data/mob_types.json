@@ -47,6 +47,10 @@
     "56":{
         "display":"Flying Monster"
     },
+    "57":{
+        "display":"Slime or Magma Cube",
+        "version_min": 2.1
+    },
     "70":{
         "display":"Undead Monster"
     },

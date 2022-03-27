@@ -13,7 +13,7 @@ function FunctionalityPage({ data, onChange, version }) {
                 <input
                     className="input-box-long"
                     type="text"
-                    defaultValue={data.itemId}
+                    value={data.itemId}
                     onChange={(e) => {
                         onChange({
                             ...data,
