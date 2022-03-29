@@ -1,4 +1,5 @@
 import '../App.css';
+import React, { useEffect } from 'react';
 import { hexFormat } from '../helpers/color.js'
 
 function InputColor({ label, startValue, onChange }) {

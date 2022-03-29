@@ -43,6 +43,7 @@ function newCondition() {
         value: 0,
         value2: 0,
         value3: 0,
+        value4: 0,
         inverted: false,
         nosound: false,
         text: "",
@@ -174,6 +175,21 @@ function Condition({
                                 onChange({
                                     ...structure,
                                     value3: val,
+                                })
+                            }}
+                        />
+                    </div>
+                    <div className="entry">
+                        <Input
+                            type={type}
+                            id={structure.id}
+                            jsonKey="value4"
+                            startValue={structure.value4}
+                            version={version}
+                            onChange={(val) => {
+                                onChange({
+                                    ...structure,
+                                    value4: val,
                                 })
                             }}
                         />

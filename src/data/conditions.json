@@ -20,6 +20,37 @@
         "instant":true,
         "player_only":true
     },
+    "103":{
+        "display":"Deal Damage With a Fireball",
+        "note":"The fireball must land a direct hit\nto trigger this condition.",
+        "version_min": 2.1,
+        "instant":true,
+        "player_only":true
+    },
+    "104":{
+        "display":"Deal Damage With a Trident",
+        "version_min": 2.1,
+        "instant":true,
+        "player_only":true
+    },
+    "105":{
+        "display":"Deal Damage With a Shulker Bullet",
+        "version_min": 2.1,
+        "instant":true,
+        "player_only":true
+    },
+    "106":{
+        "display":"Deal Damage With a Splash Potion",
+        "version_min": 2.1,
+        "instant":true,
+        "player_only":true
+    },
+    "107":{
+        "display":"Deal Damage With a Lingering Potion",
+        "version_min": 2.1,
+        "instant":true,
+        "player_only":true
+    },
     "110":{
         "display":"Took Damage",
         "instant":true,
@@ -346,6 +377,7 @@
     },
     "900":{
         "display":"Timer",
+        "note":"Values are in Ticks.",
         "instant":true,
         "value_mode":"input",
         "value_display":"Cycle",

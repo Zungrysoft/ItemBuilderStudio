@@ -1,4 +1,8 @@
 {
+    "0":{
+        "display":"Blindness",
+        "version_min": 2.1
+    },
     "20":{
         "display":"Fire Resistance"
     },
@@ -11,6 +15,18 @@
     "49":{
         "display":"Haste X"
     },
+    "50":{
+        "display":"Hunger",
+        "version_min": 2.1
+    },
+    "51":{
+        "display":"Hunger II",
+        "version_min": 2.1
+    },
+    "59":{
+        "display":"Hunger X",
+        "version_min": 2.1
+    },
     "80":{
         "display":"Levitation"
     },
@@ -19,6 +35,18 @@
     },
     "84":{
         "display":"Levitation V"
+    },
+    "120":{
+        "display":"Poison",
+        "version_min": 2.1
+    },
+    "121":{
+        "display":"Poison II",
+        "version_min": 2.1
+    },
+    "124":{
+        "display":"Poison V",
+        "version_min": 2.1
     },
     "130":{
         "display":"Regeneration"

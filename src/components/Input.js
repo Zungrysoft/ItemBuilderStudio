@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import InputId from './InputId.js';
 import InputRange from './InputRange.js';
 import InputCheckbox from './InputCheckbox.js';
+import InputColor from './InputColor.js';
 
 import { getDataByType } from '../helpers/jsonData.js';
 
@@ -88,6 +89,19 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                     label={labelName}
                     startValue={startValue}
                     onChange={onChange}
+                />
+            </div>
+        );
+    }
+    else if (mode === "color_dec") {
+        return (
+            <div>
+                <InputColor
+                    label={labelName}
+                    startValue={startValue}
+                    data={data[id]}
+                    onChange={onChange}
+                    jsonKey={jsonKey}
                 />
             </div>
         );

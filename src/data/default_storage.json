@@ -1,3 +1,487 @@
 {
-    "data":[{"structure":{"effects":[],"conditions":[{"id":"206","value":1,"value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"800","value":"4","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"208","value":0,"value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[],"conditions":[{"id":"207","value":1,"value2":0,"value3":0,"inverted":1,"nosound":false,"text":"","effects":[],"conditions":[{"id":"801","value":"1","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"801","value":"-1","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]},{"id":"450","value":"1","value2":0,"value3":0,"inverted":false,"nosound":1,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]}],"filters":[]}],"filters":[]}],"filters":[]},"itemId":"minecraft:crossbow","slot":"ItemBuilderMainhand","includeGive":true,"name":{"text":"[Demo] Auto-Reloading Crossbow","color":"ffffff","color2":"555555","colorMode":"single","bold":false,"italic":false},"lore":{"upsides":"Fires five consecutive shots","downsides":"","lore":""},"model":{"color":"2c2f9e","colorEnabled":false,"customModelData":0},"enchantments":[{"id":"minecraft:unbreaking","lvl":"2"}]},{"structure":{"effects":[],"conditions":[{"id":"121","value":"51","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"900","value":"305","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]}],"filters":[{"id":"120","value":"15","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[{"id":"390","value":"51","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"841","value":"1","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]}],"filters":[]},{"id":0,"value":0,"value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[{"id":"841","value":"1","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"100","value":"3","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]},{"id":"900","value":"100","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[{"id":"100","value":0,"value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"900","value":"305","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]}],"filters":[]}],"filters":[]}]},"itemId":"minecraft:stone_sword","slot":"ItemBuilderMainhand","includeGive":true,"name":{"text":"[Demo] Skeleton Detector","color":"ffffff","color2":"555555","colorMode":"single","bold":false,"italic":false},"lore":{"upsides":"+3 Attack Damage if a Skeleton is nearby","downsides":"","lore":""},"model":{"color":"2c2f9e","colorEnabled":false,"customModelData":0},"enchantments":[{"id":"minecraft:sharpness","lvl":"1"}]},{"structure":{"effects":[],"conditions":[{"id":"900","value":"1800","value2":"0","value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"800","value":0,"value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"900","value":"1800","value2":"600","value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"800","value":"1","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"900","value":"1800","value2":"1200","value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"800","value":"2","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"800","value":0,"value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"100","value":"1","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"800","value":"1","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"104","value":"2","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]},{"id":"800","value":"2","value2":0,"value3":0,"inverted":0,"nosound":false,"text":"","effects":[{"id":"101","value":"15","value2":0,"value3":0,"inverted":false,"nosound":false,"text":"","effects":[],"conditions":[],"filters":[]}],"conditions":[],"filters":[]}],"filters":[]},"itemId":"minecraft:diamond_chestplate","slot":"ItemBuilderArmor","includeGive":true,"name":{"text":"[Demo] Cyclical Chestplate","color":"ffffff","color2":"555555","colorMode":"single","bold":false,"italic":false},"lore":{"upsides":"Every 30 seconds, cycles between:\n  +1 Attack Damage\n  +2 Armor\n  +15% Movement Speed","downsides":"","lore":""},"model":{"color":"2c2f9e","colorEnabled":false,"customModelData":0},"enchantments":[{"id":"minecraft:protection","lvl":"1"}]}]
+    "data": [
+        {
+            "structure": {
+                "effects": [],
+                "conditions": [
+                    {
+                        "id": "206",
+                        "value": 1,
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "800",
+                                "value": "4",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "208",
+                        "value": 0,
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [],
+                        "conditions": [
+                            {
+                                "id": "207",
+                                "value": 1,
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": 1,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [
+                                    {
+                                        "id": "801",
+                                        "value": "1",
+                                        "value2": 0,
+                                        "value3": 0,
+                                        "inverted": 0,
+                                        "nosound": false,
+                                        "text": "",
+                                        "effects": [
+                                            {
+                                                "id": "801",
+                                                "value": "-1",
+                                                "value2": 0,
+                                                "value3": 0,
+                                                "inverted": false,
+                                                "nosound": false,
+                                                "text": "",
+                                                "effects": [],
+                                                "conditions": [],
+                                                "filters": []
+                                            },
+                                            {
+                                                "id": "450",
+                                                "value": "1",
+                                                "value2": 0,
+                                                "value3": 0,
+                                                "inverted": false,
+                                                "nosound": 1,
+                                                "text": "",
+                                                "effects": [],
+                                                "conditions": [],
+                                                "filters": []
+                                            }
+                                        ],
+                                        "conditions": [],
+                                        "filters": []
+                                    }
+                                ],
+                                "filters": []
+                            }
+                        ],
+                        "filters": []
+                    }
+                ],
+                "filters": []
+            },
+            "itemId": "minecraft:crossbow",
+            "slot": "ItemBuilderMainhand",
+            "includeGive": true,
+            "name": {
+                "text": "[Demo] Auto-Reloading Crossbow",
+                "color": "ffffff",
+                "color2": "555555",
+                "colorMode": "single",
+                "bold": false,
+                "italic": false
+            },
+            "lore": {
+                "upsides": "Fires five consecutive shots",
+                "downsides": "",
+                "lore": ""
+            },
+            "model": {
+                "color": "2c2f9e",
+                "colorEnabled": false,
+                "customModelData": 0
+            },
+            "enchantments": [
+                {
+                    "id": "minecraft:unbreaking",
+                    "lvl": "2"
+                }
+            ]
+        },
+        {
+            "structure": {
+                "effects": [],
+                "conditions": [
+                    {
+                        "id": "121",
+                        "value": "51",
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "900",
+                                "value": "305",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    }
+                ],
+                "filters": [
+                    {
+                        "id": "120",
+                        "value": "15",
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": false,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [],
+                        "conditions": [
+                            {
+                                "id": "390",
+                                "value": "51",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": 0,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [
+                                    {
+                                        "id": "841",
+                                        "value": "1",
+                                        "value2": 0,
+                                        "value3": 0,
+                                        "inverted": false,
+                                        "nosound": false,
+                                        "text": "",
+                                        "effects": [],
+                                        "conditions": [],
+                                        "filters": []
+                                    }
+                                ],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "filters": []
+                    },
+                    {
+                        "id": 0,
+                        "value": 0,
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": false,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [],
+                        "conditions": [
+                            {
+                                "id": "841",
+                                "value": "1",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": 0,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [
+                                    {
+                                        "id": "100",
+                                        "value": "3",
+                                        "value2": 0,
+                                        "value3": 0,
+                                        "inverted": false,
+                                        "nosound": false,
+                                        "text": "",
+                                        "effects": [],
+                                        "conditions": [],
+                                        "filters": []
+                                    },
+                                    {
+                                        "id": "900",
+                                        "value": "100",
+                                        "value2": 0,
+                                        "value3": 0,
+                                        "inverted": false,
+                                        "nosound": false,
+                                        "text": "",
+                                        "effects": [],
+                                        "conditions": [],
+                                        "filters": []
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "id": "100",
+                                        "value": 0,
+                                        "value2": 0,
+                                        "value3": 0,
+                                        "inverted": 0,
+                                        "nosound": false,
+                                        "text": "",
+                                        "effects": [
+                                            {
+                                                "id": "900",
+                                                "value": "305",
+                                                "value2": 0,
+                                                "value3": 0,
+                                                "inverted": false,
+                                                "nosound": false,
+                                                "text": "",
+                                                "effects": [],
+                                                "conditions": [],
+                                                "filters": []
+                                            }
+                                        ],
+                                        "conditions": [],
+                                        "filters": []
+                                    }
+                                ],
+                                "filters": []
+                            }
+                        ],
+                        "filters": []
+                    }
+                ]
+            },
+            "itemId": "minecraft:stone_sword",
+            "slot": "ItemBuilderMainhand",
+            "includeGive": true,
+            "name": {
+                "text": "[Demo] Skeleton Detector",
+                "color": "ffffff",
+                "color2": "555555",
+                "colorMode": "single",
+                "bold": false,
+                "italic": false
+            },
+            "lore": {
+                "upsides": "+3 Attack Damage if a Skeleton is nearby",
+                "downsides": "",
+                "lore": ""
+            },
+            "model": {
+                "color": "2c2f9e",
+                "colorEnabled": false,
+                "customModelData": 0
+            },
+            "enchantments": [
+                {
+                    "id": "minecraft:sharpness",
+                    "lvl": "1"
+                }
+            ]
+        },
+        {
+            "structure": {
+                "effects": [],
+                "conditions": [
+                    {
+                        "id": "900",
+                        "value": "1800",
+                        "value2": "0",
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "800",
+                                "value": 0,
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "900",
+                        "value": "1800",
+                        "value2": "600",
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "800",
+                                "value": "1",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "900",
+                        "value": "1800",
+                        "value2": "1200",
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "800",
+                                "value": "2",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "800",
+                        "value": 0,
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "100",
+                                "value": "1",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "800",
+                        "value": "1",
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "104",
+                                "value": "2",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    },
+                    {
+                        "id": "800",
+                        "value": "2",
+                        "value2": 0,
+                        "value3": 0,
+                        "inverted": 0,
+                        "nosound": false,
+                        "text": "",
+                        "effects": [
+                            {
+                                "id": "101",
+                                "value": "15",
+                                "value2": 0,
+                                "value3": 0,
+                                "inverted": false,
+                                "nosound": false,
+                                "text": "",
+                                "effects": [],
+                                "conditions": [],
+                                "filters": []
+                            }
+                        ],
+                        "conditions": [],
+                        "filters": []
+                    }
+                ],
+                "filters": []
+            },
+            "itemId": "minecraft:diamond_chestplate",
+            "slot": "ItemBuilderArmor",
+            "includeGive": true,
+            "name": {
+                "text": "[Demo] Cyclical Chestplate",
+                "color": "ffffff",
+                "color2": "555555",
+                "colorMode": "single",
+                "bold": false,
+                "italic": false
+            },
+            "lore": {
+                "upsides": "Every 30 seconds, cycles between:\n  +1 Attack Damage\n  +2 Armor\n  +15% Movement Speed",
+                "downsides": "",
+                "lore": ""
+            },
+            "model": {
+                "color": "2c2f9e",
+                "colorEnabled": false,
+                "customModelData": 0
+            },
+            "enchantments": [
+                {
+                    "id": "minecraft:protection",
+                    "lvl": "1"
+                }
+            ]
+        }
+    ]
 }

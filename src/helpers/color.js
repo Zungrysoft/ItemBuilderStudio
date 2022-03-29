@@ -3,6 +3,11 @@ function isHexChar(char) {
 }
 
 export function hexFormat(color) {
+     // Check if it's a string
+     if (typeof color !== "string") {
+        return "#000000";
+     }
+
     // Strip off # or 0x
     if (color.slice(0,1) === "#") {
         color = color.slice(1);

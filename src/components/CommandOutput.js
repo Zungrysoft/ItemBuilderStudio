@@ -250,6 +250,11 @@ function generateDisplay(data) {
 }
 
 function bindValue(num) {
+    // Convert hex colors to dec
+    if (typeof num === "string" && num.slice(0,1) === "#") {
+        num = hexToDec(num);
+    }
+
     // Make sure it's an int
     num = parseInt(String(num).replace(/,/g, ""));
 
@@ -299,6 +304,7 @@ function generateCondition(structure, isBase) {
         output += jsonParam(bindValue(structure.value),"Value","");
         output += jsonParam(bindValue(structure.value2),"Value2","");
         output += jsonParam(bindValue(structure.value3),"Value3","");
+        output += jsonParam(bindValue(structure.value4),"Value4","");
         output += jsonParam(structure.nosound,"NoSound","");
         output += jsonParam(structure.inverted,"Inverted","");
         output += jsonParam(structure.text,"Text","\"");

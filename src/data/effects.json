@@ -405,6 +405,42 @@
         "has_sound":true,
         "instant": true
     },
+    "551":{
+        "display":"Shoot Spectral Arrow",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Power Multiplier %",
+        "has_sound":true,
+        "instant": true
+    },
+    "552":{
+        "display":"Shoot Potion Arrow",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Power Multiplier %",
+        "value3_mode":"potion_effect",
+        "value3_display":"Potion Effect",
+        "value4_mode":"duration",
+        "value4_display":"Duration",
+        "has_sound":true,
+        "instant": true
+    },
+    "553":{
+        "display":"Shoot Color Arrow",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Power Multiplier %",
+        "value3_mode":"color_dec",
+        "value3_display":"Color",
+        "has_sound":true,
+        "instant": true
+    },
     "560":{
         "display":"Shoot Small Fireball",
         "version_min": 2.1,
@@ -432,7 +468,7 @@
         "value_mode":"input",
         "value_display":"Velocity Multiplier %",
         "value2_mode":"input",
-        "value2_display":"Fuse Time",
+        "value2_display":"Fuse Time in Ticks",
         "has_sound":true,
         "instant": true
     },
@@ -451,6 +487,21 @@
         "value_display":"Velocity Multiplier %",
         "value2_mode":"checkbox",
         "value2_display":"Disable Homing",
+        "has_sound":true,
+        "instant": true
+    },
+    "566":{
+        "display":"Shoot Splash Potion",
+        "note":"Leave \"Item Id\" blank to use\nSplash Potion model.\nSet to \"minecraft:lingering_potion\"\nto cause lingering effect.",
+        "version_min": 2.1,
+        "value_mode":"input",
+        "value_display":"Velocity Multiplier %",
+        "value3_mode":"potion_effect",
+        "value3_display":"Potion Effect",
+        "value4_mode":"duration",
+        "value4_display":"Duration",
+        "text_mode":"input",
+        "text_display":"Item Id",
         "has_sound":true,
         "instant": true
     },
