@@ -1,12 +1,14 @@
 {
     "0":{
-        "display":"No Effect"
+        "display":"No Effect",
+        "for_trident":true
     },
     "1":{
         "display":"Debug Message",
         "text_mode":"input",
         "text_display":"Print",
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "100":{
         "display":"Plus Attack Damage",
@@ -297,13 +299,15 @@
         "value2_display":"Ignore Unbreaking",
         "has_sound":true,
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "421":{
         "display":"Item is Restored to Full Durability",
         "has_sound":true,
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "430":{
         "display":"Set Item Count",
@@ -339,7 +343,8 @@
     "480":{
         "display":"Item Breaks",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident": true
     },
     "481":{
         "display":"Item Falls Out",
@@ -358,12 +363,14 @@
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "500":{
         "display":"Set on Fire",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "501":{
         "display":"Set Ground on Fire",
@@ -372,11 +379,13 @@
         "value_min": 1,
         "value_max": 5,
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "502":{
         "display":"Call Lightning Strike",
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "503":{
         "display":"Summon Explosion",
@@ -385,7 +394,8 @@
         "value_display":"Explosion Power",
         "value_min": 1,
         "value_max": 10,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "520":{
         "display":"Launch Upwards",
@@ -393,7 +403,8 @@
         "value_display":"Launch Force",
         "monster_only": true,
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "550":{
         "display":"Shoot Arrow",
@@ -403,7 +414,8 @@
         "value2_mode":"input",
         "value2_display":"Power Multiplier %",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "551":{
         "display":"Shoot Spectral Arrow",
@@ -413,7 +425,8 @@
         "value2_mode":"input",
         "value2_display":"Power Multiplier %",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "552":{
         "display":"Shoot Potion Arrow",
@@ -427,7 +440,8 @@
         "value4_mode":"duration",
         "value4_display":"Duration",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "553":{
         "display":"Shoot Color Arrow",
@@ -439,7 +453,8 @@
         "value3_mode":"color_dec",
         "value3_display":"Color",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "560":{
         "display":"Shoot Small Fireball",
@@ -447,7 +462,8 @@
         "value_mode":"input",
         "value_display":"Velocity Multiplier %",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "561":{
         "display":"Shoot Large Fireball",
@@ -459,7 +475,8 @@
         "value2_min": 1,
         "value2_max": 10,
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "562":{
         "display":"Shoot Ignited TNT",
@@ -470,7 +487,8 @@
         "value2_mode":"input",
         "value2_display":"Fuse Time in Ticks",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "564":{
         "display":"Shoot Trident",
@@ -478,7 +496,8 @@
         "value_mode":"input",
         "value_display":"Velocity Multiplier %",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "565":{
         "display":"Shoot Shulker Bullet",
@@ -488,11 +507,12 @@
         "value2_mode":"checkbox",
         "value2_display":"Disable Homing",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "566":{
         "display":"Shoot Splash Potion",
-        "note":"Leave \"Item Id\" blank to use\nSplash Potion model.\nSet to \"minecraft:lingering_potion\"\nto cause lingering effect.",
+        "note":"\"Item Id\" field is optional.\nSet to \"minecraft:lingering_potion\"\nto cause lingering effect.",
         "version_min": 2.1,
         "value_mode":"input",
         "value_display":"Velocity Multiplier %",
@@ -503,12 +523,14 @@
         "text_mode":"input",
         "text_display":"Item Id",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "580":{
         "display":"Die Instantly",
         "has_sound":true,
-        "instant": true
+        "instant": true,
+        "for_trident":true
     },
     "581":{
         "display":"Kill Launched Projectile",
@@ -521,96 +543,112 @@
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "801":{
         "display":"Increase SavedCounter1",
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "805":{
         "display":"Set SavedCounter2",
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "806":{
         "display":"Increase SavedCounter2",
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "810":{
         "display":"Set SavedCounter3",
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "811":{
         "display":"Increase SavedCounter3",
         "value_mode":"input",
         "value_display":"Value",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "840":{
         "display":"Set FrameCounter1",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "841":{
         "display":"Increase FrameCounter1",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "845":{
         "display":"Set FrameCounter2",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "846":{
         "display":"Increase FrameCounter2",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "850":{
         "display":"Set FrameCounter3",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "851":{
         "display":"Increase FrameCounter3",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "860":{
         "display":"Roll Random Number",
         "note":"Rolled number only lasts for the\ncurrent tick.\n0 <= n < Max",
         "value_mode":"input",
-        "value_display":"Max"
+        "value_display":"Max",
+        "for_trident":true
     },
     "870":{
         "display":"Prime Item",
         "value_mode":"input",
         "value_display":"Ticks",
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "875":{
         "display":"Activate Item",
         "has_sound":true,
         "instant": true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "900":{
         "display":"Sound/Particle Effect",
         "value_mode":"sound",
-        "value_display":"Sound Effect"
+        "value_display":"Sound Effect",
+        "for_trident":true
     },
     "901":{
         "display":"Chat Message",

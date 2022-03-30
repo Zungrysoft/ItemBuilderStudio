@@ -37,6 +37,7 @@ function FunctionalityPage({ data, onChange, version }) {
                 label="Activator Type"
                 data={slotData}
                 startValue={data.slot}
+                version={version}
                 onChange={(val) => {
                     onChange({
                         ...data,
@@ -48,7 +49,7 @@ function FunctionalityPage({ data, onChange, version }) {
                 type={1}
                 structure={data.structure}
                 depth={0}
-                context="self"
+                context={slotData[data.slot].context}
                 version={version}
                 onChange={(val) => {
                     onChange({

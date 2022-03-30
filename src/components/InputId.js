@@ -41,7 +41,7 @@ function InputId({ type, startValue, onChange, context, version }) {
     let labelName = "";
     let optionGroups = [];
     let useCategories = false;
-
+    
     // Effects
     if (type === 0) {
         labelName = "Effect";

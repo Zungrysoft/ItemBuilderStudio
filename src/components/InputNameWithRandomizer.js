@@ -26,7 +26,6 @@ function pickFromWeightedList(list) {
             return list[i];
         }
     }
-    console.log("This code should never be reached!");
     return list[0];
 }
 
@@ -90,8 +89,6 @@ function parseSection(section, itemId) {
 
 function randomizeName(itemId) {
     let format = pickFromWeightedList(randomizerFormats.formats);
-
-    console.log(format);
 
     let output = "";
 

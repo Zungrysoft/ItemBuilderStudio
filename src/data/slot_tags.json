@@ -1,14 +1,23 @@
 {
     "ItemBuilderMainhand":{
-        "display":"Mainhand"
+        "display":"Mainhand",
+        "context":"self"
     },
     "ItemBuilderOffhand":{
-        "display":"Offhand"
+        "display":"Offhand",
+        "context":"self"
     },
     "ItemBuilderEitherHand":{
-        "display":"Either Hand"
+        "display":"Either Hand",
+        "context":"self"
     },
     "ItemBuilderArmor":{
-        "display":"Armor"
+        "display":"Armor",
+        "context":"self"
+    },
+    "ItemBuilderTrident":{
+        "display":"Thrown Trident",
+        "version_min": 2.1,
+        "context":"trident"
     }
 }

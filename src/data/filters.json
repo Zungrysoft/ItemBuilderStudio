@@ -1,88 +1,103 @@
 {
     "0":{
-        "display":"No Changes"
+        "display":"No Changes",
+        "for_trident":true
     },
     "100":{
         "display":"Executed as All Nearby Players",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"player"
+        "context":"player",
+        "for_trident":true
     },
     "101":{
         "display":"Executed as All Other Nearby Players",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"player"
+        "context":"player",
+        "for_trident":true
     },
     "102":{
         "display":"Executed as Nearest Player Within Range",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"player"
+        "context":"player",
+        "for_trident":true
     },
     "103":{
         "display":"Executed as Random Nearby Player",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"player"
+        "context":"player",
+        "for_trident":true
     },
     "104":{
         "display":"Executed as Random Other Nearby Player",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"player"
+        "context":"player",
+        "for_trident":true
     },
     "120":{
         "display":"Executed as All Nearby Monsters",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "121":{
         "display":"Executed as All Other Nearby Monsters",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "122":{
         "display":"Executed as Nearest Monster Within Range",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "123":{
         "display":"Executed as Random Nearby Monster",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "124":{
         "display":"Executed as Random Other Nearby Monster",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "125":{
         "display":"Executed as Monsters That Just Took Damage",
         "value_mode":"range",
         "value_display":"Range",
-        "context":"mob"
+        "context":"mob",
+        "for_trident":true
     },
     "500":{
         "display":"Horizontal Triple Volley",
         "version_min": 2.1,
         "value_mode":"angle",
-        "value_display":"Angle"
+        "value_display":"Angle",
+        "for_trident":true
     },
     "501":{
         "display":"Vertical Triple Volley",
         "version_min": 2.1,
         "value_mode":"angle",
-        "value_display":"Angle"
+        "value_display":"Angle",
+        "for_trident":true
     },
     "502":{
         "display":"In Cardinal Directions",
-        "version_min": 2.1
+        "version_min": 2.1,
+        "for_trident":true
     },
     "900":{
         "display":"Executed on Item Equip Slot",
@@ -94,6 +109,13 @@
         "note":"Large values here will cause lag.\nCapped at 256.",
         "version_min": 2.1,
         "value_mode":"input",
-        "value_display":"Count"
+        "value_display":"Count",
+        "for_trident":true
+    },
+    "990":{
+        "display":"Executed as Thrower",
+        "version_min": 2.1,
+        "context":"player",
+        "trident_only":true
     }
 }

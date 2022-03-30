@@ -26,6 +26,7 @@ function userDefined() {
             "text_mode":"input",
             "text_display":"Text",
             "has_sound":true,
+            "for_trident":true,
         }
     }
     return ret;

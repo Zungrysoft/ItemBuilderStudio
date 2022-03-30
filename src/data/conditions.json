@@ -1,6 +1,7 @@
 {
     "0":{
-        "display":"Always True"
+        "display":"Always True",
+        "for_trident":true
     },
     "100":{
         "display":"Dealt Damage With a Melee Attack",
@@ -240,18 +241,22 @@
         "player_only":true
     },
     "380":{
-        "display":"On Fire"
+        "display":"On Fire",
+        "for_trident":true
     },
     "381":{
-        "display":"In Water"
+        "display":"In Water",
+        "for_trident":true
     },
     "382":{
-        "display":"In Lava"
+        "display":"In Lava",
+        "for_trident":true
     },
     "383":{
         "display":"In Light Level",
         "value_mode":"input",
-        "value_display":"Minimum Light Level"
+        "value_display":"Minimum Light Level",
+        "for_trident":true
     },
     "390":{
         "display":"Monster is of Type",
@@ -259,15 +264,22 @@
         "value_display":"Type",
         "monster_only":true
     },
+    "391":{
+        "display":"Trident is in Ground",
+        "player_only":true,
+        "trident_only":true
+    },
     "400":{
         "display":"Item is Enchanted",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "420":{
         "display":"Item is Damaged",
         "value_mode":"input",
         "value_display":"Minimum Damage",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "430":{
         "display":"Item Count",
@@ -290,90 +302,107 @@
         "display":"SavedCounter1 = Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "801":{
         "display":"SavedCounter1 >= Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "805":{
         "display":"SavedCounter2 = Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "806":{
         "display":"SavedCounter2 >= Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "810":{
         "display":"SavedCounter3 = Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "811":{
         "display":"SavedCounter3 >= Value",
         "value_mode":"input",
         "value_display":"Value",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "840":{
         "display":"FrameCounter1 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "841":{
         "display":"FrameCounter1 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "845":{
         "display":"FrameCounter2 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "846":{
         "display":"FrameCounter2 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "850":{
         "display":"FrameCounter3 = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "851":{
         "display":"FrameCounter3 >= Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "860":{
         "display":"Rolled Random Number = Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "861":{
         "display":"Rolled Random Number >= to Value",
         "value_mode":"input",
-        "value_display":"Value"
+        "value_display":"Value",
+        "for_trident":true
     },
     "870":{
         "display":"Item is Primed",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "871":{
         "display":"Item became Unprimed",
         "instant":true,
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "875":{
         "display":"Item is Activated",
-        "player_only":true
+        "player_only":true,
+        "for_trident":true
     },
     "900":{
         "display":"Timer",
@@ -382,13 +411,15 @@
         "value_mode":"input",
         "value_display":"Cycle",
         "value2_mode":"input",
-        "value2_display":"Offset"
+        "value2_display":"Offset",
+        "for_trident":true
     },
     "901":{
         "display":"Random Chance",
         "instant":true,
         "value_mode":"input",
-        "value_display":"Percent Chance"
+        "value_display":"Percent Chance",
+        "for_trident":true
     },
     "902":{
         "display":"Used Carrot on a Stick",

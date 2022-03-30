@@ -24,13 +24,30 @@ export function isDisabled(id,data,context,version) {
     }
 
     // Filter context
-    if ((context === "self" || context === "player") && "monster_only" in data[id] && data[id].monster_only) {
+    if (!context) {
+        return false;
+    }
+
+    if (context === "trident") {
+        if ("trident_only" in data[id] && data[id]["trident_only"]) {
+            return false;
+        }
+        if ("for_trident" in data[id] && data[id]["for_trident"]) {
+            return false;
+        }
         return true;
     }
-    if ((context === "mob" || context === "player") && "self_only" in data[id] && data[id].self_only) {
+
+    if (context !== "player" && context !== "self" && "player_only" in data[id] && data[id]["player_only"]) {
         return true;
     }
-    else if (context === "mob" && "player_only" in data[id] && data[id].player_only) {
+    if (context !== "self" && "self_only" in data[id] && data[id]["self_only"]) {
+        return true;
+    }
+    if (context !== "mob" && "monster_only" in data[id] && data[id]["monster_only"]) {
+        return true;
+    }
+    if (context !== "trident" && "trident_only" in data[id] && data[id]["trident_only"]) {
         return true;
     }
 
