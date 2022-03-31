@@ -12,6 +12,8 @@ import resourceData from '../data/resources.json';
 import equipmentData from '../data/equipment.json';
 import angleData from '../data/angles.json';
 import potionEffectData from '../data/potion_effects.json';
+import limitedColorData from '../data/limited_colors.json';
+import tridentPatternData from '../data/trident_patterns.json';
 
 function userDefined() {
     let ret = {};
@@ -92,6 +94,12 @@ export function getDataByType(type) {
     }
     else if (type === "potion_effect") {
         return potionEffectData;
+    }
+    else if (type === "trident_pattern") {
+        return tridentPatternData;
+    }
+    else if (type === "limited_color") {
+        return limitedColorData;
     }
     else {
         return {}

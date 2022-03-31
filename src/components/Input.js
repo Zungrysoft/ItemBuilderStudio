@@ -17,7 +17,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
     // Validation
     useEffect(() => {
         // If there is no data for this key, set value to 0
-        if ( !((jsonKey + "_mode") in data[id]) || !((jsonKey + "_display") in data[id])) {
+        if ( !(id in data) || !((jsonKey + "_mode") in data[id]) || !((jsonKey + "_display") in data[id])) {
             if (startValue !== 0) {
                 onChange(0);
             }

@@ -1,0 +1,50 @@
+{
+    "1":{
+        "display":"White"
+    },
+    "2":{
+        "display":"Orange"
+    },
+    "3":{
+        "display":"Magenta"
+    },
+    "4":{
+        "display":"Light Blue"
+    },
+    "5":{
+        "display":"Yellow"
+    },
+    "6":{
+        "display":"Lime"
+    },
+    "7":{
+        "display":"Pink"
+    },
+    "8":{
+        "display":"Gray"
+    },
+    "9":{
+        "display":"Light Gray"
+    },
+    "10":{
+        "display":"Cyan"
+    },
+    "11":{
+        "display":"Purple"
+    },
+    "12":{
+        "display":"Blue"
+    },
+    "13":{
+        "display":"Brown"
+    },
+    "14":{
+        "display":"Green"
+    },
+    "15":{
+        "display":"Red"
+    },
+    "16":{
+        "display":"Black"
+    }
+}

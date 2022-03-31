@@ -1,0 +1,26 @@
+{
+    "1":{
+        "display":"Handle"
+    },
+    "2":{
+        "display":"Dot"
+    },
+    "50":{
+        "display":"Small Circle"
+    },
+    "51":{
+        "display":"Large Circle"
+    },
+    "52":{
+        "display":"Small Triangle"
+    },
+    "53":{
+        "display":"Large Triangle"
+    },
+    "54":{
+        "display":"Small Square"
+    },
+    "55":{
+        "display":"Large Square"
+    }
+}

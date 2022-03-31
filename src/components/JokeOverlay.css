@@ -1,0 +1,95 @@
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+.overlay-box {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    text-align: center;
+    border: 2px solid black;
+    background-color: #69748a;
+    width: 240px;
+    min-height: 70vh;
+    height: 85%;
+    margin: 10px;
+    margin-top: 60px;
+    vertical-align: top;
+}
+
+.overlay-title {
+    position: fixed;
+    justify-content: center;
+    top: 2px;
+    margin-top: 10px;
+    user-select: none;
+    color: #ccd1dd;
+    font-size: 43px;
+}
+
+.overlay-subtitle {
+    margin-top: 10px;
+}
+
+.overlay-text-container {
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.overlay-text-container-alt {
+    border-bottom: 2px solid black;
+    background-color: #515a6b;
+    width: 100%;
+}
+
+.overlay-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    user-select: none;
+}
+
+.overlay-error {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #440000;
+}
+
+.overlay-input {
+    background-color: #4f5868;
+	border: none;
+	outline: none;
+    color:#ccd1dd;
+    font-size: 20;
+	padding: 8px 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.overlay-button {
+    background-color: #383e4b;
+	border: none;
+	outline: none;
+	cursor: pointer;
+    color:#ccd1dd;
+    font-size: 20;
+	padding: 8px 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.overlay-button:hover {
+	background-color: #2b323b;
+}

@@ -10,6 +10,7 @@ import AboutPage from './pages/About.js';
 
 import CommandOutput from './components/CommandOutput.js';
 import Navbar from './components/Navbar.js';
+import JokeOverlay from './components/JokeOverlay.js';
 
 let tabs = [
     {display:"Functionality",id:"functionality"},
@@ -56,6 +57,7 @@ function App() {
     });
     return (
         <div className="App">
+            <JokeOverlay/>
             <Navbar
                 tabs={tabs}
                 startVal={page}

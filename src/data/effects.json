@@ -656,5 +656,13 @@
         "text_display":"Message",
         "instant": true,
         "player_only":true
+    },
+    "990":{
+        "display":"Trident Particle Effect",
+        "value_mode":"trident_pattern",
+        "value_display":"Particle Effect",
+        "value2_mode":"limited_color",
+        "value2_display":"Color",
+        "trident_only":true
     }
 }
