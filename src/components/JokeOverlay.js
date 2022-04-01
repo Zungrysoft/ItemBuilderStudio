@@ -38,7 +38,10 @@ function JokeOverlay() {
     let today = new Date();
     console.log(today.getDate())
     console.log(today.getMonth())
-    if ( !(today.getDate() == 1 && today.getMonth() == 3) ) {
+    if (today.getMonth() !== 3) {
+        return <div/>
+    }
+	if (today.getDate() !== 1 && today.getDate() !== 2) {
         return <div/>
     }
 
