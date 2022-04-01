@@ -76,10 +76,18 @@ function JokeOverlay() {
                 <div>
                     <h2 className="overlay-subtitle">ItemBuilder Studio Enterprise Edition</h2>
                     {enterpriseEdition}
-                    <input className="overlay-input" placeholder="Enter wallet key"/>
+                    <input className="overlay-input" placeholder="Enter wallet key" id="wallet_input"/>
                     <button
                         className="overlay-button"
-                        onClick={() => {setErrorMessage("Error: Could not find ItemCoin Wallet")}}
+                        onClick={(e) => {
+                            let val = document.getElementById("wallet_input").value;
+                            if (val == "wallet key") {
+                                setErrorMessage("Error: Extreme Cleverness Overload")
+                            }
+                            else {
+                                setErrorMessage("Error: Could not find ItemCoin Wallet")
+                            }
+                        }}
                     >
                         Buy
                     </button>
