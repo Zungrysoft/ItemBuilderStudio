@@ -36,8 +36,6 @@ function JokeOverlay() {
 
     // Not April Fools Day
     let today = new Date();
-    console.log(today.getDate())
-    console.log(today.getMonth())
     if (today.getMonth() !== 3) {
         return <div/>
     }
