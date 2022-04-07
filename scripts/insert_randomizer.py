@@ -3,7 +3,7 @@
 import json
 
 FILE_PATH = '../src/data/randomizer_words.json'
-TYPES = ["weapons","nouns","descriptions","adjectives","names"]
+TYPES = ["weapons","nouns","descriptions","adjectives","names","adverbs"]
 WEAPON_TYPES = [
 	"trinket",
 	"sword",
@@ -87,6 +87,7 @@ def main():
 			print(f"3: Sword of {value}")
 			print(f"4: Sword that's {value}")
 			print(f"5: {value}'s Sword")
+			print(f"6: {value} Very Bad Sword")
 			type = input("Input type: ")
 			
 			# Check for plural form

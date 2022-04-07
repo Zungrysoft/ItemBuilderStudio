@@ -258,12 +258,25 @@
             ]
         },
         {
-            "weight": 5,
+            "weight": 3,
             "sections":[
-                "Very ",
+                "[adverb]",
+                " ",
                 "[adjective]",
                 " ",
                 "[weapon]"
+            ]
+        },
+        {
+            "weight": 1,
+            "sections":[
+                "[weapon]",
+                " of ",
+                "[adverb]",
+                " ",
+                "[adjective]",
+                " ",
+                "[noun_plural]"
             ]
         },
         {

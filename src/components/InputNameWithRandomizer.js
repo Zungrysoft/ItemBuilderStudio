@@ -63,6 +63,9 @@ function parseSection(section, itemId) {
     if (section === "[adjective]") {
         return pickFromWeightedList(randomizerWords.adjectives).value;
     }
+    if (section === "[adverb]") {
+        return pickFromWeightedList(randomizerWords.adverbs).value;
+    }
     if (section === "[description]") {
         return pickFromWeightedList(randomizerWords.descriptions).value;
     }
