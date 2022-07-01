@@ -313,7 +313,7 @@ function Condition({
                             only={structure.effects.length === 1}
                             depth={depth+1}
                             type={0}
-                            context={getFilterContext(context, structure.id)}
+                            context={getFilterContext(context, structure.id, type)}
                             version={version}
                         />
                     </div>
@@ -354,7 +354,7 @@ function Condition({
                             only={structure.conditions.length === 1}
                             depth={depth+1}
                             type={1}
-                            context={getFilterContext(context, structure.id)}
+                            context={getFilterContext(context, structure.id, type)}
                             version={version}
                         />
                     </div>
@@ -395,7 +395,7 @@ function Condition({
                             only={structure.filters.length === 1}
                             depth={depth+1}
                             type={2}
-                            context={getFilterContext(context, structure.id)}
+                            context={getFilterContext(context, structure.id, type)}
                             version={version}
                         />
                     </div>

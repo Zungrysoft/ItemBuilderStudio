@@ -2,8 +2,13 @@ import { getFilterData } from '../helpers/jsonData.js';
 
 // Context tracks whether the filter is causing conditions to
 // be run on players or mobs. Some conditions need to be disabled
-// out depending on the context
-export function getFilterContext(oldContext, id) {
+// depending on the context
+export function getFilterContext(oldContext, id, type) {
+    // If this isn't a filter, the context shouldn't change
+    // Only filters can change context
+    if (type !== 2) {
+        return oldContext;
+    }
     if (!getFilterData()[id]) {
         return oldContext;
     }

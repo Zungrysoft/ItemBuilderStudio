@@ -3,7 +3,7 @@
 import json
 
 FILE_PATH = '../src/data/randomizer_words.json'
-TYPES = ["weapons","nouns","descriptions","adjectives","names","adverbs"]
+TYPES = ["weapons","nouns","descriptions","adjectives","names","emphases"]
 WEAPON_TYPES = [
 	"trinket",
 	"sword",

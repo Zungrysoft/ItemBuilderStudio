@@ -258,9 +258,9 @@
             ]
         },
         {
-            "weight": 3,
+            "weight": 2,
             "sections":[
-                "[adverb]",
+                "[emphasis]",
                 " ",
                 "[adjective]",
                 " ",
@@ -272,7 +272,7 @@
             "sections":[
                 "[weapon]",
                 " of ",
-                "[adverb]",
+                "[emphasis]",
                 " ",
                 "[adjective]",
                 " ",

@@ -8,5 +8,3 @@ With Node.js installed on your system, run the following commands in the reposit
 
 ### `npm install`
 ### `npm run start`
-
-
