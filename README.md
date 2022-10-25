@@ -1,6 +1,6 @@
 # ItemBuilder v2 Website
 
-This website is designed to provide a way to conveniently and visually create ItemBuilder items.
+This website is designed to provide a way to conveniently and visually create ItemBuilder items. It is hosted here: https://zungrysoft.github.io/ItemBuilderStudio/
 
 ## To run website
 
