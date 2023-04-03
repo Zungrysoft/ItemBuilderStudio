@@ -587,37 +587,37 @@
         "for_trident":true
     },
     "840":{
-        "display":"Set FrameCounter1",
+        "display":"Set TickCounter1",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "841":{
-        "display":"Increase FrameCounter1",
+        "display":"Increase TickCounter1",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "845":{
-        "display":"Set FrameCounter2",
+        "display":"Set TickCounter2",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "846":{
-        "display":"Increase FrameCounter2",
+        "display":"Increase TickCounter2",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "850":{
-        "display":"Set FrameCounter3",
+        "display":"Set TickCounter3",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "851":{
-        "display":"Increase FrameCounter3",
+        "display":"Increase TickCounter3",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true

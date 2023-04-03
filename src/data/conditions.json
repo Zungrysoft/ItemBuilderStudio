@@ -341,37 +341,37 @@
         "for_trident":true
     },
     "840":{
-        "display":"FrameCounter1 = Value",
+        "display":"TickCounter1 = Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "841":{
-        "display":"FrameCounter1 >= Value",
+        "display":"TickCounter1 >= Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "845":{
-        "display":"FrameCounter2 = Value",
+        "display":"TickCounter2 = Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "846":{
-        "display":"FrameCounter2 >= Value",
+        "display":"TickCounter2 >= Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "850":{
-        "display":"FrameCounter3 = Value",
+        "display":"TickCounter3 = Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
     },
     "851":{
-        "display":"FrameCounter3 >= Value",
+        "display":"TickCounter3 >= Value",
         "value_mode":"input",
         "value_display":"Value",
         "for_trident":true
