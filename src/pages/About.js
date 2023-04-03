@@ -9,7 +9,8 @@ function AboutPage({ data, onChange }) {
                 mapmakers will likely find this useful as well.
             </p>
             <a href="https://github.com/Zungrysoft/ItemBuilder/releases" target="_blank">Get the datapack here</a>
-            <p href="https://github.com/Zungrysoft/ItemBuilder/releases" target="_blank">Video Tutorial Coming Soon</p>
+            <div/>
+            <a href="https://www.youtube.com/watch?v=F3cVSwe-9Ys&list=PLIKyq4udOqV5j7yCZHKlt72CUPi7CpuRK" target="_blank">Video Tutorial</a>
             <p>Created by ZungryWare</p>
             <p>Contact: ZungrySoftEntertainment@gmail.com or ZungryWare#1545 on Discord</p>
         </div>
