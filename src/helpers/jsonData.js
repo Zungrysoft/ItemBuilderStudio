@@ -51,7 +51,6 @@ export function getConditionData() {
 export function getFilterData() {
     return {
         ...filterData,
-        ...userDefined(),
     }
 }
 
