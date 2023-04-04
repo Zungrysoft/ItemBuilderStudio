@@ -54,6 +54,7 @@ function App() {
             text: "",
             color: "ffffff",
             color2: "555555",
+            color3: "fc03db",
             colorMode: "single",
             bold: false,
             italic: false,

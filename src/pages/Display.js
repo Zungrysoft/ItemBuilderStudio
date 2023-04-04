@@ -20,6 +20,10 @@ let colorModes = {
         display:"Sheen",
         numColors: 2,
     },
+    "gradient_triple":{
+        display:"Triple Gradient",
+        numColors: 3,
+    },
     "alternating":{
         display:"Alternating",
         numColors: 2,
@@ -113,7 +117,7 @@ function DisplayPage({ data, onChange }) {
                 : <div/>}
                 {colorModes[data.name.colorMode].numColors >= 2 ?
                     <InputColor
-                        label="Alt Color"
+                        label="Color 2"
                         startValue={data.name.color2}
                         onChange={(val) => {
                             onChange({
@@ -121,6 +125,21 @@ function DisplayPage({ data, onChange }) {
                                 name: {
                                     ...data.name,
                                     color2: val,
+                                }
+                            })
+                        }}
+                    />
+                : <div/>}
+                {colorModes[data.name.colorMode].numColors >= 3 ?
+                    <InputColor
+                        label="Color 3"
+                        startValue={data.name.color3}
+                        onChange={(val) => {
+                            onChange({
+                                ...data,
+                                name: {
+                                    ...data.name,
+                                    color3: val,
                                 }
                             })
                         }}

@@ -65,7 +65,7 @@ function generateNameMetallic(name) {
             name.italic,
         );
     }
-    
+
     return rlc(output);
 }
 
@@ -85,7 +85,36 @@ function generateNameGradient(name) {
             name.italic,
         );
     }
-    
+
+    return rlc(output);
+}
+
+function generateNameGradientTriple(name) {
+    // Special case for if the name has a length of 2
+    if (name.text.length <= 2) {
+        return generateText(name.text, name.color, name.bold, name.italic);
+    }
+
+    let output = "";
+
+    for (let i = 0; i < name.text.length; i ++) {
+        let interpColor = "ffffff"
+        let midPoint = Math.floor(name.text.length/2)
+        if (i < midPoint) {
+            interpColor = interpolateColor(name.color, name.color2, i/(midPoint))
+        }
+        else {
+            interpColor = interpolateColor(name.color2, name.color3, (i-midPoint)/(name.text.length-1-midPoint))
+        }
+
+        output += generateText(
+            name.text[i],
+            interpColor,
+            name.bold,
+            name.italic,
+        );
+    }
+
     return rlc(output);
 }
 
@@ -124,7 +153,7 @@ function generateNameAlternating(name) {
         let color = i % 2 == 0 ? name.color : name.color2;
         output += generateText(name.text[i], color, name.bold, name.italic);
     }
-    
+
     return rlc(output);
 }
 
@@ -142,7 +171,7 @@ function generateNameCapitalized(name) {
         if (newCase !== curCase) {
             let chosenColor = curCase ? name.color2 : name.color;
             output += generateText(queue, chosenColor, name.bold, name.italic);
-            
+
             queue = "";
             curCase = newCase;
         }
@@ -150,7 +179,7 @@ function generateNameCapitalized(name) {
     }
     let chosenColor = curCase ? name.color2 : name.color;
     output += generateText(queue, chosenColor, name.bold, name.italic);
-    
+
     return rlc(output);
 }
 
@@ -177,7 +206,7 @@ function generateNameCharactersSpecial(name) {
         if (newCase !== curCase) {
             let chosenColor = curCase ? name.color2 : name.color;
             output += generateText(queue, chosenColor, name.bold, name.italic);
-            
+
             queue = "";
             curCase = newCase;
         }
@@ -185,7 +214,7 @@ function generateNameCharactersSpecial(name) {
     }
     let chosenColor = curCase ? name.color2 : name.color;
     output += generateText(queue, chosenColor, name.bold, name.italic);
-    
+
     return rlc(output);
 }
 
@@ -208,6 +237,9 @@ function generateName(name) {
     }
     else if (name.colorMode === "word_gradient") {
         output = generateNameWordGradient(name);
+    }
+    else if (name.colorMode === "gradient_triple") {
+        output = generateNameGradientTriple(name);
     }
     else if (name.colorMode === "metallic") {
         output = generateNameMetallic(name);
@@ -347,7 +379,7 @@ function generateCondition(structure, isBase) {
         output += jsonParam(structure.inverted,"Inverted","");
         output += jsonParam(structure.text,"Text","\"");
     }
-    
+
     // Child Conditions
     output += jsonChildren(structure.effects, "Effects");
     output += jsonChildren(structure.conditions, "Conditions");
@@ -373,7 +405,7 @@ function generateEnchantments(enchantments) {
 
 function generateCommand(data) {
     let output = "";
-    
+
     if (data.includeGive) {
         output += "/give @p " + data.itemId + "{";
     }
