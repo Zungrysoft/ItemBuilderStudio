@@ -14,13 +14,18 @@ export function getFilterContext(oldContext, id, type) {
 }
 
 // Checks whether or not a particular id can be used under the circumstances
-export function isDisabled(id,data,context,version) {
+export function isDisabled(id, data, context, settings) {
     // Versioning
-    if ("version_min" in data[id] && version < data[id].version_min) {
+    if ("version_min" in data[id] && settings.version < data[id].version_min) {
         return true;
     }
-    if ("version_max" in data[id] && version > data[id].version_max) {
+    if ("version_max" in data[id] && settings.version > data[id].version_max) {
         return true;
+    }
+
+    // User-Defined
+    if (data[id].user_defined && !settings.userDefinedEnabled) {
+        return true
     }
 
     // Filter context
@@ -55,10 +60,10 @@ export function isDisabled(id,data,context,version) {
 }
 
 // Trims down data to just the id's that are allowed under the circumstances
-export function getValidEntries(data, context, version) {
+export function getValidEntries(data, context, settings) {
     let ret = {};
     Object.keys(data).forEach((id) => {
-        if (!isDisabled(id,data,context,version)) {
+        if (!isDisabled(id, data, context, settings)) {
             ret[id] = data[id];
         }
     })

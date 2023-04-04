@@ -29,6 +29,7 @@ function userDefined() {
             "text_display":"Text",
             "has_sound":true,
             "for_trident":true,
+            "user_defined":true,
         }
     }
     return ret;

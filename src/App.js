@@ -85,7 +85,7 @@ function App() {
                         <FunctionalityPage
                             data={data}
                             onChange={setData}
-                            version={settings.version}
+                            settings={settings}
                         />
                     :<div/>}
                     {page=="display" ?

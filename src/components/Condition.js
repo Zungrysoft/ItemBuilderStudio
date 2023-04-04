@@ -94,7 +94,7 @@ function shiftDown(list, toShift) {
 function Condition({
     type, structure, onChange,
     eventDuplicate, eventShiftUp, eventShiftDown,
-    only, depth, context, version,
+    only, depth, context, settings,
 }) {
     return (
         <div className={boxType(type, depth)}>
@@ -129,7 +129,7 @@ function Condition({
                             type={type}
                             startValue={structure.id}
                             context={context}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -144,7 +144,7 @@ function Condition({
                             id={structure.id}
                             jsonKey="value"
                             startValue={structure.value}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -159,7 +159,7 @@ function Condition({
                             id={structure.id}
                             jsonKey="value2"
                             startValue={structure.value2}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -174,7 +174,7 @@ function Condition({
                             id={structure.id}
                             jsonKey="value3"
                             startValue={structure.value3}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -189,7 +189,7 @@ function Condition({
                             id={structure.id}
                             jsonKey="value4"
                             startValue={structure.value4}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -204,7 +204,7 @@ function Condition({
                             id={structure.id}
                             jsonKey="text"
                             startValue={structure.text}
-                            version={version}
+                            settings={settings}
                             onChange={(val) => {
                                 onChange({
                                     ...structure,
@@ -318,7 +318,7 @@ function Condition({
                             depth={depth+1}
                             type={0}
                             context={getFilterContext(context, structure.id, type)}
-                            version={version}
+                            settings={settings}
                         />
                     </div>
                 ))}
@@ -359,7 +359,7 @@ function Condition({
                             depth={depth+1}
                             type={1}
                             context={getFilterContext(context, structure.id, type)}
-                            version={version}
+                            settings={settings}
                         />
                     </div>
                 ))}
@@ -400,7 +400,7 @@ function Condition({
                             depth={depth+1}
                             type={2}
                             context={getFilterContext(context, structure.id, type)}
-                            version={version}
+                            settings={settings}
                         />
                     </div>
                 ))}

@@ -8,7 +8,7 @@ import InputColor from './InputColor.js';
 
 import { getDataByType } from '../helpers/jsonData.js';
 
-function Input({ type, id, jsonKey, startValue, onChange, version }) {
+function Input({ type, id, jsonKey, startValue, onChange, settings }) {
     let mode = null
     let labelName = ""
     let data = getDataByType(type);
@@ -41,7 +41,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
 
     // Build label object
     let label = <p className="condition-label">{labelName + ": "}</p>
-    
+
     if (mode === "input") {
         return (
             <div>
@@ -114,7 +114,7 @@ function Input({ type, id, jsonKey, startValue, onChange, version }) {
                     type={mode}
                     startValue={startValue}
                     onChange={onChange}
-                    version={version}
+                    settings={settings}
                 />
             </div>
         );

@@ -1,11 +1,12 @@
 import '../App.css';
 
-function InputList({ startValue, data, label, onChange, version }) {
+function InputList({ startValue, data, label, onChange, settings }) {
     let optionList = [];
 
     // Create option list from json data
     Object.keys(data).forEach(function(key, _) {
-        if (!("version_min" in data[key]) || version >= data[key].version_min) {
+        // If this entry has a version_min, don't show it when older versions are selected
+        if (!("version_min" in data[key]) || settings.version >= data[key].version_min) {
             optionList.push(
                 <option value={key} key={key}>
                     {data[key].display}

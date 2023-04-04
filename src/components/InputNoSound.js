@@ -19,7 +19,7 @@ function InputSlot({ id, label, startValue, onChange }) {
         }
     }, [hasSound]);
 
-    //Return element
+    // Return element
     if (hasSound) {
         return (
             <InputCheckbox

@@ -35,13 +35,13 @@ function getCategory( type, id ) {
     return "Misc"
 }
 
-function InputId({ type, startValue, onChange, context, version }) {
+function InputId({ type, startValue, onChange, context, settings }) {
     let data = getDataByType(type);
-    let valid = getValidEntries(data, context, version);
+    let valid = getValidEntries(data, context, settings);
     let labelName = "";
     let optionGroups = [];
     let useCategories = false;
-    
+
     // Effects
     if (type === 0) {
         labelName = "Effect";
@@ -64,7 +64,7 @@ function InputId({ type, startValue, onChange, context, version }) {
 
     // Validation
     useEffect(() => {
-        if (Object.keys(valid).length > 0) {           
+        if (Object.keys(valid).length > 0) {
             // If the current value is not within the valid list, set it to something in the list
             if (!(startValue in valid)) {
                 onChange(Object.keys(valid)[0]);
@@ -100,14 +100,14 @@ function InputId({ type, startValue, onChange, context, version }) {
         if ("instant" in valid[id] && valid[id].instant == true) {
             labelName = "*" + labelName;
         }
-        
+
         curList.push(
             <option value={id} key={id}>
                 {labelName}
             </option>
         )
     });
-    
+
     if (useCategories) {
         // Collect remaining elements at the end
         optionGroups.push(

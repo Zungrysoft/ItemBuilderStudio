@@ -5,7 +5,7 @@ import InputList from '../components/InputList.js';
 
 import slotData from '../data/slot_tags.json';
 
-function FunctionalityPage({ data, onChange, version }) {
+function FunctionalityPage({ data, onChange, settings }) {
     return (
         <div>
             <div className="entry">
@@ -37,7 +37,7 @@ function FunctionalityPage({ data, onChange, version }) {
                 label="Activator Type"
                 data={slotData}
                 startValue={data.slot}
-                version={version}
+                settings={settings}
                 onChange={(val) => {
                     onChange({
                         ...data,
@@ -50,7 +50,7 @@ function FunctionalityPage({ data, onChange, version }) {
                 structure={data.structure}
                 depth={0}
                 context={slotData[data.slot].context}
-                version={version}
+                settings={settings}
                 onChange={(val) => {
                     onChange({
                         ...data,
