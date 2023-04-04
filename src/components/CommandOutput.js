@@ -154,6 +154,41 @@ function generateNameCapitalized(name) {
     return rlc(output);
 }
 
+function isSpecial(char) {
+    if (48 <= char && char <= 57) {
+        return false
+    }
+    if (65 <= char && char <= 90) {
+        return false
+    }
+    if (97 <= char && char <= 122) {
+        return false
+    }
+    return true
+}
+
+function generateNameCharactersSpecial(name) {
+    let output = "";
+
+    let curCase = true;
+    let queue = "";
+    for (let i = 0; i < name.text.length; i ++) {
+        let newCase = isSpecial(name.text.charCodeAt(i));
+        if (newCase !== curCase) {
+            let chosenColor = curCase ? name.color2 : name.color;
+            output += generateText(queue, chosenColor, name.bold, name.italic);
+            
+            queue = "";
+            curCase = newCase;
+        }
+        queue += name.text[i];
+    }
+    let chosenColor = curCase ? name.color2 : name.color;
+    output += generateText(queue, chosenColor, name.bold, name.italic);
+    
+    return rlc(output);
+}
+
 function generateName(name) {
     let output = "";
     if (name.colorMode === "alternating") {
@@ -164,6 +199,9 @@ function generateName(name) {
     }
     else if (name.colorMode === "capitalized") {
         output = generateNameCapitalized(name);
+    }
+    else if (name.colorMode === "characters_special") {
+        output = generateNameCharactersSpecial(name);
     }
     else if (name.colorMode === "gradient") {
         output = generateNameGradient(name);

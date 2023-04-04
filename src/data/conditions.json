@@ -423,6 +423,7 @@
     },
     "902":{
         "display":"Used Carrot on a Stick",
+        "note":"Cooldown is in Ticks.",
         "instant":true,
         "value_mode":"input",
         "value_display":"Cooldown",

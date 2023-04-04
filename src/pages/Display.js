@@ -32,6 +32,10 @@ let colorModes = {
         display:"Capitalized",
         numColors: 2,
     },
+    "characters_special":{
+        display:"Special Characters",
+        numColors: 2,
+    },
 };
 
 function DisplayPage({ data, onChange }) {

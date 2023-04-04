@@ -6,21 +6,39 @@
         "display":"Dot"
     },
     "50":{
-        "display":"Small Circle"
+        "display":"Small Circles"
     },
     "51":{
         "display":"Large Circle"
     },
     "52":{
-        "display":"Small Triangle"
+        "display":"Small Triangles"
     },
     "53":{
         "display":"Large Triangle"
     },
     "54":{
-        "display":"Small Square"
+        "display":"Small Squares"
     },
     "55":{
         "display":"Large Square"
+    },
+    "1003":{
+        "display":"Radius 3"
+    },
+    "1005":{
+        "display":"Radius 5"
+    },
+    "1007":{
+        "display":"Radius 7"
+    },
+    "1010":{
+        "display":"Radius 10"
+    },
+    "1015":{
+        "display":"Radius 15"
+    },
+    "1020":{
+        "display":"Radius 20"
     }
 }

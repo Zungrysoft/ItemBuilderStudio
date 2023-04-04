@@ -106,7 +106,7 @@
     },
     "901":{
         "display":"Executed Multiple Times",
-        "note":"Large values here will cause lag.\nCapped at 256.",
+        "note":"Overly large values here will cause lag.\nCapped at 256.",
         "version_min": 2.1,
         "value_mode":"input",
         "value_display":"Count",

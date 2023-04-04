@@ -397,6 +397,14 @@
         "instant": true,
         "for_trident":true
     },
+    "504":{
+        "display":"Take Damage",
+        "version_min": 2.1,
+        "note":"Damage source will be the player wielding\nthis item",
+        "value_mode":"input",
+        "value_display":"Damage",
+        "instant": true
+    },
     "520":{
         "display":"Launch Upwards",
         "value_mode":"input",
@@ -521,7 +529,7 @@
         "value4_mode":"duration",
         "value4_display":"Duration",
         "text_mode":"input",
-        "text_display":"Item Id",
+        "text_display":"Sprite Item Id",
         "has_sound":true,
         "instant": true,
         "for_trident":true
