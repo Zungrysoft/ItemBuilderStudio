@@ -240,6 +240,14 @@
         "value2_display":"Minimum Count",
         "player_only":true
     },
+    "311":{
+        "display":"Has Potion Effect",
+        "version_min": 2.1,
+        "value_mode":"potion_id",
+        "value_display":"Potion Effect",
+        "value2_mode":"input",
+        "value2_display":"Minimum Amplifier"
+    },
     "380":{
         "display":"On Fire",
         "for_trident":true

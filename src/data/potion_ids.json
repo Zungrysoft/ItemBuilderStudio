@@ -1,0 +1,95 @@
+{
+    "1":{
+        "display":"Speed"
+    },
+    "2":{
+        "display":"Slowness"
+    },
+    "3":{
+        "display":"Haste"
+    },
+    "4":{
+        "display":"Mining Fatigue"
+    },
+    "5":{
+        "display":"Strength"
+    },
+    "8":{
+        "display":"Jump Boost"
+    },
+    "9":{
+        "display":"Nausea"
+    },
+    "10":{
+        "display":"Regeneration"
+    },
+    "11":{
+        "display":"Resistance"
+    },
+    "12":{
+        "display":"Fire Resistance"
+    },
+    "13":{
+        "display":"Water Breathing"
+    },
+    "14":{
+        "display":"Invisibility"
+    },
+    "15":{
+        "display":"Blindness"
+    },
+    "16":{
+        "display":"Night Vision"
+    },
+    "17":{
+        "display":"Hunger"
+    },
+    "18":{
+        "display":"Weakness"
+    },
+    "19":{
+        "display":"Poison"
+    },
+    "20":{
+        "display":"Wither"
+    },
+    "21":{
+        "display":"Health Boost"
+    },
+    "22":{
+        "display":"Absorption"
+    },
+    "23":{
+        "display":"Saturation"
+    },
+    "24":{
+        "display":"Glowing"
+    },
+    "25":{
+        "display":"Levitation"
+    },
+    "26":{
+        "display":"Luck"
+    },
+    "27":{
+        "display":"Bad Luck"
+    },
+    "28":{
+        "display":"Slow Falling"
+    },
+    "29":{
+        "display":"Conduit Power"
+    },
+    "30":{
+        "display":"Dolphin's Grace"
+    },
+    "31":{
+        "display":"Bad Omen"
+    },
+    "32":{
+        "display":"Hero of the Village"
+    },
+    "33":{
+        "display":"Darkness"
+    }
+}

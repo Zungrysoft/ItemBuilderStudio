@@ -27,6 +27,18 @@
         "display":"Hunger X",
         "version_min": 2.1
     },
+    "70":{
+        "display":"Jump Boost",
+        "version_min": 2.1
+    },
+    "71":{
+        "display":"Jump Boost II",
+        "version_min": 2.1
+    },
+    "79":{
+        "display":"Jump Boost X",
+        "version_min": 2.1
+    },
     "80":{
         "display":"Levitation"
     },
@@ -119,5 +131,5 @@
     },
     "224":{
         "display":"Absorption V"
-    }    
+    }
 }
