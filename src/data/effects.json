@@ -504,8 +504,12 @@
         "version_min": 2.1,
         "value_mode":"input",
         "value_display":"Velocity Multiplier %",
+        "value2_mode":"input",
+        "value2_display":"Lifetime in Ticks",
         "has_sound":true,
         "instant": true,
+        "allow_children": true,
+        "context": "trident",
         "for_trident":true
     },
     "565":{

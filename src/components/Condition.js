@@ -14,9 +14,13 @@ import Note from './Note.js';
 import '../App.css';
 
 import { getFilterContext } from '../helpers/conditionUtils.js';
+import { getDataByType } from '../helpers/jsonData.js';
 
 // Whether this item can contain more conditions in it
 function hasChildren(type, id) {
+    if (id && (id in getDataByType(type)) && getDataByType(type)[id].allow_children) {
+        return true;
+    }
     if (type === 0) {
         return false;
     }
@@ -89,7 +93,7 @@ function shiftDown(list, toShift) {
 
 function Condition({
     type, structure, onChange,
-    eventDuplicate, eventShiftUp, eventShiftDown, 
+    eventDuplicate, eventShiftUp, eventShiftDown,
     only, depth, context, version,
 }) {
     return (
