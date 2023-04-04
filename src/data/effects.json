@@ -688,6 +688,7 @@
     },
     "990":{
         "display":"Trident Particle Effect",
+        "version_min": 2.1,
         "value_mode":"trident_pattern",
         "value_display":"Particle Effect",
         "value2_mode":"limited_color",

@@ -17,37 +17,37 @@
         "player_only":true
     },
     "102":{
-        "display":"Deal Damage With a Firework Rocket",
+        "display":"Dealt Damage With a Firework Rocket",
         "instant":true,
         "player_only":true
     },
     "103":{
-        "display":"Deal Damage With a Fireball",
+        "display":"Dealt Damage With a Fireball",
         "note":"The fireball must land a direct hit\nto trigger this condition.",
         "version_min": 2.1,
         "instant":true,
         "player_only":true
     },
     "104":{
-        "display":"Deal Damage With a Trident",
+        "display":"Dealt Damage With a Trident",
         "version_min": 2.1,
         "instant":true,
         "player_only":true
     },
     "105":{
-        "display":"Deal Damage With a Shulker Bullet",
+        "display":"Dealt Damage With a Shulker Bullet",
         "version_min": 2.1,
         "instant":true,
         "player_only":true
     },
     "106":{
-        "display":"Deal Damage With a Splash Potion",
+        "display":"Dealt Damage With a Splash Potion",
         "version_min": 2.1,
         "instant":true,
         "player_only":true
     },
     "107":{
-        "display":"Deal Damage With a Lingering Potion",
+        "display":"Dealt Damage With a Lingering Potion",
         "version_min": 2.1,
         "instant":true,
         "player_only":true
