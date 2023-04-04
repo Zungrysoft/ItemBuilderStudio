@@ -21,11 +21,26 @@ let tabs = [
     {display:"Info",id:"about"},
 ];
 
+function getStoredSettings() {
+    let FAILCASE = {
+        version: 2.0,
+        userDefinedEnabled: false,
+    }
+    try {
+        let ret = JSON.parse(localStorage.getItem("settings"))
+        if (!ret) {
+            ret = FAILCASE
+        }
+        return ret
+    }
+    catch (e) {
+        return FAILCASE
+    }
+}
+
 function App() {
     const [page, setPage] = useState("functionality");
-    const [settings, setSettings] = useState({
-        version: 2.0
-    });
+    const [settings, setSettings] = useState(getStoredSettings());
     const [data, setData] = useState({
         structure: {
             effects:[],
@@ -71,37 +86,40 @@ function App() {
                             data={data}
                             onChange={setData}
                             version={settings.version}
-                        /> 
+                        />
                     :<div/>}
                     {page=="display" ?
                         <DisplayPage
                             data={data}
                             onChange={setData}
-                        /> 
+                        />
                     :<div/>}
                     {page=="enchantments" ?
                         <EnchantmentsPage
                             data={data}
                             onChange={setData}
-                        /> 
+                        />
                     :<div/>}
                     {page=="storage" ?
                         <StoragePage
                             data={data}
                             onChange={setData}
-                        /> 
+                        />
                     :<div/>}
                     {page=="settings" ?
                         <SettingsPage
                             data={settings}
-                            onChange={setSettings}
-                        /> 
+                            onChange={(v) => {
+                                localStorage.setItem("settings", JSON.stringify(v))
+                                setSettings(v)
+                            }}
+                        />
                     :<div/>}
                     {page=="about" ?
                         <AboutPage
                             data={data}
                             onChange={setData}
-                        /> 
+                        />
                     :<div/>}
                     <div className="command-output">
                         <CommandOutput
