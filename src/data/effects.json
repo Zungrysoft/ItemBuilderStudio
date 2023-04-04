@@ -400,7 +400,7 @@
     "504":{
         "display":"Take Damage",
         "version_min": 2.1,
-        "note":"Damage source will be the player wielding\nthis item",
+        "note":"Damage source will be the player\nwielding this item",
         "value_mode":"input",
         "value_display":"Damage",
         "instant": true
