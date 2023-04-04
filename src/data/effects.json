@@ -353,7 +353,8 @@
         "player_only":true
     },
     "482":{
-        "display":"Item is Removed from Slot",
+        "display":"Unequip Item",
+        "note":"If the player has no inventory space, the\nitem will be thrown on the ground.",
         "has_sound":true,
         "instant": true,
         "player_only":true
