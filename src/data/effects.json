@@ -340,6 +340,21 @@
         "instant": true,
         "player_only":true
     },
+    "455":{
+        "display":"Fill Potion on Hotbar",
+        "version_min": 2.1,
+        "value_mode":"potion_id",
+        "value_display":"Potion Effect",
+        "value2_mode":"input",
+        "value2_display":"Amplifier",
+        "value3_mode":"input",
+        "value3_display":"Duration",
+        "value4_mode":"color_dec",
+        "value4_display":"Color",
+        "has_sound":true,
+        "instant": true,
+        "player_only":true
+    },
     "480":{
         "display":"Item Breaks",
         "has_sound":true,
