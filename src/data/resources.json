@@ -35,6 +35,10 @@
     "24":{
         "display":"Spider Eye"
     },
+    "40":{
+        "display":"Glass Bottle",
+        "version_min": 2.1
+    },
     "50":{
         "display":"Arrow"
     },
