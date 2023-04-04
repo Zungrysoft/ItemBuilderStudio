@@ -342,6 +342,7 @@
     },
     "455":{
         "display":"Fill Potion on Hotbar",
+        "note": "This effect will fill emtpy glass\nbottles on the player's hotbar with\nthe specified potion.",
         "version_min": 2.1,
         "value_mode":"potion_id",
         "value_display":"Potion Effect",
