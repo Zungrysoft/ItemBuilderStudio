@@ -56,6 +56,26 @@
     "84":{
         "display":"Levitation V"
     },
+    "90":{
+        "display":"Mining Fatigue",
+        "version_min": 2.1
+    },
+    "91":{
+        "display":"Mining Fatigue II",
+        "version_min": 2.1
+    },
+    "92":{
+        "display":"Mining Fatigue III",
+        "version_min": 2.1
+    },
+    "100":{
+        "display":"Nausea",
+        "version_min": 2.1
+    },
+    "110":{
+        "display":"Night Vision",
+        "version_min": 2.1
+    },
     "120":{
         "display":"Poison",
         "version_min": 2.1
