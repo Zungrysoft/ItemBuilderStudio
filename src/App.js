@@ -23,7 +23,7 @@ let tabs = [
 
 function getStoredSettings() {
     let FAILCASE = {
-        version: 2.0,
+        version: 2.1,
         userDefinedEnabled: false,
     }
     try {
