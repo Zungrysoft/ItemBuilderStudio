@@ -21,13 +21,10 @@ function userDefined() {
     for (let i = 1; i <= 40; i ++) {
         ret[i + 1000] = {
             "display":"User-Defined #" + i,
-            "note":"See user_defined.txt for more info.",
             "value_mode":"input",
             "value_display":"Value",
             "value2_mode":"input",
             "value2_display":"Value2",
-            "text_mode":"input",
-            "text_display":"Text",
             "has_sound":true,
             "for_trident":true,
             "user_defined":true,
