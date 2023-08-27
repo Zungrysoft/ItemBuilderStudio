@@ -319,6 +319,16 @@ function generateDisplay(data) {
     return ",display:{" + rlc(output) + "}";
 }
 
+function generateCustomModelData(data) {
+    if (
+        data.model.customModelData === "" || data.model.customModelData === 0
+    ) {
+        return "";
+    }
+    
+    return jsonParam(bindValue(data.model.customModelData),"CustomModelData","");
+}
+
 function bindValue(num) {
     // Convert hex colors to dec
     if (typeof num === "string" && num.slice(0,1) === "#") {
@@ -415,6 +425,8 @@ function generateCommand(data) {
     output += generateCondition(data.structure, true);
 
     output += generateDisplay(data);
+
+    output += generateCustomModelData(data);
 
     output += generateEnchantments(data.enchantments);
 

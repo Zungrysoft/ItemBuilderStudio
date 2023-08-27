@@ -194,6 +194,19 @@ function DisplayPage({ data, onChange }) {
             />
             <h2>Model</h2>
             <div>
+                <p className="label">CustomModelData:</p>
+                <input
+                    className="input-box-long"
+                    type="text"
+                    value={data.model.customModelData}
+                    onChange={(e) => onChange({
+                        ...data,
+                        model: {
+                            ...data.model,
+                            customModelData: e.target.value,
+                        }
+                    })}
+                />
                 <InputColor
                     label="Leather Color"
                     startValue={data.model.color}
